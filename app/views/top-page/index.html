@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- 表示の設定 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- レスポンシブ対応 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaLaの湯</title>
+  <!-- 非公開設定 -->
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Webページの説明文 -->
+  <meta name="description" content="弱アルカリ性で良質なナトリウムイオンやカルシウムイオン含まれている美人の湯" />
+
+  <!-- CSS -->
+  <link rel="icon" type="image/png" href="images/温泉マークのアイコン素材 1.png" />
+  <!-- ファビコンの設定 -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <!-- リセットCSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Googleフォント  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Googleフォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet" />
+  <!-- Googleフォント -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+  <link rel="stylesheet" type="text/css"
+    href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/css/6-1-8.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/js/6-1-8.js"></script>
+</head>
+
+<!-- メモ -->
+<!-- 不要なclassは記述しない。子孫セレクタで記述 -->
+<!-- _f フレーム _a アニメーション _e イベント -->
+
+<body>
+  <header>
+    <div class="header-logo">
+      <a href="index.html"><i>LaLa<small>の</small>湯</i></a>
+      <ul>
+        <li><a href="new.html">おしらせ</a></li>
+        <li><a href="show.html">施設案内</a></li>
+        <li><a href="cooking.html">お食事</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ハンバーガーメニュー ここから↓ -->
+  <label for="open-close">
+    <!-- forとidが連動している。同じ名前にする -->
+    <nav>
+      <input type="checkbox" id="open-close" />
+      <img src="images/menu.png" alt="" id="menu-btn" />
+      <ul id="menu">
+        <li><a href="new.html">お知らせ</a></li>
+        <li><a href="show.html">施設案内</a></li>
+        <li><a href="cooking.html">お食事</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="#section-warp">営業時間</a></li>
+        <li><a href="#section-warp">料金案内</a></li>
+        <li><a href="#access-warp">アクセス</a></li>
+      </ul>
+    </nav>
+  </label>
+  <!-- ハンバーガーメニュー ここまで↑ -->
+
+  <!-- 大きなロゴ ここから↓ -->
+  <div class="big-log photos">
+    <h1><i>LaLa<small>の</small>湯</i></h1>
+    <p>天然温泉 美人の湯</p>
+    <img src="images/B_img1.jpg" alt="露店風呂1" />
+    <img src="images/B_img2.jpg" alt="露店風呂2" />
+    <img src="images/B_img3.jpg" alt="露店風呂3" />
+  </div>
+  <!-- 大きなロゴここまで↑ -->
+
+  <!-- 画面スクロール ここから↓-->
+  <div class="slider_f">
+    <ul class="slider btn">
+      <li><img src="images/thumb-img1.png" alt="温泉1" /></li>
+      <li><img src="images/thumb-img2.png" alt="温泉2" /></li>
+      <li><img src="images/thumb-img3.png" alt="温泉3" /></li>
+      <li><img src="images/thumb-img4.png" alt="温泉4" /></li>
+      <li><img src="images/thumb-img5.png" alt="温泉5" /></li>
+      <li><img src="images/thumb-img6.png" alt="温泉6" /></li>
+      <li><img src="images/thumb-img7.png" alt="温泉7" /></li>
+      <li><img src="images/thumb-img8.png" alt="温泉8" /></li>
+      <li><img src="images/thumb-img9.png" alt="温泉9" /></li>
+      <li><img src="images/thumb-img10.png" alt="温泉10" /></li>
+    </ul>
+  </div>
+  <!-- 画面スクロールここまで↑ -->
+
+  <main>
+    <!-- 温泉の由来 ここから↓-->
+    <h2 id="origin_e">LaLa温泉の由来</h2>
+    <article class="origin_f wrapper">
+      <div class="origin-img">
+        <p>
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+        </p>
+        <p>
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+        </p>
+        <p>
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+        </p>
+        <p>
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+          弱アルカリ性の温泉です。良質なナトリウムイオンやカルシウムイオンが含まれています。
+          入るとヌルッとしたとろみを感じるところから、究極の美人の湯と言われています。
+        </p>
+      </div>
+    </article>
+    <!-- 温泉の由来 ここまで↑ -->
+
+    <!-- お知らせ ここから↓-->
+    <h2 id="info_e">おしらせ</h2>
+
+    <article class="info_f">
+      <div id="info" class="info-img">
+        <div id="slide_e1"></div>
+        <!-- イベント発生箇所 -->
+        <dl class="btn_a">
+          <dt>2021/8/1</dt>
+          <dd>
+            <a href="new.html"><span>8月のイベント</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a1">
+          <dt>2021/7/30</dt>
+          <dd>
+            <a href="new.html"><span>木曜日はレディースデイ</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a2">
+          <dt>2021/7/29</dt>
+          <dd>
+            <a href="new.html"><span>お得なクーポンのお知らせ</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a3">
+          <dt>2021/7/28</dt>
+          <dd>
+            <a href="new.html"><span>会員募集中</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a4">
+          <dt>2021/7/27</dt>
+          <dd>
+            <a href="new.html"><span>温泉の効能について</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a5">
+          <dt>2021/7/26</dt>
+          <dd>
+            <a href="new.html"><span>会員様限定。お得な情報</span></a>
+          </dd>
+        </dl>
+        <dl class="btn_a6">
+          <dt>2021/7/25</dt>
+          <dd>
+            <a href="new.html"><span>LaLaの湯だより</span></a>
+          </dd>
+        </dl>
+      </div>
+    </article>
+    <!-- お知らせここまで ↑ -->
+
+    <!-- お知らせ一覧 ここまで -->
+    <div id="grid_a" class="post-info show_t">
+      <a href="new.html">
+        <p class="post-date">お知らせ<span>一覧</span></p>
+      </a>
+    </div>
+    <!-- お知らせ一覧 ここから↑ -->
+
+    <!-- 施設案内 ここから↓ -->
+    <div id="grid_e"></div>
+    <section>
+      <div id="grid">
+        <div class="item_f">
+          <div class="item">
+            <div class="zoomOut">
+              <a href="show.html"><span class="mask"><img src="images/B_img4.png" alt="施設案内" class="iiii" /></span></a>
+            </div>
+          </div>
+          <a href="show.html">
+            <p>施設案内</p>
+          </a>
+        </div>
+
+        <div class="item_f">
+          <div class="item">
+            <div class="zoomOut">
+              <a href="cooking.html"><span class="mask"><img src="images/menu11.jpg" alt="sns" /></span></a>
+            </div>
+          </div>
+          <a href="cooking.html">
+            <p>お食事</p>
+          </a>
+        </div>
+
+        <div class="item_f">
+          <div class="item">
+            <div class="zoomOut">
+              <a href="#access-warp"><span class="mask"><img src="images/img25.jpg" alt="アクセス" /></span></a>
+            </div>
+          </div>
+          <a href="#access-warp">
+            <p>アクセス</p>
+          </a>
+        </div>
+
+        <div class="item_f">
+          <div class="item">
+            <div class="zoomOut">
+              <a href="contact.html"><span class="mask"><img src="images/img26.png" alt="お問い合わせ" /></span></a>
+            </div>
+          </div>
+          <a href="contact.html">
+            <p>お問い合わせ</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- 施設案内 ここまで↑ -->
+
+    <!-- SNS ここから↓-->
+    <div class="sns-favicon hidden">
+      <div>
+        <span class="favicon1"></span>
+        <span class="favicon2"></span>
+        <span class="favicon3"></span>
+      </div>
+      <p id="merumaga_a3" class="kiran">メルマガ登録</p>
+    </div>
+
+    <div id="merumaga_a2" class="post-info show_t">
+      <p class="post-date">メルマガ<span>登録</span></p>
+    </div>
+
+    <section id="merumaga_a" class="hidden">
+      <div class="sns">
+        <div class="sns-box">
+          <h3 class="sub-title hidden">Twitter</h3>
+          <a class="twitter-timeline" data-height="315"
+            href="https://twitter.com/webcreatorbox?ref_src=twsrc%5Etfw"></a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="sns-box">
+          <h3 class="sub-title">YouTube</h3>
+          <iframe src="https://www.youtube.com/embed/CXrW5rqP-WY" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- sns ここまで↑-->
+
+    <!-- 営業時間＆料金案内 ここから↓ -->
+    <div id="section-warp"></div>
+    <h2 id="money_a">営業時間＆料金案内</h2>
+    <div class="stroke hidden">
+      <h2>営業時間＆料金案内</h2>
+      <div class="border top_p"></div>
+      <div class="border right"></div>
+      <div class="border bottom"></div>
+      <div class="border left"></div>
+    </div>
+    <article id="line_a" class="money_f">
+      <div class="time wrapper">
+        <h3>開館時間</h3>
+        <p>11:00～20:00</p>
+        <span>最終入館 19:00</span>
+      </div>
+
+      <div class="line"></div>
+      <!-- ライン -->
+
+      <div class="money wrapper">
+        <h3 id="money_e">料金表</h3>
+      </div>
+
+      <table class="table-money" border="1">
+        <tr>
+          <th colspan="8" class="money-heder">入館料</th>
+        </tr>
+        <tr>
+          <th colspan="1"></th>
+          <th colspan="4">大人</th>
+          <th colspan="4">小人</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">通常価格</td>
+          <td colspan="2">Web前売</td>
+          <td colspan="2">通常価格</td>
+          <td colspan="2">Web前売</td>
+        </tr>
+        <tr>
+          <td colspan="1">平日</td>
+          <td class="price" colspan="2"><span>800円</span></td>
+          <td class="price" colspan="2"><span>750円</span></td>
+          <td class="price" colspan="2"><span>500円</span></td>
+          <td class="price" colspan="2"><span>350円</span></td>
+        </tr>
+        <tr>
+          <td colspan="1">土日祝</td>
+          <td class="price" colspan="2"><span>1,000円</span></td>
+          <td class="price" colspan="2"><span>900円</span></td>
+          <td class="price" colspan="2"><span>500円</span></td>
+          <td class="price" colspan="2"><span>350円</span></td>
+        </tr>
+        <tr>
+          <td colspan="1">特定日</td>
+          <td class="price" colspan="2"><span>1,500円</span></td>
+          <td colspan="2">-</td>
+          <td class="price" colspan="2"><span>500円</span></td>
+          <td colspan="2">-</td>
+        </tr>
+      </table>
+
+      <div class="explanation">
+        <p>消費税込み。※小人料金対象は4歳～小学生のお客様。4歳未満無料。</p>
+      </div>
+      <!-- アクセスリンク -->
+    </article>
+    <!-- 営業時間＆料金案内 ここまで↑ -->
+
+    <!-- アクセス ここから↓ -->
+    <div id="access-warp"></div>
+    <h2>アクセス</h2>
+
+    <div class="access-image wrapper">
+      <article>
+        <div class="img-change"></div>
+        <!-- 画像アニメーション -->
+        <p>LaLaの湯 周辺の画像</p>
+
+        <div>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZRRMqfV8Rx82YlHsZncIbDg9hI-niRjQ"></iframe>
+          <p>Googleマップ</p>
+        </div>
+
+      </article>
+
+      <article class="car-contents">
+        <div>
+          <h4>所在地</h4>
+          <p>〒大阪市〇区〇〇〇〇〇〇</p>
+          <h4>電話番号</h4>
+          <p>06-1111―1111</p>
+          <h4>駐車場</h4>
+          <p>駐車場台数200台</p>
+          <span>お車でお越しの場合</span>
+        </div>
+        <ul>
+          <li>
+            大阪方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            和歌山方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            名古屋方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <span>電車でお越しの場合</span>
+        <p class="font">JR大阪駅より徒歩で5分</p>
+      </article>
+    </div>
+    <!-- アクセス ここまで↑ -->
+  </main>
+
+  <footer>
+    <div>
+      <small>&copy; 2021 LALA-YU</small>
+    </div>
+  </footer>
+
+  <!-- トップ移動 ここから↓ -->
+  <div id="gotop" class="top hidden">
+    <a href="#" class="go-tope"></a>
+    <span>PAGE<br />TOP</span>
+  </div>
+  <!-- トップ移動 ここまで↑ -->
+
+  <script>
+    "use stript";
+
+    // 画像プリロード ここから↓ //
+    //配列を使用した取得
+    const images = [
+      "images/B_img1.jpg",
+      "images/B_img2.jpg",
+      "images/B_img3.jpg",
+      "images/B_img4.jpg",
+      "images/B_img5.png",
+      "images/B_img6.jpg",
+      "images/B_img7.jpg",
+      "images/thumb-img1.png",
+      "images/thumb-img2.png",
+      "images/thumb-img3.png",
+      "images/thumb-img4.png",
+      "images/thumb-img5.png",
+      "images/thumb-img6.png",
+      "images/thumb-img7.png",
+      "images/thumb-img8.png",
+      "images/thumb-img9.png",
+      "images/thumb-img10.png",
+    ];
+
+    images.forEach(function (item, index) {
+      preloadImage(item);
+    });
+
+    function preloadImage(path) {
+      let imgTag = document.createElement("img");
+      imgTag.src = path;
+      console.log(path);
+    }
+    // 画像プリロードここまで↑ //
+
+    // ハンバーメニュー 画像の切り替えここから↓ //
+    const menuBtn = document.getElementById("menu-btn");
+    let hamburger = true;
+    menuBtn.onclick = function () {
+      if (hamburger) {
+        menuBtn.src = "images/close.png";
+        hamburger = false;
+      } else {
+        menuBtn.src = "images/menu.png";
+        hamburger = true;
+      }
+    };
+    // ハンバーメニュー 画像の切り替えここまで↑ //
+
+    // ヘッダー 動画スクロールここから↓ //
+    $(".slider").slick({
+      arrows: false, //左右の矢印はなし
+      autoplay: true, //自動的に動き出すか。初期値はfalse。
+      autoplaySpeed: 0, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
+      speed: 6900, //スライドのスピード。初期値は300。
+      infinite: true, //スライドをループさせるかどうか。初期値はtrue。
+      pauseOnHover: false, //オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
+      pauseOnFocus: false, //フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
+      cssEase: "linear", //動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear
+      slidesToShow: 5, //スライドを画面に4枚見せる
+      slidesToScroll: 1, //1回のスライドで動かす要素数
+      responsive: [
+        {
+          breakpoint: 769, //モニターの横幅が769px以下の見せ方
+          settings: {
+            slidesToShow: 2, //スライドを画面に2枚見せる
+          },
+        },
+        {
+          breakpoint: 426, //モニターの横幅が426px以下の見せ方
+          settings: {
+            slidesToShow: 1.5, //スライドを画面に1.5枚見せる
+          },
+        },
+      ],
+    });
+    // ヘッダー 動画スクロールここまで↑ //
+
+    // 温泉由来 ズームイン〜フェードアップここから↓ //
+    let indexEvent;
+    $(window).on("load", function () {
+      indexEvent = $("#origin_e").offset().top + $("#origin_e").outerHeight();
+    });
+    $(window).scroll(function () {
+      if ($(window).scrollTop() + $(window).height() > indexEvent) {
+        $(".origin_f").css("visibility", "visible");
+        $(".origin_f").addClass("show_f-up3"); /* フェードアップ */
+        $(".origin-img p").css("visibility", "visible");
+        $(".origin-img p").addClass("show_f-up1"); /* フェードアップ */
+      }
+    });
+
+    // スマホ対応用 //
+    $(function () {
+      $("#origin_e").on("touchstart", function () {
+        $(".origin_f").css("visibility", "visible");
+        $(".origin_f").addClass("show_f-up3"); /* フェードアップ */
+        $(".origin-img p").css("visibility", "visible");
+        $(".origin-img p").addClass("show_f-up1"); /* フェードアップ */
+      });
+    });
+    // 温泉由来 ここまで↑ //
+
+    // お知らせ フェードアップ〜スライドここから↓ //
+    let indexEvent_1;
+    $(window).on("load", function () {
+      indexEvent_1 = $("#info_e").offset().top + $("#info_e").outerHeight();
+    });
+    $(window).scroll(function () {
+      if ($(window).scrollTop() + $(window).height() > indexEvent_1) {
+        $(".info_f").css("visibility", "visible");
+        $(".info_f").addClass("show_f-up3"); /* フェードアップ */
+        $(".info-img").css("visibility", "visible");
+        $(".info-img").addClass("show_f1"); /* フェードイン */
+      }
+    });
+
+    let indexEvent_2;
+    $(window).on("load", function () {
+      indexEvent_2 =
+        $("#slide_e1").offset().top + $("#slide_e1").outerHeight();
+    });
+    $(window).scroll(function () {
+      if ($(window).scrollTop() + $(window).height() > indexEvent_2) {
+        $(".btn_a dt").css("visibility", "visible");
+        $(".btn_a dt").addClass("show_s"); /* スライド */
+        $(".btn_a dd").css("visibility", "visible");
+        $(".btn_a dd").addClass("show_s1"); /* スライド */
+        $(".btn_a1 dt").css("visibility", "visible");
+        $(".btn_a1 dt").addClass("show_s2"); /* スライド */
+        $(".btn_a1 dd").css("visibility", "visible");
+        $(".btn_a1 dd").addClass("show_s3"); /* スライド */
+        $(".btn_a2 dt").css("visibility", "visible");
+        $(".btn_a2 dt").addClass("show_s4"); /* スライド */
+        $(".btn_a2 dd").css("visibility", "visible");
+        $(".btn_a2 dd").addClass("show_s5"); /* スライド */
+        $(".btn_a3 dt").css("visibility", "visible");
+        $(".btn_a3 dt").addClass("show_s6"); /* スライド */
+        $(".btn_a3 dd").css("visibility", "visible");
+        $(".btn_a3 dd").addClass("show_s7"); /* スライド */
+        $(".btn_a4 dt").css("visibility", "visible");
+        $(".btn_a4 dt").addClass("show_s8"); /* スライド */
+        $(".btn_a4 dd").css("visibility", "visible");
+        $(".btn_a4 dd").addClass("show_s9"); /* スライド */
+        $(".btn_a5 dt").css("visibility", "visible");
+        $(".btn_a5 dt").addClass("show_s10"); /* スライド */
+        $(".btn_a5 dd").css("visibility", "visible");
+        $(".btn_a5 dd").addClass("show_s11"); /* スライド */
+        $(".btn_a6 dt").css("visibility", "visible");
+        $(".btn_a6 dt").addClass("show_s12"); /* スライド */
+        $(".btn_a6 dd").css("visibility", "visible");
+        $(".btn_a6 dd").addClass("show_s13"); /* スライド */
+      }
+    });
+
+    // スマホ対応 ここから↓ //
+    $(function () {
+      $("#info_e").on("touchstart", function () {
+        $(".info_f").css("visibility", "visible");
+        $(".info_f").addClass("show_f-up3"); /* フェードアップ */
+        $(".info-img").css("visibility", "visible");
+        $(".info-img").addClass("show_f1"); /* フェードイン */
+      });
+      $("#slide_e1").on("touchstart", function () {
+        $(".btn_a dt").css("visibility", "visible");
+        $(".btn_a dt").addClass("show_s"); /* スライド */
+        $(".btn_a dd").css("visibility", "visible");
+        $(".btn_a dd").addClass("show_s1"); /* スライド */
+        $(".btn_a1 dt").css("visibility", "visible");
+        $(".btn_a1 dt").addClass("show_s2"); /* スライド */
+        $(".btn_a1 dd").css("visibility", "visible");
+        $(".btn_a1 dd").addClass("show_s3"); /* スライド */
+        $(".btn_a2 dt").css("visibility", "visible");
+        $(".btn_a2 dt").addClass("show_s4"); /* スライド */
+        $(".btn_a2 dd").css("visibility", "visible");
+        $(".btn_a2 dd").addClass("show_s5"); /* スライド */
+        $(".btn_a3 dt").css("visibility", "visible");
+        $(".btn_a3 dt").addClass("show_s6"); /* スライド */
+        $(".btn_a3 dd").css("visibility", "visible");
+        $(".btn_a3 dd").addClass("show_s7"); /* スライド */
+        $(".btn_a4 dt").css("visibility", "visible");
+        $(".btn_a4 dt").addClass("show_s8"); /* スライド */
+        $(".btn_a4 dd").css("visibility", "visible");
+        $(".btn_a4 dd").addClass("show_s9"); /* スライド */
+        $(".btn_a5 dt").css("visibility", "visible");
+        $(".btn_a5 dt").addClass("show_s10"); /* スライド */
+        $(".btn_a5 dd").css("visibility", "visible");
+        $(".btn_a5 dd").addClass("show_s11"); /* スライド */
+        $(".btn_a6 dt").css("visibility", "visible");
+        $(".btn_a6 dt").addClass("show_s12"); /* スライド */
+        $(".btn_a6 dd").css("visibility", "visible");
+        $(".btn_a6 dd").addClass("show_s13"); /* スライド */
+      })
+    });
+    //スマホ対応 ここまで↑ //
+    // お知らせ フェードアップ・スライドここまで↑ //
+
+    // お知らせ一覧 チカチカここから↓ //
+    // マウスのタッチと外したときのイベント
+    $(function () {
+      $("#grid_a").on({
+        mouseenter: function () {
+          $(".show_t").removeClass("show_t");
+        },
+        mouseleave: function () {
+          $("#grid_a").addClass("show_t");
+        },
+      });
+    });
+    // お知らせ一覧 チカチカここまで↑//
+
+    // 施設案内 ななめからここから↓ //
+    let indexEvent_3;
+    $(window).on("load", function () {
+      indexEvent_3 = $("#grid_e").offset().top + $("#grid_e").outerHeight();
+    });
+    $(window).scroll(function () {
+      if ($(window).scrollTop() + $(window).height() > indexEvent_3) {
+        $("#grid").css("visibility", "visible");
+        $("#grid").addClass("show_f-up3"); /* フェードアップ */
+        $("#grid img").css("visibility", "visible");
+        $("#grid img").addClass("show_n2");
+        $(".item").addClass("kiran");
+        $(function () {
+          setInterval(function () {
+            $(".item").toggleClass("kiran");
+          }, 4000);
+        });
+      }
+    });
+
+    // スマホ対応 //
+    $("#grid_a2").on("touchstart", function () {
+      $("#grid img").css("visibility", "visible");
+      $("#grid img").addClass("show_n");
+    });
+    // 施設案内 ななめからここまで↑ //
+
+    // メルマガ登録 ここから↓ //
+    $(function () {
+      $("#merumaga_a2").on({
+        mouseenter: function () {
+          $("#merumaga_a2").removeClass("show_t");
+        },
+        mouseleave: function () {
+          $("#merumaga_a2").addClass("show_t");
+        },
+      });
+    });
+    // メルマガ登録 ここまで↑ //
+
+    // sns ぷよぷよ・くるくるクリックイベントここから↓ //
+    $(function () {
+      $("#merumaga_a2").on("click", function () {
+        $("#merumaga_a2").addClass("hidden");
+        $(".sns-favicon").removeClass("hidden");
+        $(".sns-favicon").addClass("show_p");
+      });
+    });
+    // sns ぷよぷよ・くるくるクリックイベントここまで↑ //
+
+    // sns スライドイベントここから↓ //
+    $(function () {
+      $("#merumaga_a3").on("click", function () {
+        $("#merumaga_a").removeClass("hidden");
+        $(".sub-title").removeClass("hidden");
+        $("#merumaga_a").addClass("show_s14");
+      });
+    });
+    // sns スライドイベントここまで↑ //
+
+    // 営業時間 ボーダーイベントここから↓//
+    $(function () {
+      $("#money_a").on("mousemove", function () {
+        $("#money_a").addClass("hidden");
+        $(".stroke").removeClass("hidden");
+      });
+    });
+    // 営業時間 ボーダーイベントここまで↑ //
+
+    // 営業時間 ラインイベントここから↓ //
+    $(function () {
+      $("#line_a").on("mousemove", function () {
+        $(".line").addClass("line_a");
+      });
+    });
+    // 営業時間 ラインイベントここまで↑ //
+
+    // 営業時間 フェードアップここから↓ //
+    $(function () {
+      $("#line_a").on("mousemove", function () {
+        $(".price").css("visibility", "visible");
+        $(".price span").addClass("show_up1");
+      });
+    });
+
+    // スマホ対応 //
+    $(function () {
+      $("#money_e").on("touchstart", function () {
+        $(".price").css("visibility", "visible");
+        $(".price").addClass("show_up1");
+      });
+    });
+    // 営業時間 フェードアップここまで↑ //
+
+    // トップページへスクロールここから↓ //
+    $(function () {
+      $(window).on("scroll", function () {
+        /*下に2000スクロールすると表示*/
+        if ($(this).scrollTop() > 2000) {
+          $(".top").removeClass("hidden");
+          $(".top").addClass("show_ff");
+        } else {
+          $(".top").addClass("hidden");
+        }
+      });
+      // トップへスクロールで移動
+      $(".top").click(function () {
+        $("body,html").animate({ scrollTop: 0 }, 500);
+      });
+    });
+      // トップページへスクロールここまで↑ //
+  </script>
+</body>
+
+</html>
