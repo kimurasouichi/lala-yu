@@ -93,16 +93,67 @@ article {
 }
 
 /* スライドアニメーション */
+/* お知らせ ここから↓ */
 .show_s {
-  animation: slideIn-right 1s 1 forwards;
+  animation: slideIn-left 1s 4s backwards;
+}
+
+.show_s1 {
+  animation: slideIn-right 1s 4s backwards;
 }
 
 .show_s2 {
-  animation: slideIn-left 1s 1 forwards;
+  animation: slideIn-left 1s 4.5s backwards;
 }
 
 .show_s3 {
-  animation: slideIn-bottom 1s 1 1s backwards;
+  animation: slideIn-right 1s 4.5s backwards;
+}
+
+.show_s4 {
+  animation: slideIn-left 1s 5s backwards;
+}
+
+.show_s5 {
+  animation: slideIn-right 1s 5s backwards;
+}
+
+.show_s6 {
+  animation: slideIn-left 1s 5.5s backwards;
+}
+
+.show_s7 {
+  animation: slideIn-right 1s 5.5s backwards;
+}
+
+.show_s8 {
+  animation: slideIn-left 1s 6s backwards;
+}
+
+.show_s9 {
+  animation: slideIn-right 1s 6s backwards;
+}
+
+.show_s10 {
+  animation: slideIn-left 1s 6.5s backwards;
+}
+
+.show_s11 {
+  animation: slideIn-right 1s 6.5s backwards;
+}
+
+.show_s12 {
+  animation: slideIn-left 1s 7s backwards;
+}
+
+.show_s13 {
+  animation: slideIn-right 1s 7s backwards;
+}
+/* お知らせ ここまで↑ */
+
+/* snsで使用 */
+.show_s14 {
+  animation: slideIn-left 1s;
 }
 
 /* ななめから出てくるアニメーション */
@@ -112,6 +163,10 @@ article {
 
 .show_n1 {
   animation: slide-skew1 1s 0s alternate; /* 右上から右下 */
+}
+
+.show_n2 {
+  animation: slide-skew 1s 3s backwards; /* 左下から左上 */
 }
 
 /* ぷよぷよアニメーション */
@@ -133,6 +188,10 @@ article {
   animation: fadeIn 2s ease-in-out 1 normal forwards;
 }
 
+.show_f1 {
+  animation: fadeIn 2s ease-in-out 3s backwards;
+}
+
 /* フェードイン・ふわふわアニメーション */
 .show_ff {
   animation: fadeIn 2s ease-in-out 1 normal forwards,
@@ -150,7 +209,19 @@ article {
 }
 
 .show_f-up1 {
-  animation: fadeup 1s 4s backwards;
+  animation: fadeup 1.5s 3s backwards;
+}
+
+.show_f-up2 {
+  animation: fadeup 0.5s ease-in-out 2s backwards;
+}
+
+.show_f-up3 {
+  animation: fadeup2 1.5s ease-out 1s backwards;
+}
+
+.show_f-up4 {
+  animation: fadeup2 1.5s ease-out 2s backwards;
 }
 /* jQuery アニメーションここまで↑ */
 
@@ -158,7 +229,7 @@ article {
 h2 {
   font-size: 2rem; /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
   text-align: center;
-  margin: 150px 0 ;
+  margin: 150px 0;
 }
 
 /* 小さな見出し 開館時間 露店風呂 室内*/
@@ -393,55 +464,50 @@ nav span::after {
 /* 画像スライダー ここまで↑ */
 
 /* 温泉由来 ここから↓ */
-/* 温泉由来のリンク先 */
-#origin-warp {
-  visibility: hidden; /* 要素を消去。設定はなくならない */
-}
-
-#origin_a {
-  background-color: #fff;
-}
-
-.main-origin {
-  margin-bottom: 200px;
+.origin_f {
+  visibility: hidden;
   font-size: 1.5rem;
+  width: 100%;
+  min-height: 100vh;
 }
 
-#origin_a2 p {
+.origin-img {
+  background-image: url(../images/img18.jpg);
+  background-color: #badacf;
+  background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.origin-img p {
   visibility: hidden;
   font-family: "遊ゴシック";
   max-width: 90%;
   margin: 20px auto;
 }
-
-.origin-imag {
-  background-size: cover;
-  background-position: center;
-}
-
-.origin {
-  padding: 30px;
-  background-image: url(../images/img18.jpg);
-  background-color: #badacf;
-  background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
-  width: 100%;
-  min-height: 100vh;
-}
 /* 温泉由来 ここまで↑ */
 
 /* お知らせ ここから↓ */
-#info_a {
-  padding: 100px;
-  background-color: #ffffff;
+.info_f {
+  visibility: hidden;
+  font-size: 1.5rem;
+  width: 95%;
+  min-height: 100vh;
+  background-color: #fff;
 }
 
-.info-img_f {
+.info-img {
+  visibility: hidden;
+  padding: 100px;
+  background-color: #ffffff;
   margin-bottom: 100px;
-  padding: 200px 0;
+  padding: 300px 0;
   background-image: url(../images/img19.png);
   background-size: cover;
   background-position: center;
-  animation: fadeIn 1s;
+  width: 100%;
 }
 
 #info dl {
@@ -510,6 +576,7 @@ nav span::after {
 
 /* 施設案内 ここから↓ */
 #grid {
+  visibility: hidden;
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(auto-fit, minmax(360px, 4fr));
@@ -655,19 +722,6 @@ nav span::after {
 /* メルマガ登録 ここまで↑ */
 
 /* sns一覧 ここから↓ */
-#merumaga_a2 {
-  margin: 0 auto;
-  text-align: center;
-  width: 30%;
-  font-size: 1.5rem;
-  background: #0bd;
-  border-radius: 5%;
-  color: #fff;
-}
-
-#merumaga_a2:hover {
-  background: #2eb6b3;
-}
 
 #merumaga_a {
   background-color: #f9f7f0;
@@ -889,7 +943,7 @@ td {
   font-size: 1.5rem;
   text-align: center;
   border: 1px black solid;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   padding: 10px;
 }
 
@@ -1139,7 +1193,7 @@ footer {
   margin-left: 200px;
   width: 100%;
   position: absolute;
-  animation: slide-skew2 1s 1s backwards;
+  animation: slide-skew2 1s 3s backwards;
 }
 
 .info-content_3 div {
@@ -1151,19 +1205,19 @@ footer {
   width: 70%;
   height: auto;
   background: rgba(251, 250, 250, 0.8);
-  animation: slide-skew3 1s 1s backwards;
+  animation: slide-skew3 1s 3s backwards;
 }
 
 .info-content_3 h4 {
   margin-bottom: 50px;
   font-size: 2rem;
-  animation: slideIn-right 1s 3s backwards;
+  animation: slideIn-right 1s 4s backwards;
 }
 
 .info-content_3 p {
   font-size: 1.2rem;
   padding: 20px 0;
-  animation: fadeup 1s 1 4s backwards;
+  animation: fadeup 1s 1 5s backwards;
 }
 
 /* 左 */
@@ -1176,7 +1230,7 @@ footer {
 .info-content_4 img {
   width: 80%;
   position: absolute;
-  animation: slide-skew1 1s 2s backwards;
+  animation: slide-skew1 1s 6s backwards;
 }
 
 .info-content_4 div {
@@ -1188,19 +1242,19 @@ footer {
   width: 70%;
   height: auto;
   background: rgba(251, 250, 250, 0.8);
-  animation: slide-skew 1s 2s backwards;
+  animation: slide-skew 1s 6s backwards;
 }
 
 .info-content_4 h4 {
   margin-bottom: 50px;
   font-size: 2rem;
-  animation: slideIn-left 1s 4s backwards;
+  animation: slideIn-left 1s 7s backwards;
 }
 
 .info-content_4 p {
   font-size: 1.2rem;
   padding: 20px 0;
-  animation: fadeup 1s 5s backwards;
+  animation: fadeup 1s 8s backwards;
 }
 
 /* 右 */
@@ -1214,7 +1268,7 @@ footer {
   margin-left: 200px;
   width: 100%;
   position: absolute;
-  animation: slide-skew2 1s 2s backwards;
+  animation: slide-skew2 1s 10s backwards;
 }
 
 .info-content_5 div {
@@ -1226,19 +1280,19 @@ footer {
   width: 70%;
   height: auto;
   background: rgba(251, 250, 250, 0.8);
-  animation: slide-skew3 1s 2s backwards;
+  animation: slide-skew3 1s 10s backwards;
 }
 
 .info-content_5 h4 {
   margin-bottom: 50px;
   font-size: 2rem;
-  animation: slideIn-right 1s 4s backwards;
+  animation: slideIn-right 1s 11s backwards;
 }
 
 .info-content_5 p {
   font-size: 1.2rem;
   padding: 20px 0;
-  animation: fadeup 1s 5s backwards;
+  animation: fadeup 1s 12s backwards;
 }
 /* New.html ここまで↑ */
 
@@ -1403,6 +1457,7 @@ footer {
   background-position: center;
   padding: 100px 200px;
   margin-top: 150px;
+  animation: fadeup 1s ease-in-out 3s backwards;
 }
 
 .form-title {
@@ -1863,7 +1918,7 @@ input[type="submit"] {
     display: none;
   }
 
-  nav img{
+  nav img {
     max-width: 10%;
   }
 
@@ -2009,12 +2064,21 @@ input[type="submit"] {
   /* 大きなロゴ ここまで↑ */
 
   /* 温泉由来 ここから↓ */
+  .origin-img {
+    background-image: url(../images/img18.jpg);
+    background-color: #badacf;
+    background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 80px 0;
+  }
 
-  .main-origen p {
+  .origin-img p {
     font-family: "遊ゴシック";
-    width: 90%; /* 変更 */
-    margin: 0 auto;
-    font-size: 1.5rem;
+    width: 100%; /* 変更 */
+    padding: 0;
+    margin: 10px auto;
   }
   /* 温泉由来 ここまで↑ */
 
@@ -2137,21 +2201,6 @@ input[type="submit"] {
   /* メルマガ登録 ここまで↑ */
 
   /* sns一覧 ここから↓ */
-  #merumaga_a2 {
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    width: 30%;
-    font-size: 1.5rem;
-    background: #0bd;
-    border-radius: 5%;
-    color: #fff;
-  }
-
-  #merumaga_a2:hover {
-    background: #2eb6b3;
-  }
-
   .sns {
     width: 100%;
     max-width: 80%;
@@ -2762,25 +2811,28 @@ input[type="submit"] {
   /* Bigロゴ ここまで↑ */
 
   /* 温泉由来 ここから↓ */
-  #origin_a2 {
-    padding: 10px;
-  }
-
-  #origin_a2 p {
-    padding: 20px 0;
-  }
-
-  .main-origin {
-    margin-bottom: 100px; /* ※変更 */
+  .origin_f {
+    visibility: hidden;
     font-size: 1.5rem;
+    width: 100%;
+    min-height: 100vh;
   }
 
-  .origin p {
+  .origin-img {
+    background-image: url(../images/img18.jpg);
+    background-color: #badacf;
+    background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 30px 10px; /* ※変更 */
+  }
+
+  .origin-img p {
     font-family: "遊ゴシック";
     width: 90%;
-    margin: 0 auto;
+    margin: 0px auto;
     font-size: 1rem;
-    padding: 0 1px;
   }
   /* 温泉由来 ここまで↑ */
 
@@ -2793,12 +2845,8 @@ input[type="submit"] {
     margin-bottom: 20px; /* ※変更 */
   }
 
-  #info_a {
-    padding: 160px 0; /* ※変更 */
-  }
-
   #info {
-    padding: 0 30px; /* 変更 */
+    padding: 150px 30px; /* ※変更 */
     background-size: cover;
     background-position: center;
   }
@@ -2893,15 +2941,7 @@ input[type="submit"] {
   /* 施設案内 ここまで↑ */
 
   /* メルマガ登録 ここから↓ */
-  #merumaga_a2 {
-    margin: 0 auto;
-    text-align: center;
-    width: 50%; /* ※変更 */
-    font-size: 1.5rem;
-    background: #0bd;
-    border-radius: 5%;
-    color: #fff;
-  }
+
   .sns-favicon {
     padding: 80px 50px; /* ※変更 */
     background-image: url(../images/img20.jpg);
@@ -3492,7 +3532,7 @@ input[type="submit"] {
   }
 
   #noren img {
-    width: 60%;
+    width: 100%;
     order: 2;
   }
 
@@ -3521,6 +3561,7 @@ input[type="submit"] {
   }
 
   #cafe h3 {
+    text-align: right;
     width: 100%;
     font-size: 1.2rem;
     font-family: serif;
@@ -3529,6 +3570,7 @@ input[type="submit"] {
   }
 
   #cafe img {
+    width: 100%;
     justify-content: flex-end;
     order: 1;
   }
@@ -3538,6 +3580,7 @@ input[type="submit"] {
   }
 
   #cafe h3 > p {
+    text-align: right;
     font-size: 1rem;
     padding-top: 20px;
   }
@@ -3626,6 +3669,26 @@ input[type="submit"] {
     opacity: 0;
   }
   80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeup2 {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
     opacity: 1;
   }
   100% {
