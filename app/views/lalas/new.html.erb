@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaLaの湯 - CONTECT</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- 非公開設定 -->
+
+  <!-- CSS -->
+  <link rel="icon" type="image/png" href="images/温泉マークのアイコン素材 1.png" />
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+  <!-- アイコン -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-logo">
+      <a href="/"><i>LaLa<small>の</small>湯</i></a>
+      <ul>
+        <li><%= link_to "ホーム" , root_path %></li>
+        <li><a href="/infos">おしらせ</a></li>
+        <li><a href="/buildings">施設案内</a></li>
+        <li><a href="/cookings">お食事</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <label for="open-close">
+    <nav>
+      <input type="checkbox" id="open-close" />
+      <img src="images/menu.png" alt="" id="menu-btn">
+      <ul id="menu">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="new.html">お知らせ</a></li>
+        <li><a href="show.html">施設案内</a></li>
+        <li><a href="cooking.html">お食事</a></li>
+        <li><a href="#section-warp">営業時間</a></li>
+        <li><a href="#section-warp">料金案内</a></li>
+        <li><a href="#access-warp">アクセス</a></li>
+      </ul>
+    </nav>
+  </label>
+
+  <main>
+    <div class="h2_f">
+      <h2>お問い合わせ</h2>
+    </div>
+
+    <div class="form-contact wrapper">
+      <h2 class="form-title">Contact</h2>
+      <form action="#">
+        <div class="required">
+          <label for="name">お名前<span>*必須</span></label>
+          <input type="text" id="name" name="your-name" style="padding: 10px 0" placeholder="  例: 山田 太郎" />
+        </div>
+
+        <div class="required">
+          <label for="email">メールアドレス<span>*必須</span></label>
+          <input type="email" id="emall" name="your-email" style="padding: 10px 0" placeholder="  sample@sample.com" />
+        </div>
+
+        <div class="required">
+          <label for="name">メッセージ<span>*必須</span></label>
+          <textarea name="your-message" id="mesage" placeholder="メッセージ入力"></textarea>
+        </div>
+
+        <input type="submit" class="button" value="送信" />
+        <a id="accecs-warp"></a>
+      </form>
+    </div>
+    <!-- 営業時間＆料金案内 ここから↓ -->
+    <div id="section-warp"></div>
+    <h2 id="money_a">営業時間＆料金案内</h2>
+    <div class="stroke hidden">
+      <h2>営業時間＆料金案内</h2>
+      <div class="border top_p"></div>
+      <div class="border right"></div>
+      <div class="border bottom"></div>
+      <div class="border left"></div>
+    </div>
+    <article id="line_a" class="money_f">
+      <div class="time wrapper">
+        <h3>開館時間</h3>
+        <p>11:00～20:00</p>
+        <span>最終入館 19:00</span>
+      </div>
+
+      <div class="line"></div>
+      <!-- ライン -->
+
+      <div class="money wrapper">
+        <h3 id="money_e">料金表</h3>
+      </div>
+
+      <table class="table-money" border="1">
+        <tr>
+          <th colspan="8" class="money-heder">入館料</th>
+        </tr>
+        <tr>
+          <th colspan="1"></th>
+          <th colspan="4">大人</th>
+          <th colspan="4">小人</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="2">通常価格</td>
+          <td colspan="2">Web前売</td>
+          <td colspan="2">通常価格</td>
+          <td colspan="2">Web前売</td>
+        </tr>
+        <tr>
+          <td colspan="1">平日</td>
+          <td colspan="2">800円</td>
+          <td colspan="2"><span>750円</span></td>
+          <td colspan="2">500円</td>
+          <td colspan="2"><span>350円</span></td>
+        </tr>
+        <tr>
+          <td colspan="1">土日祝</td>
+          <td colspan="2">1,000円</td>
+          <td colspan="2"><span>900円</span></td>
+          <td colspan="2">500円</td>
+          <td colspan="2"><span>350円</span></td>
+        </tr>
+        <tr>
+          <td colspan="1">特定日</td>
+          <td colspan="2">1,500円</td>
+          <td colspan="2">-</td>
+          <td colspan="2">500円</td>
+          <td colspan="2">-</td>
+        </tr>
+      </table>
+
+      <div class="explanation">
+        <p>消費税込み。※小人料金対象は4歳～小学生のお客様。4歳未満無料。</p>
+      </div>
+      <!-- アクセスリンク -->
+    </article>
+    <!-- 営業時間＆料金案内 ここまで↑ -->
+
+    <!-- アクセス ここから↓ -->
+    <div id="access-warp"></div>
+    <h2>アクセス</h2>
+
+    <div class="access-image">
+      <article>
+        <div class="img-change"></div>
+        <!-- 画像アニメーション -->
+        <p>LaLaの湯 周辺の画像</p>
+
+        <div>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZRRMqfV8Rx82YlHsZncIbDg9hI-niRjQ"></iframe>
+          <p>Googleマップ</p>
+        </div>
+      </article>
+
+      <article class="car-contents">
+        <div>
+          <h4>所在地</h4>
+          <p>〒大阪市〇区〇〇〇〇〇〇</p>
+          <h4>電話番号</h4>
+          <p>06-1111―1111</p>
+          <h4>駐車場</h4>
+          <p>駐車場台数200台</p>
+          <span>お車でお越しの場合</span>
+        </div>
+        <ul>
+          <li>
+            大阪方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            和歌山方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            名古屋方面から
+            <ul>
+              <li>西名阪〇〇〇〇〇〇へ</li>
+              <li>南阪〇〇〇〇〇〇〇へ</li>
+              <li>国道309号線→〇〇〇へ</li>
+            </ul>
+          </li>
+        </ul>
+        <span>電車でお越しの場合</span>
+        <p class="font">JR大阪駅より徒歩で5分</p>
+      </article>
+    </div>
+    <!-- アクセス ここまで↑ -->
+  </main>
+
+  <!-- スイッチ画像 ここから↓ -->
+  <div class="switch">
+    <div id="switch_a" class="hidden">
+      <span></span>
+      <p>お得なチケット</p>
+    </div>
+    <div id="switch_a2" class="hidden">
+      <span></span>
+      <p>貸切露店風呂の予約</p>
+    </div>
+  </div>
+  <!-- スイッチ画像 ここまで↑ -->
+
+  <footer>
+    <div>
+      <small>&copy; 2021 LALA-YU</small>
+    </div>
+  </footer>
+
+  <script>
+    "use stript";
+
+    // ハンバーメニュー 画像の切り替えここから↓ //
+    const menuBtn = document.getElementById('menu-btn');
+    let hamburger = true;
+    menuBtn.onclick = function () {
+      if (hamburger) {
+        menuBtn.src = 'images/close.png';
+        hamburger = false;
+      } else {
+        menuBtn.src = 'images/menu.png';
+        hamburger = true;
+      }
+    }
+    // ハンバーメニュー 画像の切り替えここまで↑ //
+
+    // フォーム フェードインここから↓ //
+    $(function () {
+      $(".h2_f").on("mousemove", function () {
+        $(".form-contact").removeClass("hidden");
+      });
+    });
+    // フォーム フェードインここまで↑ //
+
+    // チケット スクロールイベントここから↓ //
+    $(function () {
+      $(document).on("scroll", function () {
+        if ($(this).scrollTop() > 500) {
+          $("#switch_a").removeClass("hidden");
+          $("#switch_a2").removeClass("hidden");
+        } else {
+          $("#switch_a").addClass("hidden");
+          $("#switch_a2").addClass("hidden");
+        }
+      });
+    });
+    // チケット スクロールイベントここまで↑ //
+
+  </script>
+</body>
+
+</html>
