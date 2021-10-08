@@ -235,7 +235,7 @@ h2 {
 
 /* 小さな見出し 開館時間 露店風呂 室内*/
 h3 {
-    font-family: "遊ゴシック";
+  font-family: "遊ゴシック";
   width: 100%;
   color: #09c2bf;
   padding-bottom: 20px;
@@ -933,10 +933,16 @@ td {
   background-color: #e4f195;
 }
 
-.explanation p {
+.explanation span {
+  display: block;
+  text-align: center;
   font-family: "遊ゴシック";
   color: #2eb6b3;
   padding: 20px 0 0 20px;
+}
+
+.table-money .black {
+  color: black;
 }
 /* 営業時間 ここまで↑ */
 
@@ -977,7 +983,7 @@ td {
 }
 
 .access-image iframe {
-  height: 70vh;
+  height: 55vh;
 }
 
 .car-contents h4 {
@@ -1961,6 +1967,733 @@ input[type="submit"] {
 /* ===================================================== */
 
 /* レスポンシブル2 ここから↓ */
+/* レスポンシブル2 ここから↓  */
+/* max-widthは横幅1500pxからの表示 */
+/* ヘッダー ここから↓ */
+@media (min-width: 1500px) {
+  h2 {
+    font-size: 4rem; /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
+    text-align: center;
+    margin: 300px 0;
+    font-family: "遊ゴシック";
+  }
+
+  /* 小さな見出し 開館時間 露店風呂 室内*/
+  h3 {
+    font-family: "遊ゴシック";
+    width: 100%;
+    color: #09c2bf;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  /* 共通部分 ここまで↑ */
+
+  header {
+    width: 100%;
+    height: auto;
+    background: rgba(251, 250, 250, 0.5);
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1); /* シャドウ */
+    z-index: 30; /* 絶対値の値 */
+  }
+
+  .header-logo {
+    display: flex;
+    font-size: 5rem; /* ※変更 */
+    width: 100%;
+    font-family: "Reggae One", cursive; /* Google フォント */
+    color: rgba(10, 9, 9, 0.877);
+    margin: 10px;
+  }
+
+  .header-logo i {
+    display: block;
+    padding: 0 30px;
+  }
+
+  .header-logo shadow:hover {
+    color: #fff;
+    background-color: rgba(163, 225, 218, 0.5);
+  }
+
+  header ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: serif;
+    margin: 0 auto;
+    list-style: none;
+    color: #432;
+  }
+
+  header li {
+    font-size: 3rem; /* ※変更 */
+  }
+
+  header a {
+    color: #432;
+  }
+
+  /* aダグだけをhoverレイアウトが崩さないため */
+  header li > a:hover {
+    color: #fff;
+    text-shadow: 1px 1px 1px #140505;
+    display: block; /* aタグはインライン注意 */
+    padding: 20px 0; /* blockに変更すればpaddingが効く */
+    background-color: rgba(163, 225, 218, 0.5);
+  }
+  /* ヘッダー ここまで↑ */
+
+  /* Bigロゴ ここから↓ */
+  .big-log {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2000px;
+    background: linear-gradient(
+      to right,
+      #1b38da 0%,
+      #6ec1cf 50%,
+      #adcfda 100%
+    );
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    background-size: 200% 200%; /*サイズを大きくひきのばす*/
+    position: absolute;
+    top: -100px;
+    z-index: 100;
+    animation: bggradient 25s ease infinite;
+  }
+
+  .big-log h1 {
+    font-family: "Reggae One", cursive; /* Google font */
+    color: #fff;
+    text-shadow: 1px 4px 4px #140505; /* テキストシャドウ */
+  }
+
+  .big-log i {
+    display: block; /* iタグはインライン注意 */
+    padding-top: 50px; /* ※変更 */
+    width: 100%;
+    font-size: 15rem; /* ロゴのサイズ */
+  }
+
+  .big-log p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "ヒラギノ明朝";
+    font-size: 4rem;
+    text-shadow: 1px 2px 3px #140505;
+    position: relative;
+    top: -100px;
+  }
+  /* Bigロゴ ここまで↑ */
+
+  /* Big画像 フェードイン・フェードアウトここから↓ */
+  .photos {
+    position: relative;
+  }
+
+  .photos img {
+    position: absolute;
+    width: 100%;
+    top: 550px;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+    animation: photo 25s infinite; /* 無限に繰り返す */
+    opacity: 0; /* 不透明 */
+  }
+
+  /* nth-of-type(x)番目の要素を指定 */
+  .photos img:nth-of-type(1) {
+    animation-delay: 0s; /* ディレイ 遅れ */
+  }
+  .photos img:nth-of-type(2) {
+    animation-delay: 5s;
+  }
+  .photos img:nth-of-type(3) {
+    animation-delay: 10s;
+  }
+  /* Big画像 フェードイン・フェードアウトここまで↑ */
+
+  /* 温泉由来 ここから↓ */
+  .origin_f {
+    font-family: "遊ゴシック";
+    visibility: hidden;
+    font-size: 3rem; /* ※変更 */
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .origin-img {
+    background-image: url(../images/img18.jpg);
+    background-color: #badacf;
+    background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 50px;
+  }
+
+  .origin-img p {
+    visibility: hidden;
+    font-family: "遊ゴシック";
+    max-width: 90%;
+    margin: 20px auto;
+  }
+  /* 温泉由来 ここまで↑ */
+
+  /* お知らせ ここから↓ */
+  .info_f {
+    font-family: "遊ゴシック";
+    visibility: hidden;
+    font-size: 1.5rem;
+    width: 95%;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+
+  .info-img {
+    visibility: hidden;
+    padding: 100px;
+    background-color: #ffffff;
+    margin-bottom: 100px;
+    padding: 300px 0;
+    background-image: url(../images/img19.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  #info dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    font-size: 3rem; /* ※変更 */
+    max-width: 80%; /* ここで全体の幅を調整できる */
+    margin: 0 auto;
+  }
+
+  #info dt {
+    width: 30%;
+    margin-right: 100px;
+    color: #2eb6b3;
+    text-align: center;
+    visibility: hidden;
+  }
+
+  #info dd {
+    visibility: hidden;
+    text-align: center;
+    width: 50%;
+  }
+
+  #info dt,
+  #info dd {
+    border-bottom: 1px #ddd solid;
+    margin-bottom: 80px;
+  }
+  /* おしらせ ここまで↑ */
+
+  /* お知らせ一覧 ここから↓ */
+  .post-info {
+    font-family: "遊ゴシック";
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 400px; /* ※変更 */
+  }
+
+  .post-date {
+    font-family: "遊ゴシック";
+    background: #0bd;
+    border-radius: 50%;
+    color: #fff;
+    width: 400px;
+    height: 400px;
+    font-size: 3rem;
+    padding-top: 120px;
+    /* margin-left: -30px; */
+  }
+
+  .post-date:hover {
+    background: #2eb6b3;
+  }
+
+  .post-date span {
+    font-size: 3rem;
+    border-top: 1px rgba(255, 255, 255, 0.5) solid;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+  /* お知らせ一覧 ここまで↑ */
+
+  /* 施設案内 ここから↓ */
+  #grid {
+    visibility: hidden;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(750px, 2fr));
+    padding: 80px;
+    background-image: url(../images/img17.jpg);
+    background-color: #2eb6b3;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 200px;
+  }
+
+  #grid img {
+    visibility: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #grid p {
+    font-family: "遊ゴシック";
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  #grid p:hover {
+    color: rgb(233, 233, 233);
+  }
+
+  /* メルマガ登録 ここから↓ */
+  .sns-favicon {
+    margin: 0 auto;
+    padding: 80px 400px;
+    background-image: url(../images/img20.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 1.25rem;
+    width: 95%;
+  }
+
+  .sns-favicon div {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+  }
+
+  .sns-favicon p {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 80px; /* ※変更 */
+    color: #ffff;
+    border-radius: 5px;
+    background: linear-gradient(
+      to right,
+      #362ae0 0%,
+      #3b79cc 50%,
+      #42d3ed 100%
+    );
+    opacity: 0;
+    animation: kurukuru 1.4s ease-out; /* くるくるアニメーション */
+    opacity: 1;
+  }
+
+  .sns-favicon a {
+    color: #fff;
+  }
+
+  .sns-favicon p:hover {
+    background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
+  }
+
+  .sns-favicon span {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+
+  .favicon1 {
+    background-image: url(../images/icon4-twitter.png);
+    background-position: center;
+    background-size: cover;
+    animation: poyopoyo 2s ease-out 3s infinite;
+    opacity: 1;
+  }
+
+  .favicon2 {
+    background-image: url(../images/icons5-facebook.png);
+    background-position: center;
+    background-size: cover;
+    animation: poyopoyo 2s ease-out 3s infinite;
+    opacity: 1;
+  }
+
+  .favicon3 {
+    background-image: url(../images/icons6-twitter.png);
+    background-position: center;
+    background-size: cover;
+    animation: poyopoyo 2s ease-out 3s infinite;
+    opacity: 1;
+  }
+  /* メルマガ登録 ここまで↑ */
+
+  /* sns一覧 ここから↓ */
+  #merumaga_a {
+    width: 95%;
+    background-color: #f9f7f0;
+  }
+
+  .sns {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #faf7f0;
+  }
+
+  .sub-title {
+    width: 50%;
+    font-size: 3rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+  }
+
+  .sns .sub-title {
+    margin: 50px 50px;
+  }
+
+  .sns-box {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 50vh;
+    /* height: auto; */
+  }
+  /* sns一覧 ここまで↑ */
+
+  /* 営業時間 ここから↓ */
+  /* ボーダーアニメーション ここから↓ */
+  .stroke h2 {
+    font-size: 3rem; /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
+    text-align: center;
+    padding: 130px 0;
+    margin-bottom: 50px;
+  }
+
+  .stroke {
+    margin: 0 30px;
+    position: relative;
+  }
+
+  .stroke .border {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+
+  .stroke .border.top_p,
+  .stroke .border.bottom {
+    width: calc(100% - 20px);
+  }
+
+  .stroke .border.top_p {
+    border-top: 3px solid #362ae0;
+    right: 0;
+    top: 0;
+  }
+
+  .stroke .border.bottom {
+    border-bottom: 3px solid #362ae0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .stroke .border.right,
+  .stroke .border.left {
+    height: calc(100% - 20px);
+  }
+  .stroke .border.right {
+    border-right: 3px solid #362ae0;
+    right: 0;
+    top: 0;
+  }
+  .stroke .border.left {
+    border-left: 3px solid #362ae0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .stroke .border {
+    opacity: 1;
+  }
+
+  .stroke .border.top_p,
+  .stroke .border.bottom {
+    animation: stroke-width 1.8s;
+  }
+
+  .stroke.is-animated .border.right,
+  .stroke.is-animated .border.left {
+    animation: stroke-height 1.8s;
+  }
+
+  .time p {
+    font-size: 2.5rem;
+    color: #2eb6b3;
+    text-align: center;
+  }
+
+  .time span {
+    font-family: "遊ゴシック";
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #2eb6b3;
+  } /* ※spanはインライン要素。display:blockが必要; */
+  /* ボーダーアニメーション ここまで↑ */
+
+  /* ラインアニメーション ここから↓ */
+  .line {
+    display: block;
+    position: relative;
+  }
+
+  .line::after {
+    background: linear-gradient(
+      to right,
+      #362ae0 0%,
+      #3b79cc 50%,
+      #42d3ed 100%
+    );
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    transform: translateX(-50%);
+    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+
+  .line_a::after {
+    width: 100%;
+  }
+  /* ラインアニメーション ここまで↑ */
+
+  /* 料金表 */
+  .money h3 {
+    font-size: 3rem;
+    padding: 30px 0;
+  }
+
+  .money_f {
+    font-size: 2.5rem;
+    background: #eeecc2;
+    padding: 100px 50px;
+  }
+
+  .time h3 {
+    font-size: 3rem;
+  }
+
+  .money_f p {
+    font-size: 3rem;
+    font-family: "遊ゴシック";
+  }
+
+  .money_f span {
+    font-family: "遊ゴジック";
+    font-size: 2rem;
+  }
+
+  .table-money {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px #09c2bf solid;
+    border-collapse: collapse;
+    font-family: "明朝";
+  }
+
+  .table-money .money-heder {
+    color: #fff;
+    background-color: rgb(214, 235, 33);
+    border: 1px rgb(214, 235, 33) solid;
+    font-size: 2.5rem;
+  }
+
+  .table-money span {
+    color: #09c2bf;
+  }
+
+  tr,
+  th,
+  td {
+    height: 40px;
+  }
+
+  th {
+    background: #e0ebe7;
+  }
+
+  td {
+    background: #eeecc2;
+  }
+
+  .price {
+    visibility: hidden;
+  }
+
+  .show_up1 {
+    animation: fadeup 2s ease 1 backwards;
+  }
+
+  .table-money td:nth-of-type(3n) {
+    background: #e4f195;
+  }
+
+  .table-money td:nth-of-type(5n) {
+    background-color: #e4f195;
+  }
+
+  .explanation span {
+    display: block;
+    text-align: center;
+    font-family: "遊ゴシック";
+    color: #2eb6b3;
+    padding: 20px 0 0 20px;
+  }
+
+  .table-money .black {
+    color: black;
+  }
+  /* 営業時間 ここまで↑ */
+
+  /* アクセス ここから↓ */
+  .access-image {
+    font-family: "遊ゴシック";
+    display: flex;
+    height: 1800px;
+  }
+
+  .access-image article {
+    background-color: rgb(246, 250, 248);
+    width: 50%;
+    padding: 50px;
+  }
+
+  /* article内のpタグに反応してしまう注意 */
+  .access-image p {
+    font-size: 3rem;
+    text-align: center;
+    border: 1px black solid;
+    margin-bottom: 100px;
+    padding: 10px;
+  }
+
+  .access-image p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* アクセス 周辺画像 */
+  .img-change {
+    width: 100%;
+    height: 30%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+    animation: bgchange 25s ease-out infinite;
+  }
+
+  .access-image iframe {
+    height: 60vh;
+  }
+
+  .car-contents h4 {
+    font-size: 2.5rem;
+    text-align: left;
+    color: #2eb6b3;
+  }
+
+  .car-contents div > p {
+    font-size: 2rem;
+    text-align: left;
+    border: 0;
+    margin: 0;
+  }
+
+  .car-contents span {
+    font-size: 2rem;
+    display: block;
+    width: 80%;
+    background-color: #09c2bf;
+    color: #ffff;
+    padding: 10px 10px;
+    margin: 20px 0;
+  }
+
+  .car-contents ul {
+    text-align: left;
+    padding: 10px 30px 10px;
+    font-size: 2rem;
+  }
+
+  .car-contents .font {
+    text-align: left;
+    font-size: 2rem;
+    padding: 20px;
+    border: 0;
+  }
+  /* アクセス ここまで↑ */
+
+  /* フッター ここから↓ */
+  footer {
+    font-family: "遊ゴシック";
+    background: #432;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 2rem;
+  }
+  /* フッター ここまで↑ */
+
+  /* ===================================================== */
+
+  /* New.html ここから↓ */
+  /* お知らせ一覧 */
+  .h2_f {
+    width: 100%;
+    background-color: #dbe9e4;
+    display: flex;
+    justify-content: center;
+    margin: 130px 0 0 0;
+  }
+  /* New.html ここまで↑ */
+
+  /* Show.html ここから↓ */
+  .show-content h3 {
+    font-size: 3rem;
+  }
+
+  .show-content p {
+    font-size: 2rem;
+  }
+  /* Show.html ここまで↑ */
+
+  /* ===================================================== */
+}
+/* レスポンシブル2 ここまで↑ */
+
+/* レスポンシブル3 ここから↓ */
 /* max-widthは横幅1050pxからの表示 */
 @media (max-width: 1050px) {
   .header-logo {
@@ -2710,11 +3443,11 @@ input[type="submit"] {
   }
   /* Cooking.htmlここまで↑ */
 }
-/* レスポンス2 ここまで↑ */
+/* レスポンス3 ここまで↑ */
 
 /* ===================================================== */
 
-/* レスポンシブ3 スマホ用ここから↓ */
+/* レスポンシブ4 スマホ用ここから↓ */
 /* max-widthは横幅600pxからの表示 */
 @media (max-width: 600px) {
   /* 共通部分 ここから↓ */
@@ -3651,7 +4384,7 @@ input[type="submit"] {
   }
   /* Cooking.htmlここまで↑ */
 }
-/* レスポンシブ3 スマホ用ここまで↑ */
+/* レスポンシブ4 スマホ用ここまで↑ */
 
 /* keyframe ここから↓ */
 /* グラデーションアニメーション */

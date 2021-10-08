@@ -130,6 +130,7 @@
     <div class="border left"></div>
   </div>
   <article id="line_a" class="money_f">
+
     <div class="time wrapper">
       <h3>開館時間</h3>
       <p>11:00～20:00</p>
@@ -161,31 +162,31 @@
       </tr>
       <tr>
         <td colspan="1">平日</td>
-        <td colspan="2">800円</td>
-        <td colspan="2"><span>750円</span></td>
-        <td colspan="2">500円</td>
-        <td colspan="2"><span>350円</span></td>
+        <td class="price" colspan="2"><span class="black">800円</span></td>
+        <td class="price" colspan="2"><span>750円</span></td>
+        <td class="price" colspan="2"><span class="black">500円</span></td>
+        <td class="price" colspan="2"><span>350円</span></td>
       </tr>
       <tr>
         <td colspan="1">土日祝</td>
-        <td colspan="2">1,000円</td>
-        <td colspan="2"><span>900円</span></td>
-        <td colspan="2">500円</td>
-        <td colspan="2"><span>350円</span></td>
+        <td class="price" colspan="2"><span class="black">1,000円</span></td>
+        <td class="price" colspan="2"><span>900円</span></td>
+        <td class="price" colspan="2"><span class="black">500円</span></td>
+        <td class="price" colspan="2"><span>350円</span></td>
       </tr>
       <tr>
         <td colspan="1">特定日</td>
-        <td colspan="2">1,500円</td>
+        <td class="price" colspan="2"><span class="black">1,500円</span></td>
         <td colspan="2">-</td>
-        <td colspan="2">500円</td>
+        <td class="price" colspan="2"><span class="black">500円</span></td>
         <td colspan="2">-</td>
       </tr>
     </table>
 
     <div class="explanation">
-      <p>消費税込み。※小人料金対象は4歳～小学生のお客様。4歳未満無料。</p>
+      <span>消費税込み。※小人料金対象は4歳～小学生のお客様。4歳未満無料。</span>
     </div>
-    <!-- アクセスリンク -->
+
   </article>
   <!-- 営業時間＆料金案内 ここまで↑ -->
 
@@ -365,4 +366,21 @@
     }
   });
   // お食事 ここまで↑ //
+
+  // 営業時間 フェードアップここから↓ //
+  $(function () {
+    $("#line_a").on("mousemove", function () {
+      $(".price").css("visibility", "visible");
+      $(".price span").addClass("show_up1");
+    });
+  });
+
+  // スマホ対応 //
+  $(function () {
+    $("#money_e").on("touchstart", function () {
+      $(".price").css("visibility", "visible");
+      $(".price").addClass("show_up1");
+    });
+  });
+  // 営業時間 フェードアップここまで↑ //
 </script>
