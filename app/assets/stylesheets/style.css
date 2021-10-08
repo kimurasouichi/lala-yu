@@ -230,10 +230,12 @@ h2 {
   font-size: 2rem; /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
   text-align: center;
   margin: 150px 0;
+  font-family: "遊ゴシック";
 }
 
 /* 小さな見出し 開館時間 露店風呂 室内*/
 h3 {
+    font-family: "遊ゴシック";
   width: 100%;
   color: #09c2bf;
   padding-bottom: 20px;
@@ -349,6 +351,7 @@ nav span::after {
 
 /* クリックしたときに表示するメニュー */
 #menu {
+  font-family: "遊ゴシック";
   width: 100%;
   margin-top: 80px; /* メニューの高さ調整 */
   list-style-type: none;
@@ -465,6 +468,7 @@ nav span::after {
 
 /* 温泉由来 ここから↓ */
 .origin_f {
+  font-family: "遊ゴシック";
   visibility: hidden;
   font-size: 1.5rem;
   width: 100%;
@@ -491,6 +495,7 @@ nav span::after {
 
 /* お知らせ ここから↓ */
 .info_f {
+  font-family: "遊ゴシック";
   visibility: hidden;
   font-size: 1.5rem;
   width: 95%;
@@ -543,6 +548,7 @@ nav span::after {
 
 /* お知らせ一覧 ここから↓ */
 .post-info {
+  font-family: "遊ゴシック";
   width: 200px;
   height: 200px;
   text-align: center;
@@ -551,6 +557,7 @@ nav span::after {
 }
 
 .post-date {
+  font-family: "遊ゴシック";
   background: #0bd;
   border-radius: 50%;
   color: #fff;
@@ -596,6 +603,7 @@ nav span::after {
 }
 
 #grid p {
+  font-family: "遊ゴシック";
   text-align: center;
   font-size: 30px;
   color: #fff;
@@ -829,6 +837,7 @@ iframe {
 }
 
 .time span {
+  font-family: "遊ゴシック";
   display: block;
   text-align: center;
   font-size: 1.25rem;
@@ -928,6 +937,7 @@ td {
 
 /* アクセス ここから↓ */
 .access-image {
+  font-family: "遊ゴシック";
   display: flex;
   height: auto;
 }
@@ -1004,6 +1014,7 @@ td {
 
 /* フッター ここから↓ */
 footer {
+  font-family: "遊ゴシック";
   background: #432;
   text-align: center;
   padding: 20px 0;
@@ -1451,6 +1462,7 @@ footer {
 
 /* Contact.html ここから↓ */
 .form-contact {
+  font-family: "遊ゴシック";
   width: 95%;
   background-image: url(../images/img15.jpg);
   background-color: #d6d8d8;
