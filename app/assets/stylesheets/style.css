@@ -586,7 +586,7 @@ nav span::after {
   visibility: hidden;
   display: grid;
   gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 4fr));
+  grid-template-columns: repeat(auto-fit, minmax(430px, 2fr));
   padding: 100px;
   background-image: url(../images/img17.jpg);
   background-color: #2eb6b3;
@@ -1970,7 +1970,7 @@ input[type="submit"] {
 /* レスポンシブル2 ここから↓  */
 /* max-widthは横幅1500pxからの表示 */
 /* ヘッダー ここから↓ */
-@media (min-width: 1500px) {
+@media (min-width: 1700px) {
   h2 {
     font-size: 4rem; /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
     text-align: center;
