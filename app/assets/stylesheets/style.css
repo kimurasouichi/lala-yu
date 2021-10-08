@@ -1299,8 +1299,11 @@ footer {
 /* ================================================================= */
 
 /* Show.html ここから↓ */
-
 /* 露天風呂 ここから↓ */
+.show-content p {
+  text-align: left;
+}
+
 .big_f1 ul {
   display: grid;
   gap: 20px;
@@ -1457,7 +1460,7 @@ footer {
   background-position: center;
   padding: 100px 200px;
   margin-top: 150px;
-  animation: fadeup 1s ease-in-out 3s backwards;
+  animation: fadeup2 2s ease-in-out 1s backwards;
 }
 
 .form-title {
@@ -1586,6 +1589,7 @@ input[type="submit"] {
 }
 
 .cooking-img h3 > p {
+  text-align: left;
   font-size: 1.2rem;
   padding-top: 20px;
 }
@@ -1643,6 +1647,7 @@ input[type="submit"] {
 }
 
 #noren h3 > p {
+  text-align: left;
   font-size: 1.2rem;
   padding-top: 20px;
 }
@@ -1689,6 +1694,7 @@ input[type="submit"] {
 }
 
 #cafe h3 > p {
+  text-align: left;
   font-size: 1.2rem;
   padding-top: 20px;
 }
@@ -1735,6 +1741,7 @@ input[type="submit"] {
 }
 
 #comachi h3 > p {
+  text-align: left;
   font-size: 1.2rem;
   padding-top: 20px;
 }
