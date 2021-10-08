@@ -3545,6 +3545,7 @@ input[type="submit"] {
   }
 
   .cooking-img h3 {
+    text-align: left;
     width: 100%; /* ※変更 */
     font-size: 1.2rem;
     font-family: serif;
@@ -3553,6 +3554,7 @@ input[type="submit"] {
   }
 
   .cooking-img h3 > p {
+    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
@@ -3568,6 +3570,7 @@ input[type="submit"] {
   }
 
   #noren h3 {
+    text-align: left;
     order: 1;
     width: 100%;
     font-size: 1.2rem;
@@ -3577,6 +3580,7 @@ input[type="submit"] {
   }
 
   #noren h3 > p {
+    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
@@ -3627,6 +3631,7 @@ input[type="submit"] {
   }
 
   #comachi h3 {
+    text-align: left;
     order: 0;
     width: 100%;
     font-size: 1.2rem;
@@ -3636,6 +3641,7 @@ input[type="submit"] {
   }
 
   #comachi h3 > p {
+    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
