@@ -3174,6 +3174,7 @@ input[type="submit"] {
 
   /* Naw.html ここから↓ */
   .info-content {
+    font-family: "遊ゴシック";
     padding: 0; /* ※変更 */
     visibility: hidden;
     margin-bottom: 150px; /* ※変更 */
@@ -3210,6 +3211,7 @@ input[type="submit"] {
   }
 
   .info-content_1 {
+    font-family: "遊ゴシック";
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
@@ -3247,6 +3249,7 @@ input[type="submit"] {
   }
 
   .info-content_2 {
+    font-family: "遊ゴシック";
     padding: 0;
     visibility: hidden;
     margin-bottom: 150px;
@@ -3282,6 +3285,7 @@ input[type="submit"] {
   }
 
   .info-content_3 {
+    font-family: "遊ゴシック";
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
@@ -3316,6 +3320,7 @@ input[type="submit"] {
   }
 
   .info-content_4 {
+    font-family: "遊ゴシック";
     padding: 0;
     visibility: hidden;
     margin-bottom: 150px;
@@ -3350,6 +3355,7 @@ input[type="submit"] {
   }
 
   .info-content_5 {
+    font-family: "遊ゴシック";
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
