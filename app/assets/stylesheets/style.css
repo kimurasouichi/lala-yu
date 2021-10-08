@@ -879,6 +879,10 @@ iframe {
   padding: 100px 50px;
 }
 
+.money_f p {
+  font-family: "遊ゴシック";
+}
+
 .table-money {
   text-align: center;
   width: 100%;
@@ -930,6 +934,7 @@ td {
 }
 
 .explanation p {
+  font-family: "遊ゴシック";
   color: #2eb6b3;
   padding: 20px 0 0 20px;
 }
@@ -1552,6 +1557,7 @@ input[type="submit"] {
 }
 
 .switch p {
+  font-family: "遊ゴシック";
   font-size: 1.25rem;
   color: #fff;
   text-align: center;
