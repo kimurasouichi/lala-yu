@@ -15,12 +15,12 @@
 <label for="open-close">
   <nav>
     <input type="checkbox" id="open-close" />
-    <img src="images/menu.png" alt="" id="menu-btn">
+    <img src="images/menu.png" alt="" id="menu-btn" />
     <ul id="menu">
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="new.html">お知らせ</a></li>
-      <li><a href="show.html">施設案内</a></li>
-      <li><a href="cooking.html">お食事</a></li>
+      <li><a href="/">ホーム</a></li>
+      <li><a href="/infos">お知らせ</a></li>
+      <li><a href="/buildings">施設案内</a></li>
+      <li><a href="/cookings">お食事</a></li>
       <li><a href="#section-warp">営業時間</a></li>
       <li><a href="#section-warp">料金案内</a></li>
       <li><a href="#access-warp">アクセス</a></li>
@@ -205,17 +205,17 @@
   "use stript";
 
   // ハンバーメニュー 画像の切り替えここから↓ //
-  const menuBtn = document.getElementById('menu-btn');
+  const menuBtn = document.getElementById("menu-btn");
   let hamburger = true;
   menuBtn.onclick = function () {
     if (hamburger) {
-      menuBtn.src = 'images/close.png';
+      menuBtn.src = "images/close.png";
       hamburger = false;
     } else {
-      menuBtn.src = 'images/menu.png';
+      menuBtn.src = "images/menu.png";
       hamburger = true;
     }
-  }
+  };
   // ハンバーメニュー 画像の切り替えここまで↑ //
 
   // フォーム フェードインここから↓ //
