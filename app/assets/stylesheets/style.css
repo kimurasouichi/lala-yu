@@ -730,7 +730,6 @@ nav span::after {
 /* メルマガ登録 ここまで↑ */
 
 /* sns一覧 ここから↓ */
-
 #merumaga_a {
   background-color: #f9f7f0;
 }
@@ -1966,9 +1965,8 @@ input[type="submit"] {
 
 /* ===================================================== */
 
-/* レスポンシブル2 ここから↓ */
 /* レスポンシブル2 ここから↓  */
-/* max-widthは横幅1500pxからの表示 */
+/* max-widthは横幅1700pxからの表示 */
 /* ヘッダー ここから↓ */
 @media (min-width: 1700px) {
   h2 {
@@ -2101,7 +2099,7 @@ input[type="submit"] {
   .photos img {
     position: absolute;
     width: 100%;
-    top: 580px;
+    top: 550px;
     left: 0;
     right: 0;
     margin: 30px auto;
@@ -2582,13 +2580,13 @@ input[type="submit"] {
   .access-image {
     font-family: "遊ゴシック";
     display: flex;
-    height: 1800px;
+    height: 2300px;
   }
 
   .access-image article {
     background-color: rgb(246, 250, 248);
     width: 50%;
-    padding: 50px;
+    padding: 100px;
   }
 
   /* article内のpタグに反応してしまう注意 */
@@ -2637,13 +2635,13 @@ input[type="submit"] {
     width: 80%;
     background-color: #09c2bf;
     color: #ffff;
-    padding: 10px 10px;
-    margin: 20px 0;
+    padding: 50px 10px;
+    margin: 50px 0;
   }
 
   .car-contents ul {
     text-align: left;
-    padding: 10px 30px 10px;
+    padding: 30px 50px 30px;
     font-size: 2rem;
   }
 
@@ -2687,11 +2685,416 @@ input[type="submit"] {
   .show-content p {
     font-size: 2rem;
   }
+
+  .big_f1 ul img {
+    width: 100%; /* 追加 */
+  }
+
+  .big_f ul img {
+    width: 100%;
+  }
+
+  .big_f ul li {
+    width: 100%;
+  }
+
+  #bigimg_2 {
+    visibility: hidden;
+    width: 75%;
+  }
+
+  .right_img {
+    width: 24%; /* 追加 */
+  }
+
   /* Show.html ここまで↑ */
 
-  /* ===================================================== */
+  /* Cooking.html ここから↓ */
+  /* LaLa麺 */
+  .cooking-img_f {
+    padding: 50px 50px;
+    max-height: 100%;
+    margin-bottom: 50px;
+  }
+
+  .cooking-img {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+
+  .cooking-img h3 {
+    width: 40%;
+    font-size: 3rem;
+    font-family: serif;
+    padding: 80px 0 0 0;
+    color: rgb(185, 95, 95);
+  }
+
+  .cooking-img h3 > p {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  .cooking-img h3 > p:last-child {
+    padding-top: 0;
+  }
+
+  .cooking-img img {
+    width: 60%;
+  }
+
+  .cooking-img ul {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+  }
+
+  .cooking-img ul > li img {
+    width: 100%;
+  }
+
+  .cooking-img ul li {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .cooking-img ul li:last-child {
+    margin-right: 0;
+  }
+
+  /* 居酒屋 LaLaのれん */
+  .cooking-img_f1 {
+    background-image: url(../images/img17.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #efe9c6;
+    background-blend-mode: soft-light; /* 画像の変化に関するプロパティ */
+    padding: 50px 50px;
+    max-height: 70%;
+    margin-bottom: 50px;
+  }
+
+  #noren {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+
+  #noren h3 {
+    width: 40%;
+    font-size: 3rem;
+    font-family: serif;
+    padding: 80px 0 0 50px;
+    color: rgb(185, 95, 95);
+  }
+
+  #noren h3 > p {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  #noren h3 > p:last-child {
+    padding-top: 0;
+  }
+
+  #noren img {
+    width: 60%;
+  }
+
+  #noren ul {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    list-style: none;
+  }
+
+  #noren ul > li img {
+    width: 100%;
+  }
+
+  #noren ul li {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  #noren ul li:last-child {
+    margin-right: 0;
+  }
+
+  /* LaLaカフェ */
+  #cafe {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+
+  #cafe h3 {
+    width: 40%;
+    font-size: 3rem;
+    font-family: serif;
+    padding: 80px 0 0 0;
+    color: rgb(185, 95, 95);
+  }
+
+  #cafe h3 > p {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  #cafe h3 > p:last-child {
+    padding-top: 0;
+  }
+
+  #cafe img {
+    width: 60%;
+  }
+
+  #cafe ul {
+    display: flex;
+    margin-top: 10px;
+    list-style: none;
+  }
+
+  #cafe ul > li img {
+    width: 100%;
+  }
+
+  #cafe ul li {
+    margin-right: 10px;
+  }
+
+  #cafe ul li:last-child {
+    margin-right: 0;
+  }
+
+  /* LaLaカフェ */
+  #cafe {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+
+  #cafe h3 {
+    width: 40%;
+    font-size: 3rem;
+    font-family: serif;
+    padding: 80px 0 0 50px;
+    color: rgb(185, 95, 95);
+  }
+
+  #cafe h3 > p {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  #cafe h3 > p:last-child {
+    padding-top: 0;
+  }
+
+  #cafe img {
+    width: 60%;
+  }
+
+  #cafe ul {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+  }
+
+  #cafe ul > li img {
+    width: 100%;
+  }
+
+  #cafe ul li {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  #cafe ul li:last-child {
+    margin-right: 0;
+  }
+
+  /* 茶店 小町LaLa屋 */
+  #comachi {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+
+  #comachi h3 {
+    width: 40%;
+    font-size: 3rem;
+    font-family: serif;
+    padding: 80px 0 0 50px;
+    color: rgb(185, 95, 95);
+  }
+
+  #comachi h3 > p {
+    text-align: left;
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+
+  #comachi h3 > p:last-child {
+    padding-top: 0;
+  }
+
+  #comachi img {
+    width: 60%;
+  }
+
+  #comachi ul {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+  }
+
+  #comachi ul > li img {
+    width: 100%;
+  }
+
+  #comachi ul li {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  #comachi ul li:last-child {
+    margin-right: 0;
+  }
+  /* cooking.html ここまで↑  */
+
+  /* ====================================================== */
+
+  /* Contact.html ここから↓ */
+  .form-contact {
+    font-family: "遊ゴシック";
+    width: 95%;
+    background-image: url(../images/img15.jpg);
+    background-color: #d6d8d8;
+    background-blend-mode: soft-light;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 300px 500px;
+    margin-top: 150px;
+    animation: fadeup2 2s ease-in-out 1s backwards;
+  }
+
+  .form-title {
+    font-size: 5rem;
+    text-transform: uppercase; /* テキストを大文字表示する方法を指定 */
+    font-weight: normal;
+    margin-bottom: 100px;
+    margin: 0; /* h2のmarginが残っているので注意 */
+  }
+
+  /* 必須 */
+  .required span {
+    color: red;
+    font-size: 2rem;
+  }
+
+  /* inputの行間隔 */
+  form div.required {
+    font-size: 3rem;
+    margin: 200px 0;
+  }
+
+  .required label {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background-color: #eee;
+  }
+
+  textarea {
+    background-color: #eee;
+    width: 100%;
+    max-width: 100%;
+    height: 20rem;
+  }
+
+  input[type="submit"] {
+    border: none;
+    cursor: pointer; /* カーソルの表示変更  */
+    line-height: 1; /* 行の高さ  */
+  }
+
+  .button {
+    font-size: 3rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px; /* 要素の角を丸める */
+    padding: 18px 32px;
+  }
+
+  .button:hover {
+    background: #0090aa;
+  }
+
+  /* スイッチ */
+  .switch {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  /* アニメーションは貼り付ける場所に注意 */
+  .switch div {
+    width: 50%;
+    background-color: rgba(150, 167, 5, 0.7);
+    animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
+  }
+
+  .switch p {
+    font-family: "遊ゴシック";
+    font-size: 1.25rem;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: rgba(4, 23, 107, 0.5);
+  }
+
+  .switch span {
+    display: block;
+    text-align: center;
+    padding: 40px;
+    margin: 0 10px;
+    background-color: rgba(4, 23, 107, 0.5);
+    border-radius: 2px 0 0 20px;
+    background-image: url(../images/icons8-coment.png);
+    background-size: contain; /* 幅に合わしてくれる */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /* スイッチ ここまで↑ */
+
+  /* Contact.html ここまで↑ */
 }
 /* レスポンシブル2 ここまで↑ */
+
+/* ===================================================== */
 
 /* レスポンシブル3 ここから↓ */
 /* max-widthは横幅1050pxからの表示 */
@@ -4278,7 +4681,6 @@ input[type="submit"] {
   }
 
   .cooking-img h3 {
-    text-align: left;
     width: 100%; /* ※変更 */
     font-size: 1.2rem;
     font-family: serif;
@@ -4287,7 +4689,6 @@ input[type="submit"] {
   }
 
   .cooking-img h3 > p {
-    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
@@ -4303,7 +4704,6 @@ input[type="submit"] {
   }
 
   #noren h3 {
-    text-align: left;
     order: 1;
     width: 100%;
     font-size: 1.2rem;
@@ -4313,7 +4713,6 @@ input[type="submit"] {
   }
 
   #noren h3 > p {
-    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
@@ -4364,7 +4763,6 @@ input[type="submit"] {
   }
 
   #comachi h3 {
-    text-align: left;
     order: 0;
     width: 100%;
     font-size: 1.2rem;
@@ -4374,7 +4772,6 @@ input[type="submit"] {
   }
 
   #comachi h3 > p {
-    text-align: left;
     font-size: 1rem;
     padding-top: 20px;
   }
