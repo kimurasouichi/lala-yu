@@ -1379,6 +1379,7 @@ footer {
 
 .show-content p {
   font-size: 1.5rem;
+  font-size: "遊ゴシック";
 }
 
 .big_f {
@@ -4535,6 +4536,7 @@ input[type="submit"] {
 
   .show-content p {
     font-size: 1rem; /* ※変更 */
+    font-family: "遊ゴシック";
   }
 
   .car-contents ul {
