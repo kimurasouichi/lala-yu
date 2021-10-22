@@ -1,1 +1,939 @@
-/* No CSS *//*# sourceMappingURL=lalas.css.map */
+@charset "UTF-8";
+/* ヘッダー ここから↓ */
+header {
+  width: 100%;
+  height: auto;
+  background: rgba(251, 250, 250, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+header ul {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: serif;
+  margin: 0 auto;
+  list-style: none;
+  color: #432;
+}
+
+header ul li {
+  font-size: 1.5rem;
+}
+
+header ul a {
+  color: #432;
+}
+
+header ul a:hover {
+  color: #fff;
+  text-shadow: 1px 1px 1px #140505;
+  display: block;
+  padding: 20px 0;
+  background-color: rgba(163, 225, 218, 0.5);
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  width: 100%;
+  font-family: "Reggae One", cursive;
+  color: rgba(10, 9, 9, 0.877);
+  margin: 10px;
+}
+
+.header-logo i {
+  display: block;
+  padding: 0 30px;
+  color: black;
+}
+
+/* ヘッダー ここまで↑ */
+/* ハンバーガーメニュー ここから↓ */
+label[for="open-close"] {
+  margin-bottom: 0px;
+}
+
+nav {
+  z-index: 30;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 10px;
+}
+
+/* 三本線のデザイン(共通事項) */
+/* ::beforeの部分を疑似要素 */
+nav span,
+nav span::before,
+nav span::after {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+}
+
+/* 2番目の線(位置合わせ) */
+nav span::before {
+  top: 13px;
+  left: 0;
+}
+
+/* 3番目の線(位置合わせ) */
+nav span::after {
+  top: 26px;
+  left: 0;
+}
+
+#open-close {
+  display: none;
+}
+
+/* クリックしたときに表示するメニュー */
+#menu {
+  font-family: "遊ゴシック";
+  width: 100%;
+  margin-top: 80px;
+  list-style-type: none;
+  position: fixed;
+  right: 100%;
+}
+
+#menu li a {
+  font-size: 1.2rem;
+  padding-top: 15px;
+}
+
+#menu a {
+  height: 62px;
+  padding: 28px 10px;
+  display: block;
+  background-color: rgba(65, 62, 62, 0.5);
+  color: #ffff;
+  text-shadow: 1px 4px 4px #140505;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid #eee9e9;
+}
+
+#menu a:hover {
+  color: #9cefec;
+}
+
+/* アニメーションの実施 */
+#open-close:checked ~ #menu {
+  -webkit-transition: all 3s 0s ease;
+  transition: all 3s 0s ease;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+/* ハンバーガーメニュー ここまで↑ */
+/* Bigロゴ ここから↓ */
+.big-log {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  margin: 0 0 1100px 0;
+  background: -webkit-gradient(linear, left top, right top, from(#1b38da), color-stop(50%, #6ec1cf), to(#adcfda));
+  background: linear-gradient(to right, #1b38da 0%, #6ec1cf 50%, #adcfda 100%);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  background-size: 200% 200%;
+  position: absolute;
+  top: -50px;
+  z-index: 100;
+  -webkit-animation: bggradient 25s ease infinite;
+          animation: bggradient 25s ease infinite;
+}
+
+.big-log h1 {
+  font-family: "Reggae One", cursive;
+  color: #fff;
+  text-shadow: 1px 4px 4px #140505;
+}
+
+.big-log i {
+  display: block;
+  width: 100%;
+  font-size: 7.5rem;
+}
+
+.big-log p {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "ヒラギノ明朝";
+  font-size: 25px;
+  text-shadow: 1px 2px 3px #140505;
+  position: relative;
+  top: -30px;
+}
+
+/* Bigロゴ ここまで↑ */
+/* Big画像 フェードイン・フェードアウトここから↓ */
+.photos {
+  position: relative;
+}
+
+.photos img {
+  position: absolute;
+  width: 100%;
+  top: 250px;
+  left: 0;
+  right: 0;
+  margin: 30px auto;
+  -webkit-animation: photo 25s infinite;
+          animation: photo 25s infinite;
+  opacity: 0;
+}
+
+/* nth-of-type(x)番目の要素を指定 */
+.photos img:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.photos img:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.photos img:nth-of-type(3) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+/* Big画像 フェードイン・フェードアウトここまで↑ */
+/* 画像スライダー ここから↓ */
+.slider_f {
+  margin-top: 250px;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* 画像スライダー ここまで↑ */
+/* 温泉由来 ここから↓ */
+.origin_f {
+  font-family: "遊ゴシック";
+  visibility: hidden;
+  font-size: 1.5rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.origin-img {
+  background-image: url(../images/img18.jpg);
+  background-color: #badacf;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.origin-img p {
+  visibility: hidden;
+  font-family: "遊ゴシック";
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+/* 温泉由来 ここまで↑ */
+/* お知らせ ここから↓ */
+.info_f {
+  font-family: "遊ゴシック";
+  visibility: hidden;
+  font-size: 1.5rem;
+  width: 95%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.info-img {
+  visibility: hidden;
+  padding: 100px;
+  background-color: #ffffff;
+  margin-bottom: 100px;
+  padding: 300px 0;
+  background-image: url(../images/img19.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#info dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 1.5rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#info dt {
+  width: 30%;
+  margin-right: 100px;
+  color: #2eb6b3;
+  text-align: center;
+  visibility: hidden;
+}
+
+#info dd {
+  visibility: hidden;
+  text-align: center;
+  width: 50%;
+}
+
+#info dt,
+#info dd {
+  border-bottom: 1px #ddd solid;
+  margin-bottom: 80px;
+}
+
+/* おしらせ ここまで↑ */
+/* お知らせ一覧 ここから↓ */
+.post-info {
+  font-family: "遊ゴシック";
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+
+.post-date {
+  font-family: "遊ゴシック";
+  background: #0bd;
+  border-radius: 50%;
+  color: #fff;
+  width: 200px;
+  height: 200px;
+  font-size: 2rem;
+  padding-top: 50px;
+}
+
+.post-date:hover {
+  background: #2eb6b3;
+}
+
+.post-date span {
+  font-size: 1.7rem;
+  border-top: 1px rgba(255, 255, 255, 0.5) solid;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* お知らせ一覧 ここまで↑ */
+/* 施設案内 ここから↓ */
+#grid {
+  visibility: hidden;
+  display: -ms-grid;
+  display: grid;
+  gap: 50px;
+  -ms-grid-columns: (minmax(430px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(430px, 2fr));
+  padding: 100px;
+  background-image: url(../images/img17.jpg);
+  background-color: #2eb6b3;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 200px;
+}
+
+#grid p {
+  font-family: "遊ゴシック";
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+#grid p:hover {
+  color: #e9e9e9;
+}
+
+#grid img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.item::before {
+  background-color: #f7f7f6;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.item.kiran {
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.item.kiran::before {
+  -webkit-animation: kiran 0.5s 1s;
+          animation: kiran 0.5s 1s;
+}
+
+@-webkit-keyframes kiran {
+  0% {
+    -webkit-transform: scale(2) rotate(45deg);
+            transform: scale(2) rotate(45deg);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(20) rotate(45deg);
+            transform: scale(20) rotate(45deg);
+    opacity: 0.6;
+  }
+  40% {
+    -webkit-transform: scale(30) rotate(45deg);
+            transform: scale(30) rotate(45deg);
+    opacity: 0.4;
+  }
+  80% {
+    -webkit-transform: scale(45) rotate(45deg);
+            transform: scale(45) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+            transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes kiran {
+  0% {
+    -webkit-transform: scale(2) rotate(45deg);
+            transform: scale(2) rotate(45deg);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(20) rotate(45deg);
+            transform: scale(20) rotate(45deg);
+    opacity: 0.6;
+  }
+  40% {
+    -webkit-transform: scale(30) rotate(45deg);
+            transform: scale(30) rotate(45deg);
+    opacity: 0.4;
+  }
+  80% {
+    -webkit-transform: scale(45) rotate(45deg);
+            transform: scale(45) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+            transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* 施設案内 ここまで↑ */
+/* メルマガ登録 ここから↓ */
+.sns-favicon {
+  margin: 0 auto;
+  padding: 80px 400px;
+  background-image: url(../images/img20.jpg);
+  background-position: center;
+  background-size: cover;
+  font-size: 1.25rem;
+  width: 95%;
+}
+
+.sns-favicon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30px;
+}
+
+.sns-favicon p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffff;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#362ae0), color-stop(50%, #3b79cc), to(#42d3ed));
+  background: linear-gradient(to right, #362ae0 0%, #3b79cc 50%, #42d3ed 100%);
+  opacity: 0;
+  -webkit-animation: kurukuru 1.4s ease-out;
+          animation: kurukuru 1.4s ease-out;
+  /* くるくるアニメーション */
+  opacity: 1;
+}
+
+.sns-favicon p:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#362ae0), color-stop(0%, #3b79cc), to(#42d3ed));
+  background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
+}
+
+.sns-favicon span {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.favicon1 {
+  background-image: url("../images/favicon4.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: poyopoyo 2s ease-out 3s infinite;
+          animation: poyopoyo 2s ease-out 3s infinite;
+  opacity: 1;
+}
+
+.favicon2 {
+  background-image: url("../images/favicon5.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: poyopoyo 2s ease-out 3s infinite;
+          animation: poyopoyo 2s ease-out 3s infinite;
+  opacity: 1;
+}
+
+.favicon3 {
+  background-image: url("../images/favicon6.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: poyopoyo 2s ease-out 3s infinite;
+          animation: poyopoyo 2s ease-out 3s infinite;
+  opacity: 1;
+}
+
+/* メルマガ登録 ここまで↑ */
+/* sns一覧 ここから↓ */
+#merumaga_a {
+  background-color: #f9f7f0;
+}
+
+.sns {
+  width: 100%;
+  max-width: 65%;
+  margin: 0 auto;
+  background: #faf7f0;
+}
+
+.sub-title {
+  width: 50%;
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #0bd solid;
+  font-weight: normal;
+}
+
+.sns .sub-title {
+  margin: 50px 50px;
+}
+
+.sns-box {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 315px;
+  /* height: auto; */
+}
+
+/* sns一覧 ここまで↑ */
+/* 営業時間 ここから↓ */
+.stroke h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 130px 0;
+  margin-bottom: 50px;
+}
+
+.stroke {
+  margin: 0 30px;
+  position: relative;
+}
+
+.stroke .border {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.stroke .border.top_p,
+.stroke .bottom {
+  width: calc(100% - 20px);
+}
+
+.stroke .border.top_p {
+  border-top: 3px solid #362ae0;
+  right: 0;
+  top: 0;
+}
+
+.stroke .border.bottom {
+  border-bottom: 3px solid #362ae0;
+  left: 0;
+  bottom: 0;
+}
+
+.stroke .border.right,
+.stroke .left {
+  height: calc(100% - 20px);
+}
+
+.stroke .border.right {
+  border-right: 3px solid #362ae0;
+  right: 0;
+  top: 0;
+}
+
+.stroke .border.left {
+  border-left: 3px solid #362ae0;
+  left: 0;
+  bottom: 0;
+}
+
+.stroke .border {
+  opacity: 1;
+}
+
+.stroke .border.top_p,
+.stroke .border.bottom {
+  -webkit-animation: stroke-width 1.8s;
+          animation: stroke-width 1.8s;
+}
+
+.stroke.is-animated .border.right,
+.stroke.is-animated .border.left {
+  -webkit-animation: stroke-height 1.8s;
+          animation: stroke-height 1.8s;
+}
+
+.time p {
+  font-size: 2.5rem;
+  color: #2eb6b3;
+  text-align: center;
+}
+
+.time span {
+  font-family: "遊ゴシック";
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #2eb6b3;
+}
+
+/* ラインアニメーション ここから↓ */
+.line {
+  display: block;
+  position: relative;
+}
+
+.line::after {
+  background: -webkit-gradient(linear, left top, right top, from(#362ae0), color-stop(50%, #3b79cc), to(#42d3ed));
+  background: linear-gradient(to right, #362ae0 0%, #3b79cc 50%, #42d3ed 100%);
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.line_a::after {
+  width: 100%;
+}
+
+/* ラインアニメーション ここまで↑ */
+/* 料金表 */
+.money h3 {
+  padding: 30px 0;
+}
+
+.money_f {
+  background: #eeecc2;
+  padding: 100px 50px;
+}
+
+.money_f p {
+  font-family: "遊ゴシック";
+}
+
+.table-money .money-heder {
+  color: #fff;
+  background-color: #d6eb21;
+  border: 1px #d6eb21 solid;
+  font-size: 1.2rem;
+}
+
+.table-money {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px #09c2bf solid;
+  border-collapse: collapse;
+  font-family: "明朝";
+}
+
+.table-money span {
+  color: #09c2bf;
+}
+
+.table-money .black {
+  color: black;
+}
+
+tr,
+th,
+td {
+  height: 40px;
+}
+
+th {
+  background: #e0ebe7;
+}
+
+td {
+  background: #eeecc2;
+}
+
+.price {
+  visibility: hidden;
+}
+
+.show_up1 {
+  -webkit-animation: fadeup 2s ease 1 backwards;
+          animation: fadeup 2s ease 1 backwards;
+}
+
+.table-money td:nth-of-type(3n) {
+  background: #e4f195;
+}
+
+.table-money td:nth-of-type(5n) {
+  background-color: #e4f195;
+}
+
+.explanation span {
+  display: block;
+  text-align: center;
+  font-family: "遊ゴシック";
+  color: #2eb6b3;
+  padding: 20px 0 0 20px;
+}
+
+/* 営業時間 ここまで↑ */
+/* アクセス ここから↓ */
+.access-image {
+  font-family: "遊ゴシック";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+.access-image article {
+  background-color: #f6faf8;
+  width: 50%;
+  padding: 50px;
+}
+
+/* article内のpタグに反応してしまう注意 */
+.access-image p {
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px black solid;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+
+.access-image p:last-child {
+  margin-bottom: 0;
+}
+
+/* アクセス 周辺画像 */
+.img-change {
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5px;
+  -webkit-animation: bgchange 25s ease-out infinite;
+          animation: bgchange 25s ease-out infinite;
+}
+
+.img-change iframe {
+  height: 55vh;
+}
+
+.car-contents h4 {
+  font-size: 1.5rem;
+  text-align: left;
+  color: #2eb6b3;
+}
+
+.car-contents div > p {
+  font-size: 1.3rem;
+  text-align: left;
+  border: 0;
+  margin: 0;
+}
+
+.car-contents span {
+  font-size: 1.3rem;
+  display: block;
+  width: 80%;
+  background-color: #09c2bf;
+  color: #ffff;
+  padding: 10px 10px;
+  margin: 20px 0;
+}
+
+.car-contents ul {
+  text-align: left;
+  padding: 10px 30px 10px;
+  font-size: 1.3rem;
+}
+
+.car-contents .font {
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 20px;
+  border: 0;
+}
+
+/* アクセス ここまで↑ */
+/* フッター ここから↓ */
+footer {
+  font-family: "遊ゴシック";
+  background: #432;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* フッター ここまで↑ */
+/* トップ移動 ここから↓ */
+/* ふわふわアニメーション */
+@-webkit-keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-7deg);
+            transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    -webkit-transform: translate(0, -7px) rotate(0deg);
+            transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(7deg);
+            transform: translate(0, 0) rotate(7deg);
+  }
+}
+@keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-7deg);
+            transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    -webkit-transform: translate(0, -7px) rotate(0deg);
+            transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(7deg);
+            transform: translate(0, 0) rotate(7deg);
+  }
+}
+
+/* フェードインアニメーション */
+@-webkit-keyframes fadeIn {
+  /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+  0% {
+    opacity: 0;
+  }
+  /* 始め */
+  100% {
+    opacity: 1;
+  }
+  /* 終わり */
+}
+@keyframes fadeIn {
+  /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+  0% {
+    opacity: 0;
+  }
+  /* 始め */
+  100% {
+    opacity: 1;
+  }
+  /* 終わり */
+}
+
+.top {
+  position: fixed;
+  right: 10px;
+  bottom: 80px;
+}
+
+.top a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url(../images/icon3.png);
+  background-size: cover;
+}
+
+.top span {
+  display: block;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* トップ移動 ここまで↑ */
+/*# sourceMappingURL=lalas.css.map */
