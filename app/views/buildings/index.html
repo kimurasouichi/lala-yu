@@ -44,7 +44,7 @@
 
       <ul>
         <li class="box">
-          <img id="bigimg" />
+          <img id="bigimg" class="hidden" />
         </li>
         <li>
           <div class="zoomOut none_e1 hidden">
@@ -372,6 +372,7 @@
       $(".none_e").addClass("show_s");
       $(".none_e1").removeClass("hidden");
       $(".none_e1").addClass("show_s2");
+      $("#bigimg").removeClass("hidden");
     }
   });
 
