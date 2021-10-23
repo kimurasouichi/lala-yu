@@ -1,3 +1,172 @@
-// Place all the styles related to the buildings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_global";
+
+/* 露天風呂 ここから↓ */
+.show-content {
+  h3 {
+    padding-top: 150px;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "遊ゴシック";
+  }
+}
+
+.big_f1 ul {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px)); // fr設定を消すとレスポンシブルが上手くいく */
+  list-style: none;
+
+  .box {
+    grid-column: 2/5;
+    grid-row: 2/5;
+
+    #bigimg {
+      background-position: center;
+      background-size: cover;
+      animation: zoomIn 1s 4s backwards,
+        bgchange_1 20s 1s infinite backwards;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* 露天風呂 ここまで↑ */
+
+/* 室内風呂 ここから↓ */
+.big_f {
+  background-color: color(sub);
+
+  .thumb-img_f1 {
+    display: flex;
+
+    #bigimg_2 {
+      visibility: hidden;
+      width: 75%;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.show_zf {
+  animation: zoomIn 1s 5s backwards, fadeInOut 10s infinite backwards;
+}
+
+.thumb-img_f2 ul {
+  visibility: hidden;
+  display: flex;
+  list-style: none;
+
+  li {
+    margin: 20px 20px 0 0;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+/* 室内風呂 ここまで↑ */
+
+// 画像クリックイベント ここから↓ //
+.zoomOut {
+  a {
+    .mask {
+      display: block;
+      line-height: 0; // 行の高さを0にする
+      overflow: hidden; // 拡大してはみ出る要素を隠す
+    }
+
+    img {
+      transform: scale(1);
+      transition: 0.3s ease-in-out; // 移り変わる速さを変更したい場合はこの数値を変更
+    }
+
+    &:hover img {
+      transform: scale(0.9); // 拡大の値を変更したい場合はこの数値を変更
+    }
+  }
+}
+
+// 画像クリックイベント ここまで↑ //
+
+/* 温泉 露天風呂 keyframes */
+@keyframes bgchange_1 {
+  0% {
+    background-image: url(../images/img1.png);
+  }
+
+  /*変化させたい画像*/
+  25% {
+    background-image: url(../images/img2.png);
+  }
+
+  /*変化させたい画像*/
+  50% {
+    background-image: url(../images/img3.png);
+  }
+
+  /*変化させたい画像*/
+  75% {
+    background-image: url(../images/img4.png);
+  }
+
+  /*変化させたい画像*/
+  90% {
+    background-image: url(../images/img5.png);
+  }
+
+  /*変化させたい画像*/
+  100% {
+    background-image: url(../images/img6.png);
+  }
+}
+
+/* 温泉 露天風呂 */
+@keyframes bgchange_1 {
+  0% {
+    background-image: url(../images/img1.png);
+  }
+
+  /*変化させたい画像*/
+  25% {
+    background-image: url(../images/img2.png);
+  }
+
+  /*変化させたい画像*/
+  50% {
+    background-image: url(../images/img3.png);
+  }
+
+  /*変化させたい画像*/
+  75% {
+    background-image: url(../images/img4.png);
+  }
+
+  /*変化させたい画像*/
+  90% {
+    background-image: url(../images/img5.png);
+  }
+
+  /*変化させたい画像*/
+  100% {
+    background-image: url(../images/img6.png);
+  }
+}
