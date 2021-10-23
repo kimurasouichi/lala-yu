@@ -1,3 +1,205 @@
-// Place all the styles related to the infos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ＠mixin left-content ここから↓ //
+@mixin left-content {
+  padding: 150px 0;
+  visibility: hidden;
+  margin-bottom: 350px;
+}
+
+@mixin left-image($animation) {
+  width: 80%;
+  position: absolute;
+  animation: $animation;
+}
+
+@mixin left-div($animation) {
+  margin: 0 auto;
+  padding: 50px 50px;
+  position: relative;
+  top: 350px;
+  left: 150px;
+  width: 70%;
+  height: auto;
+  background: rgba(251, 250, 250, 0.8);
+  animation: $animation;
+}
+
+@mixin left-h4($animation) {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  animation: $animation;
+}
+
+@mixin left-p($animation) {
+  font-size: 1.2rem;
+  padding: 5px 0;
+  animation: $animation;
+}
+
+// @mixin left-content ここまで↑ //
+
+// mixin right-content ここから↓ //
+@mixin right-content {
+  padding: 150px 0;
+  visibility: visible;
+  margin-bottom: 550px;
+}
+
+@mixin right-image($animation) {
+  margin-left: 200px;
+  width: 100%;
+  position: absolute;
+  animation: $animation;
+}
+
+@mixin right-div($animation) {
+  margin: 0 auto;
+  padding: 50px 50px;
+  position: relative;
+  top: 500px;
+  right: 150px;
+  width: 70%;
+  height: auto;
+  background: rgba(251, 250, 250, 0.8);
+  animation: $animation;
+}
+
+@mixin right-h4($animation) {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  animation: $animation;
+}
+
+@mixin right-p($animation) {
+  font-size: 1.2rem;
+  padding: 20px 0;
+  animation: $animation;
+}
+
+// @mixin right-content ここまで↑ //
+
+/* お知らせ一覧 */
+/* 左 */
+.info-content {
+  @include left-content;
+
+  img {
+    @include left-image(slide-skew1 1s);
+  }
+
+  div {
+    @include left-div(slide-skew 1s);
+  }
+
+  h4 {
+    @include left-h4(slideIn-left 1s 1 2s backwards);
+  }
+
+  p {
+    @include left-p(fadeup 1s 1 3s backwards);
+  }
+}
+
+/* 右 */
+.info-content_1 {
+  @include right-content;
+
+  img {
+    @include right-image(slide-skew2 1s 1s backwards)
+  }
+
+  div {
+    @include right-div(slide-skew3 1s 1s backwards)
+  }
+
+  h4 {
+    @include right-h4(slideIn-right 1s 3s backwards)
+  }
+
+  p {
+    @include right-p(fadeup 1s 4s backwards)
+  }
+}
+
+/* 左 */
+.info-content_2 {
+  @include left-content;
+
+  img {
+    @include left-image(slide-skew1 1s 1s backwards)
+  }
+
+  div {
+    @include left-div(slide-skew 1s 1s backwards)
+  }
+
+  h4 {
+    @include left-h4(slideIn-left 1s 3s backwards)
+  }
+
+  p {
+    @include left-p(fadeup 1s 1 4s backwards)
+  }
+}
+
+/* 右 */
+.info-content_3 {
+  @include right-content;
+
+  img {
+    @include right-image(slide-skew2 1s 3s backwards)
+  }
+
+  div {
+    @include right-div(slide-skew3 1s 3s backward)
+  }
+
+  h4 {
+    @include right-h4(slideIn-right 1s 4s backwards)
+  }
+
+  p {
+    @include right-p(fadeup 1s 1 5s backwards)
+  }
+}
+
+/* 左 */
+.info-content_4 {
+  @include left-content;
+
+  img {
+    @include left-image(slide-skew1 1s 6s backwards)
+  }
+
+  div {
+    @include left-div(slide-skew 1s 6s backwards)
+  }
+
+  h4 {
+    @include left-h4(slideIn-left 1s 7s backwards)
+  }
+
+  p {
+    @include left-p(fadeup 1s 8s backwards)
+  }
+}
+
+/* 右 */
+.info-content_5 {
+  @include right-content;
+
+  img {
+    @include right-image(slide-skew2 1s 10s backwards)
+  }
+
+  div {
+    @include right-div(slide-skew3 1s 10s backwards)
+  }
+
+  h4 {
+    @include right-h4(slideIn-right 1s 11s backwards)
+  }
+
+  p {
+    @include right-p(fadeup 1s 12s backwards)
+  }
+}
