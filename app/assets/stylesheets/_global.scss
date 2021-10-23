@@ -1,0 +1,83 @@
+// 共通部分 ここから↓ //
+$fonts: (main: "遊ゴシック", // key
+  sub1: "Reggae One,cursive",
+  sub2: serif,
+  sub3: "ヒラギノ明朝"
+);
+
+@function fonts($family) {
+  @return #{map-get($map: $fonts, $key: $family)}
+}
+
+;
+
+$main-color: #2eb6b3;
+$sub-color: #fff;
+$sub-color2: #432;
+
+$colors: (main: #2eb6b3,
+  sub: #fff);
+
+@function color($color) {
+  @return #{map-get($colors, $color)}
+}
+
+;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "明朝", "Yu Gothic Medium", "遊ゴシック Medium", YuGothic,
+    "遊ゴシック", "ヒラギノ角ゴ Pro W3", "ヒラギノ明朝 Pro W3", "Reggae One",
+    cursive, sans-serif;
+  line-height: 1.7;
+  color: $sub-color2;
+  background-color: #eeeeee;
+  animation: fadeIn 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1.5s ease 0s 1 normal; // ベンダープレフィックス
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%; // 親要素からはみ出すことを防ぐ
+}
+
+section {
+  width: 95%; // 横幅を親要素の9割で指定
+  margin: 15px auto; // ボックスの中央寄せ
+}
+
+article {
+  width: 95%;
+  margin: 15px auto;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/* 見出し 温泉由来 お知らせ アクセス */
+h2 {
+  font-size: 2rem; // pxは絶対値。remは相対値でレイアウトに応じて変化
+  text-align: center;
+  margin: 150px 0;
+  font-family: fonts(main);
+}
+
+/* 小さな見出し 開館時間 露店風呂 室内*/
+h3 {
+  font-family: fonts(main);
+  width: 100%;
+  color: $main-color;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* 共通部分 ここまで↑ */
