@@ -71,6 +71,14 @@ h2 {
   font-family: fonts(main);
 }
 
+.h2_f {
+  width: 100%;
+  background-color: #dbe9e4;
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 0 0;
+}
+
 /* 小さな見出し 開館時間 露店風呂 室内*/
 h3 {
   font-family: fonts(main);
