@@ -1005,4 +1005,123 @@ footer {
 }
 
 /* トップ移動 ここまで↑ */
+.form-contact {
+  width: 95%;
+  margin: 0 auto;
+  font-family: "遊ゴシック";
+  background-image: url(../images/img15.jpg);
+  background-color: #d6d8d8;
+  background-blend-mode: soft-light;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 200px;
+  margin-top: 150px;
+  -webkit-animation: fadeup2 2s ease-in-out 1s backwards;
+          animation: fadeup2 2s ease-in-out 1s backwards;
+}
+
+.form-contact .form-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 100px;
+  margin: 0;
+}
+
+.form-contact .required {
+  font-size: 1.5rem;
+  margin: 100px 0;
+}
+
+.form-contact .required span {
+  color: red;
+  font-size: 0.7rem;
+}
+
+.form-contact .required label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-contact .required input[type="text"],
+.form-contact .required input[type="email"] {
+  width: 100%;
+  max-width: 50%;
+  margin: 0;
+  background-color: #eee;
+}
+
+.form-contact .required textarea {
+  background-color: #eee;
+  width: 100%;
+  max-width: 100%;
+  height: 6rem;
+}
+
+.form-contact .required input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.form-contact .button {
+  font-size: 1.375rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.form-contact .button:hover {
+  background: #0090aa;
+}
+
+/* スイッチ */
+.switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  /* アニメーションは貼り付ける場所に注意 */
+}
+
+.switch div {
+  width: 50%;
+  background-color: rgba(150, 167, 5, 0.7);
+  -webkit-animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
+          animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
+}
+
+.switch p {
+  font-family: "遊ゴシック";
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px;
+  background-color: rgba(4, 23, 107, 0.5);
+}
+
+.switch span {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  margin: 0 10px;
+  background-color: rgba(4, 23, 107, 0.5);
+  border-radius: 2px 0 0 20px;
+  background-image: url(../images/icons8-coment.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* スイッチ ここまで↑ */
 /*# sourceMappingURL=lalas.css.map */
