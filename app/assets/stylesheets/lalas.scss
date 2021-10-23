@@ -1,3 +1,5 @@
+@import "_global";
+
 /* ヘッダー ここから↓ */
 header {
   width: 100%;
@@ -14,7 +16,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: serif;
+    font-family: fonts(sub2);
     margin: 0 auto;
     list-style: none;
     color: #432;
@@ -28,7 +30,7 @@ header {
       color: #432;
 
       &:hover {
-        color: #fff;
+        color: color(sub);
         text-shadow: 1px 1px 1px #140505;
         display: block; // aタグはインライン注意
         padding: 20px 0; // blockに変更すればpaddingが効く
@@ -42,7 +44,7 @@ header {
   display: flex;
   font-size: 3rem;
   width: 100%;
-  font-family: "Reggae One", cursive; // Google フォント
+  font-family: fonts(sub1); // Google フォント
   color: rgba(10, 9, 9, 0.877);
   margin: 10px;
 
@@ -52,6 +54,7 @@ header {
     color: black;
   }
 }
+
 /* ヘッダー ここまで↑ */
 
 /* ハンバーガーメニュー ここから↓ */
@@ -97,12 +100,13 @@ nav span::after {
 }
 
 #open-close {
-  display: none; // ブラウザから見えなくする
+  display: none;
+  /* ブラウザから見えなくする */
 }
 
 /* クリックしたときに表示するメニュー */
 #menu {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   width: 100%;
   margin-top: 80px; // メニューの高さ調整
   list-style-type: none;
@@ -119,7 +123,7 @@ nav span::after {
     padding: 28px 10px;
     display: block;
     background-color: rgba(65, 62, 62, 0.5);
-    color: #ffff;
+    color: color(sub);
     text-shadow: 1px 4px 4px #140505; // テキストシャドウ
     text-align: center;
     text-decoration: none;
@@ -136,6 +140,7 @@ nav span::after {
   transition: all 3s 0s ease; // クリックしたときのアニメーション
   transform: translate(100%); // クリックしたときの戻り値
 }
+
 /* ハンバーガーメニュー ここまで↑ */
 
 /* Bigロゴ ここから↓ */
@@ -153,8 +158,8 @@ nav span::after {
   animation: bggradient 25s ease infinite;
 
   h1 {
-    font-family: "Reggae One", cursive; // Google font
-    color: #fff;
+    font-family: fonts(sub1); // Google font
+    color: color(sub);
     text-shadow: 1px 4px 4px #140505; // テキストシャドウ
   }
 
@@ -168,14 +173,15 @@ nav span::after {
     width: 80%;
     text-align: center;
     margin: 0 auto;
-    color: #fff;
-    font-family: "ヒラギノ明朝";
+    color: color(sub);
+    font-family: fonts(sub2);
     font-size: 25px;
     text-shadow: 1px 2px 3px #140505;
     position: relative;
     top: -30px;
   }
 }
+
 /* Bigロゴ ここまで↑ */
 
 /* Big画像 フェードイン・フェードアウトここから↓ */
@@ -218,11 +224,12 @@ nav span::after {
   width: 100%; // スライダー内の画像を横幅100%に
   height: auto;
 }
+
 /* 画像スライダー ここまで↑ */
 
 /* 温泉由来 ここから↓ */
 .origin_f {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   visibility: hidden;
   font-size: 1.5rem;
   width: 100%;
@@ -232,7 +239,8 @@ nav span::after {
 .origin-img {
   background-image: url(../images/img18.jpg);
   background-color: #badacf;
-  background-blend-mode: soft-light; // 画像の変化に関するプロパティ
+  background-blend-mode: soft-light;
+  /* 画像の変化に関するプロパティ */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -240,27 +248,28 @@ nav span::after {
 
   p {
     visibility: hidden;
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     max-width: 90%;
     margin: 20px auto;
   }
 }
+
 /* 温泉由来 ここまで↑ */
 
 /* お知らせ ここから↓ */
 .info_f {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   visibility: hidden;
   font-size: 1.5rem;
   width: 95%;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: color(sub);
 }
 
 .info-img {
   visibility: hidden;
   padding: 100px;
-  background-color: #ffffff;
+  background-color: color(sub);
   margin-bottom: 100px;
   padding: 300px 0;
   background-image: url(../images/img19.png);
@@ -282,7 +291,7 @@ nav span::after {
 #info dt {
   width: 30%;
   margin-right: 100px;
-  color: #2eb6b3;
+  color: color(main);
   text-align: center;
   visibility: hidden;
 }
@@ -303,7 +312,7 @@ nav span::after {
 
 /* お知らせ一覧 ここから↓ */
 .post-info {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   width: 200px;
   height: 200px;
   text-align: center;
@@ -312,17 +321,17 @@ nav span::after {
 }
 
 .post-date {
-  font-family: "遊ゴシック";
-  background: #0bd;
+  font-family: fonts(main);
+  background-color: $main-color;
   border-radius: 50%;
-  color: #fff;
+  color: color(sub);
   width: 200px;
   height: 200px;
   font-size: 2rem;
   padding-top: 50px; // margin-left: -30px;
 
   &:hover {
-    background: #2eb6b3;
+    background-color: darken($color: $main-color, $amount: 10%);
   }
 }
 
@@ -333,6 +342,7 @@ nav span::after {
   width: 60%;
   margin: 0 auto;
 }
+
 /* お知らせ一覧 ここまで↑ */
 
 /* 施設案内 ここから↓ */
@@ -343,20 +353,20 @@ nav span::after {
   grid-template-columns: repeat(auto-fit, minmax(430px, 2fr));
   padding: 100px;
   background-image: url(../images/img17.jpg);
-  background-color: #2eb6b3;
   background-blend-mode: multiply;
+  background-color: color(main);
   background-size: cover;
   background-position: center;
   margin-bottom: 200px;
 
   p {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     text-align: center;
     font-size: 30px;
-    color: #fff;
+    color: $sub-color;
 
     &:hover {
-      color: rgb(233, 233, 233);
+      color: darken($color: $sub-color, $amount: 10%);
     }
   }
 
@@ -417,6 +427,7 @@ nav span::after {
     opacity: 0;
   }
 }
+
 /* 施設案内 ここまで↑ */
 
 /* メルマガ登録 ここから↓ */
@@ -439,7 +450,7 @@ nav span::after {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 20px;
-    color: #ffff;
+    color: color(sub);
     border-radius: 5px;
     background: linear-gradient(to right, #362ae0 0%, #3b79cc 50%, #42d3ed 100%);
     opacity: 0;
@@ -451,6 +462,7 @@ nav span::after {
       background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
     }
   }
+
   span {
     display: block;
     width: 50px;
@@ -466,15 +478,19 @@ nav span::after {
   opacity: 1;
 
 }
+
 .favicon1 {
   @include favicon(4)
 }
+
 .favicon2 {
   @include favicon(5)
 }
+
 .favicon3 {
   @include favicon(6)
 }
+
 /* メルマガ登録 ここまで↑ */
 
 /* sns一覧 ここから↓ */
@@ -583,17 +599,17 @@ iframe {
 .time {
   p {
     font-size: 2.5rem;
-    color: #2eb6b3;
+    color: color(main);
     text-align: center;
   }
 
   span {
     // ※spanはインライン要素。display:blockが必要
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     display: block;
     text-align: center;
     font-size: 1.25rem;
-    color: #2eb6b3;
+    color: color(main);
   }
 }
 
@@ -632,12 +648,12 @@ iframe {
   padding: 100px 50px;
 
   p {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
   }
 }
 
 @mixin money {
-  color: #fff;
+  color: color(sub);
   background-color: rgb(214, 235, 33);
   border: 1px rgb(214, 235, 33) solid;
   font-size: 1.2rem;
@@ -653,7 +669,7 @@ iframe {
   margin: 0 auto;
   border: 1px #09c2bf solid;
   border-collapse: collapse;
-  font-family: "明朝";
+  font-family: fonts(sub3);
 
   span {
     color: #09c2bf;
@@ -697,8 +713,8 @@ td {
 .explanation span {
   display: block;
   text-align: center;
-  font-family: "遊ゴシック";
-  color: #2eb6b3;
+  font-family: fonts(main);
+  color: color(main);
   padding: 20px 0 0 20px;
 }
 
@@ -706,7 +722,7 @@ td {
 
 /* アクセス ここから↓ */
 .access-image {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   display: flex;
   height: auto;
 }
@@ -748,7 +764,7 @@ td {
   h4 {
     font-size: 1.5rem;
     text-align: left;
-    color: #2eb6b3;
+    color: color(main);
   }
 
   div>p {
@@ -763,7 +779,7 @@ td {
     display: block;
     width: 80%;
     background-color: #09c2bf;
-    color: #ffff;
+    color: color(sub);
     padding: 10px 10px;
     margin: 20px 0;
   }
@@ -786,11 +802,11 @@ td {
 
 /* フッター ここから↓ */
 footer {
-  font-family: "遊ゴシック";
+  font-family: fonts(main);
   background: #432;
   text-align: center;
   padding: 20px 0;
-  color: #fff;
+  color: color(sub);
   font-size: 1.5rem;
 }
 
@@ -847,4 +863,5 @@ footer {
     text-align: center;
   }
 }
+
 /* トップ移動 ここまで↑ */
