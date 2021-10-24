@@ -192,8 +192,8 @@
 /* jQuery アニメーションここまで↑ */
 
 /* 共通部分 ここまで↑ */
-
 /* レスポンシブル1 ここから↓ */
+
 /* min-widthは横幅1050pxまでの表示(ハンバーガーメニュー専用。
    display:noneを使用し1050pxまでは非表示にする) */
 @media (min-width: 1050px) {
@@ -230,11 +230,10 @@
   }
 }
 
-/* ===================================================== */
+/* レスポンシブル1 ここまで↑ */
+/* レスポンシブル2 ここから↓ */
 
-/* レスポンシブル2 ここから↓  */
 /* min-widthは横幅1700pxまでの表示 */
-/* ヘッダー ここから↓ */
 @media (min-width: 1700px) {
 
   /* 共通部分 ここから↓*/
@@ -256,6 +255,7 @@
   }
 
   /* 共通部分 ここまで↑ */
+  /* ヘッダー ここから↓ */
 
   header {
     width: 100%;
@@ -310,8 +310,8 @@
   }
 
   /* ヘッダー ここまで↑ */
-
   /* Bigロゴ ここから↓ */
+
   .big-log {
     text-align: center;
     margin: 0 auto;
@@ -355,8 +355,8 @@
   }
 
   /* Bigロゴ ここまで↑ */
-
   /* Big画像 フェードイン・フェードアウトここから↓ */
+
   .photos {
     position: relative;
 
@@ -385,8 +385,8 @@
   }
 
   /* Big画像 フェードイン・フェードアウトここまで↑ */
-
   /* 温泉由来 ここから↓ */
+
   .origin_f {
     font-family: fonts(main);
     visibility: hidden;
@@ -413,8 +413,8 @@
   }
 
   /* 温泉由来 ここまで↑ */
-
   /* お知らせ ここから↓ */
+
   .info_f {
     font-family: fonts(main);
     visibility: hidden;
@@ -468,8 +468,8 @@
   }
 
   /* おしらせ ここまで↑ */
-
   /* お知らせ一覧 ここから↓ */
+
   .post-info {
     font-family: fonts(main);
     width: 400px;
@@ -505,8 +505,8 @@
   }
 
   /* お知らせ一覧 ここまで↑ */
-
   /* 施設案内 ここから↓ */
+
   #grid {
     visibility: hidden;
     display: grid;
@@ -543,7 +543,9 @@
     }
   }
 
+  /* 施設案内 ここまで↑ */
   /* メルマガ登録 ここから↓ */
+
   .sns-favicon {
     margin: 0 auto;
     padding: 80px 400px;
@@ -562,8 +564,7 @@
     p {
       font-size: 3rem;
       text-align: center;
-      margin-top: 80px;
-      /* ※変更 */
+      margin-top: 80px; // ※変更
       color: color(sub);
       border-radius: 5px;
       background: linear-gradient(to right,
@@ -571,8 +572,7 @@
           #3b79cc 50%,
           #42d3ed 100%);
       opacity: 0;
-      animation: kurukuru 1.4s ease-out;
-      /* くるくるアニメーション */
+      animation: kurukuru 1.4s ease-out; // くるくるアニメーション
       opacity: 1;
 
       &:hover {
@@ -633,8 +633,8 @@
   }
 
   /* メルマガ登録 ここまで↑ */
-
   /* sns一覧 ここから↓ */
+
   #merumaga_a {
     width: 95%;
     background-color: #f9f7f0;
@@ -668,8 +668,8 @@
   }
 
   /* sns一覧 ここまで↑ */
-
   /* 営業時間 ここから↓ */
+
   /* ボーダーアニメーション ここから↓ */
   .stroke {
     margin: 0 30px;
@@ -684,8 +684,7 @@
     }
 
     h2 {
-      font-size: 3rem;
-      /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
+      font-size: 3rem; // pxは絶対値。remは相対値でレイアウトに応じて変化
       text-align: center;
       padding: 130px 0;
       margin-bottom: 50px;
@@ -758,8 +757,8 @@
   }
 
   /* ボーダーアニメーション ここまで↑ */
-
   /* ラインアニメーション ここから↓ */
+
   .line {
     display: block;
     position: relative;
@@ -882,7 +881,6 @@
   }
 
   /* 営業時間 ここまで↑ */
-
   /* アクセス ここから↓ */
   .access-image {
     font-family: fonts(main);
@@ -970,6 +968,7 @@
 
   /* アクセス ここまで↑ */
   /* フッター ここから↓ */
+
   footer {
     font-family: "遊ゴシック";
     background: #432;
@@ -980,10 +979,8 @@
   }
 
   /* フッター ここまで↑ */
-
-  /* ===================================================== */
-
   /* New.html ここから↓ */
+
   /* お知らせ一覧 */
   .h2_f {
     width: 100%;
@@ -994,27 +991,35 @@
   }
 
   /* New.html ここまで↑ */
-
   /* Show.html ここから↓ */
-  .show-content h3 {
-    font-size: 3rem;
+
+  .show-content {
+    h3 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      font-family: fonts(main);
+    }
   }
 
-  .show-content p {
-    font-size: 2rem;
-  }
+  .big_f1 {
+    ul {
+      .box {
+        img {
+          width: 100%; // 追加
+        }
+      }
+    }
 
-  .big_f1 ul img {
-    width: 100%;
-    /* 追加 */
-  }
+    li {
+      width: 100%;
 
-  .big_f ul img {
-    width: 100%;
-  }
-
-  .big_f ul li {
-    width: 100%;
+      img {
+        width: 100%;
+      }
+    }
   }
 
   #bigimg_2 {
@@ -1028,62 +1033,62 @@
   }
 
   /* Show.html ここまで↑ */
-
   /* Cooking.html ここから↓ */
+
   /* LaLa麺 */
   .cooking-img_f {
     padding: 50px 50px;
     max-height: 100%;
     margin-bottom: 50px;
-  }
 
-  .cooking-img {
-    display: flex;
-    flex-wrap: wrap;
-    visibility: hidden;
-  }
+    .cooking-img {
+      display: flex;
+      flex-wrap: wrap;
+      visibility: hidden;
 
-  .cooking-img h3 {
-    width: 40%;
-    font-size: 3rem;
-    font-family: serif;
-    padding: 80px 0 0 0;
-    color: rgb(185, 95, 95);
-  }
+      h3 {
+        width: 40%;
+        font-size: 3rem;
+        font-family: fonts(sub2);
+        padding: 80px 0 0 0;
+        color: rgb(185, 95, 95);
 
-  .cooking-img h3>p {
-    text-align: left;
-    font-size: 2rem;
-    padding-top: 20px;
-  }
+        p {
+          text-align: left;
+          font-size: 2rem;
+          padding-top: 20px;
 
-  .cooking-img h3>p:last-child {
-    padding-top: 0;
-  }
+          :last-child {
+            padding-top: 0;
+          }
+        }
+      }
 
-  .cooking-img img {
-    width: 60%;
-  }
+      img {
+        width: 60%;
+      }
 
-  .cooking-img ul {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    margin-top: 10px;
-    list-style: none;
-  }
+      ul {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        margin-top: 10px;
+        list-style: none;
 
-  .cooking-img ul>li img {
-    width: 100%;
-  }
+        li {
+          width: 100%;
+          margin-right: 10px;
 
-  .cooking-img ul li {
-    width: 100%;
-    margin-right: 10px;
-  }
+          :last-child {
+            margin-right: 0;
+          }
 
-  .cooking-img ul li:last-child {
-    margin-right: 0;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   /* 居酒屋 LaLaのれん */
@@ -1092,8 +1097,7 @@
     background-position: center;
     background-size: cover;
     background-color: #efe9c6;
-    background-blend-mode: soft-light;
-    /* 画像の変化に関するプロパティ */
+    background-blend-mode: soft-light; // 画像の変化に関するプロパティ
     padding: 50px 50px;
     max-height: 70%;
     margin-bottom: 50px;
@@ -1103,95 +1107,48 @@
     display: flex;
     flex-wrap: wrap;
     visibility: hidden;
-  }
 
-  #noren h3 {
-    width: 40%;
-    font-size: 3rem;
-    font-family: serif;
-    padding: 80px 0 0 50px;
-    color: rgb(185, 95, 95);
-  }
+    h3 {
+      width: 40%;
+      font-size: 3rem;
+      font-family: fonts(sub2);
+      padding: 80px 0 0 50px;
+      color: rgb(185, 95, 95);
 
-  #noren h3>p {
-    text-align: left;
-    font-size: 2rem;
-    padding-top: 20px;
-  }
+      p {
+        text-align: left;
+        font-size: 2rem;
+        padding-top: 20px;
 
-  #noren h3>p:last-child {
-    padding-top: 0;
-  }
+        :last-child {
+          padding-top: 0;
+        }
+      }
+    }
 
-  #noren img {
-    width: 60%;
-  }
+    img {
+      width: 60%;
+    }
 
-  #noren ul {
-    width: 100%;
-    display: flex;
-    margin-top: 10px;
-    list-style: none;
-  }
+    ul {
+      width: 100%;
+      display: flex;
+      margin-top: 10px;
+      list-style: none;
 
-  #noren ul>li img {
-    width: 100%;
-  }
+      li {
+        width: 100%;
+        margin-right: 10px;
 
-  #noren ul li {
-    width: 100%;
-    margin-right: 10px;
-  }
+        :last-child {
+          margin-right: 0;
+        }
 
-  #noren ul li:last-child {
-    margin-right: 0;
-  }
-
-  /* LaLaカフェ */
-  #cafe {
-    display: flex;
-    flex-wrap: wrap;
-    visibility: hidden;
-  }
-
-  #cafe h3 {
-    width: 40%;
-    font-size: 3rem;
-    font-family: serif;
-    padding: 80px 0 0 0;
-    color: rgb(185, 95, 95);
-  }
-
-  #cafe h3>p {
-    text-align: left;
-    font-size: 2rem;
-    padding-top: 20px;
-  }
-
-  #cafe h3>p:last-child {
-    padding-top: 0;
-  }
-
-  #cafe img {
-    width: 60%;
-  }
-
-  #cafe ul {
-    display: flex;
-    margin-top: 10px;
-    list-style: none;
-  }
-
-  #cafe ul>li img {
-    width: 100%;
-  }
-
-  #cafe ul li {
-    margin-right: 10px;
-  }
-
-  #cafe ul li:last-child {
-    margin-right: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   /* LaLaカフェ */
@@ -1199,48 +1156,95 @@
     display: flex;
     flex-wrap: wrap;
     visibility: hidden;
+
+    h3 {
+      width: 40%;
+      font-size: 3rem;
+      font-family: fonts(sub2);
+      padding: 80px 0 0 0;
+      color: rgb(185, 95, 95);
+
+      p {
+        text-align: left;
+        font-size: 2rem;
+        padding-top: 20px;
+
+        :last-child {
+          padding-top: 0;
+        }
+      }
+    }
+
+    img {
+      width: 60%;
+    }
+
+    ul {
+      display: flex;
+      margin-top: 10px;
+      list-style: none;
+
+      li {
+        margin-right: 10px;
+
+        :last-child {
+          margin-right: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
-  #cafe h3 {
-    width: 40%;
-    font-size: 3rem;
-    font-family: serif;
-    padding: 80px 0 0 50px;
-    color: rgb(185, 95, 95);
-  }
-
-  #cafe h3>p {
-    text-align: left;
-    font-size: 2rem;
-    padding-top: 20px;
-  }
-
-  #cafe h3>p:last-child {
-    padding-top: 0;
-  }
-
-  #cafe img {
-    width: 60%;
-  }
-
-  #cafe ul {
+  /* LaLaカフェ */
+  #cafe {
     display: flex;
-    width: 100%;
-    margin-top: 10px;
-    list-style: none;
-  }
+    flex-wrap: wrap;
+    visibility: hidden;
 
-  #cafe ul>li img {
-    width: 100%;
-  }
+    h3 {
+      width: 40%;
+      font-size: 3rem;
+      font-family: fonts(sub2);
+      padding: 80px 0 0 50px;
+      color: rgb(185, 95, 95);
 
-  #cafe ul li {
-    width: 100%;
-    margin-right: 10px;
-  }
+      p {
+        text-align: left;
+        font-size: 2rem;
+        padding-top: 20px;
 
-  #cafe ul li:last-child {
-    margin-right: 0;
+        :last-child {
+          padding-top: 0;
+        }
+      }
+    }
+
+    img {
+      width: 60%;
+    }
+
+    ul {
+      display: flex;
+      width: 100%;
+      margin-top: 10px;
+      list-style: none;
+
+      li {
+        width: 100%;
+        margin-right: 10px;
+
+        :last-child {
+          margin-right: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   /* 茶店 小町LaLa屋 */
@@ -1248,58 +1252,52 @@
     display: flex;
     flex-wrap: wrap;
     visibility: hidden;
-  }
 
-  #comachi h3 {
-    width: 40%;
-    font-size: 3rem;
-    font-family: serif;
-    padding: 80px 0 0 50px;
-    color: rgb(185, 95, 95);
-  }
+    h3 {
+      width: 40%;
+      font-size: 3rem;
+      font-family: fonts(sub2);
+      padding: 80px 0 0 50px;
+      color: rgb(185, 95, 95);
 
-  #comachi h3>p {
-    text-align: left;
-    font-size: 2rem;
-    padding-top: 20px;
-  }
+      p {
+        text-align: left;
+        font-size: 2rem;
+        padding-top: 20px;
 
-  #comachi h3>p:last-child {
-    padding-top: 0;
-  }
+        :last-child {
+          padding-top: 0;
+        }
+      }
+    }
 
-  #comachi img {
-    width: 60%;
-  }
+    img {
+      width: 60%;
+    }
 
-  #comachi ul {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    margin-top: 10px;
-    list-style: none;
-  }
+    ul {
+      display: flex;
+      justify-content: right;
+      width: 100%;
+      margin-top: 10px;
+      list-style: none;
 
-  #comachi ul>li img {
-    width: 100%;
-  }
+      li {
+        width: 100%;
+        margin-right: 10px;
 
-  #comachi ul li {
-    width: 100%;
-    margin-right: 10px;
-  }
-
-  #comachi ul li:last-child {
-    margin-right: 0;
+        :last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 
   /* cooking.html ここまで↑  */
-
-  /* ====================================================== */
-
   /* Contact.html ここから↓ */
+
   .form-contact {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     width: 95%;
     background-image: url(../images/img15.jpg);
     background-color: #d6d8d8;
@@ -1310,70 +1308,67 @@
     padding: 300px 500px;
     margin-top: 150px;
     animation: fadeup2 2s ease-in-out 1s backwards;
-  }
 
-  .form-title {
-    font-size: 5rem;
-    text-transform: uppercase;
-    /* テキストを大文字表示する方法を指定 */
-    font-weight: normal;
-    margin-bottom: 100px;
-    margin: 0;
-    /* h2のmarginが残っているので注意 */
-  }
+    .form-title {
+      font-size: 5rem;
+      text-transform: uppercase; // テキストを大文字表示する方法を指定
+      font-weight: normal;
+      margin-bottom: 100px;
+      margin: 0; // h2のmarginが残っているので注意
+    }
 
-  /* 必須 */
-  .required span {
-    color: red;
-    font-size: 2rem;
-  }
+    /* inputの行間隔 */
+    form {
+      div.required {
+        font-size: 3rem;
+        margin: 200px 0;
 
-  /* inputの行間隔 */
-  form div.required {
-    font-size: 3rem;
-    margin: 200px 0;
-  }
+        /* 必須 */
+        label {
+          font-size: 2rem;
+          margin-bottom: 10px;
+          display: block;
 
-  .required label {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    display: block;
-  }
+          span {
+            color: red;
+            font-size: 2rem;
+          }
+        }
 
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    background-color: #eee;
-  }
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          max-width: 100%;
+          margin: 0;
+          background-color: #eee;
+        }
+      }
 
-  textarea {
-    background-color: #eee;
-    width: 100%;
-    max-width: 100%;
-    height: 20rem;
-  }
+      textarea {
+        background-color: #eee;
+        width: 100%;
+        max-width: 100%;
+        height: 20rem;
+      }
+    }
 
-  input[type="submit"] {
-    border: none;
-    cursor: pointer;
-    /* カーソルの表示変更  */
-    line-height: 1;
-    /* 行の高さ  */
-  }
+    input[type="submit"] {
+      border: none;
+      cursor: pointer; // カーソルの表示変更
+      line-height: 1; // 行の高さ
+    }
 
-  .button {
-    font-size: 3rem;
-    background: #0bd;
-    color: #fff;
-    border-radius: 5px;
-    /* 要素の角を丸める */
-    padding: 18px 32px;
-  }
+    .button {
+      font-size: 3rem;
+      background: #0bd;
+      color: color(sub);
+      border-radius: 5px; // 要素の角を丸める
+      padding: 18px 32px;
 
-  .button:hover {
-    background: #0090aa;
+      &:hover {
+        background: #0090aa;
+      }
+    }
   }
 
   /* スイッチ */
@@ -1384,37 +1379,38 @@
     width: 100%;
     position: fixed;
     bottom: 0;
-  }
 
-  /* アニメーションは貼り付ける場所に注意 */
-  .switch div {
-    width: 50%;
-    background-color: rgba(150, 167, 5, 0.7);
-    animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
-  }
+    /* アニメーションは貼り付ける場所に注意 */
+    div {
+      width: 50%;
+      background-color: rgba(150, 167, 5, 0.7);
+      animation: fadeIn 3s ease-in-out 1 normal forwards,
+        poyopoyo 2s 5s infinite;
+    }
 
-  .switch p {
-    font-family: "遊ゴシック";
-    font-size: 1.25rem;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin: 0 10px;
-    background-color: rgba(4, 23, 107, 0.5);
-  }
+    p {
+      font-family: fonts(main);
+      font-size: 1.25rem;
+      color: color(sub);
+      text-align: center;
+      padding: 10px;
+      margin: 0 10px;
+      background-color: rgba(4, 23, 107, 0.5);
+    }
 
-  .switch span {
-    display: block;
-    text-align: center;
-    padding: 40px;
-    margin: 0 10px;
-    background-color: rgba(4, 23, 107, 0.5);
-    border-radius: 2px 0 0 20px;
-    background-image: url(../images/icons8-coment.png);
-    background-size: contain;
-    /* 幅に合わしてくれる */
-    background-position: center;
-    background-repeat: no-repeat;
+    span {
+      display: block;
+      text-align: center;
+      padding: 40px;
+      margin: 0 10px;
+      background-color: rgba(4, 23, 107, 0.5);
+      border-radius: 2px 0 0 20px;
+      background-image: url(../images/icons8-coment.png);
+      background-size: contain;
+      /* 幅に合わしてくれる */
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   /* スイッチ ここまで↑ */
@@ -1423,10 +1419,8 @@
 }
 
 /* レスポンシブル2 ここまで↑ */
-
-/* ===================================================== */
-
 /* レスポンシブル3 ここから↓ */
+
 /* max-widthは横幅1050pxからの表示 */
 @media (max-width: 1050px) {
   .header-logo {
