@@ -1,12 +1,6 @@
 @import "_global";
 
 // @mixin right ここから↓ //
-@mixin right-img_f {
-  padding: 50px 50px;
-  max-height: 100%;
-  margin-bottom: 50px;
-}
-
 @mixin right-big-image {
   display: flex;
   flex-wrap: wrap;
@@ -114,48 +108,51 @@
 }
 
 // @mixin left ここまで↑ //
+@mixin cooking-img_f {
+  padding: 50px 50px;
+  max-height: 100%;
+  margin-bottom: 50px;
+}
+
+.cooking-img_f {
+  @include cooking-img_f();
+}
 
 /* LaLa麺 */
-.cooking-img_f {
-  @include right-img_f;
+.cooking-img {
+  @include right-big-image();
 
-  .cooking-img {
-    @include right-big-image();
+  h3 {
+    @include right-h3();
 
-    h3 {
-      @include right-h3();
-
-      p {
-        @include right-p();
-      }
-    }
-
-    ul {
-      @include right-ul();
+    p {
+      @include right-p();
     }
   }
+
+  ul {
+    @include right-ul();
+  }
 }
+
 
 /* 居酒屋 LaLaのれん */
-.cooking-img_f1 {
-  @include left-img_f;
+#noren {
+  @include left-big-image();
 
-  #noren {
-    @include left-big-image();
+  h3 {
+    @include left-h3();
 
-    h3 {
-      @include left-h3();
-
-      p {
-        @include left-p();
-      }
-    }
-
-    ul {
-      @include left-ul();
+    p {
+      @include left-p();
     }
   }
+
+  ul {
+    @include left-ul();
+  }
 }
+
 
 /* LaLaカフェ */
 #cafe {
@@ -205,7 +202,7 @@
   animation: slideIn-bottom 0.8s 1s backwards;
 }
 
-.show_z10 {
+.show_z {
   animation: zoomIn 1s 1.6s backwards;
 }
 
@@ -305,8 +302,6 @@
   transition: all 0.35s ease; // 移り変わる速さを変更したい場合はこの数値を変更
   transform: rotate3d(1, 1, 0, 100deg); // 奥行きをもたせて回転
   opacity: 0;
-  font-family: fonts(main);
-  font-size: 1.5rem;
   background: #333; // 背景色
   color: #fff; // テキストの色を変えたい場合はここを修正
   /*ここからテキスト中央寄せの指定*/

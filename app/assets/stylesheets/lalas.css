@@ -588,7 +588,7 @@ nav span::after {
 }
 
 .favicon1 {
-  background-image: url("../images/favicon4.jpg");
+  background-image: url("../images/favicon4.png");
   background-position: center;
   background-size: cover;
   -webkit-animation: poyopoyo 2s ease-out 3s infinite;
@@ -597,7 +597,7 @@ nav span::after {
 }
 
 .favicon2 {
-  background-image: url("../images/favicon5.jpg");
+  background-image: url("../images/favicon5.png");
   background-position: center;
   background-size: cover;
   -webkit-animation: poyopoyo 2s ease-out 3s infinite;
@@ -606,7 +606,7 @@ nav span::after {
 }
 
 .favicon3 {
-  background-image: url("../images/favicon6.jpg");
+  background-image: url("../images/favicon6.png");
   background-position: center;
   background-size: cover;
   -webkit-animation: poyopoyo 2s ease-out 3s infinite;

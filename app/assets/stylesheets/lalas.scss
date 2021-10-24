@@ -471,12 +471,11 @@ nav span::after {
 }
 
 @mixin favicon($img-num:1) {
-  background-image: url("../images/favicon#{$img-num}.jpg");
+  background-image: url("../images/favicon#{$img-num}.png");
   background-position: center;
   background-size: cover;
   animation: poyopoyo 2s ease-out 3s infinite;
   opacity: 1;
-
 }
 
 .favicon1 {
