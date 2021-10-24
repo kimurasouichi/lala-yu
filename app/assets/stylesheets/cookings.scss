@@ -1,3 +1,334 @@
-// Place all the styles related to the cookings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_global";
+
+// @mixin right ここから↓ //
+@mixin right-img_f {
+  padding: 50px 50px;
+  max-height: 100%;
+  margin-bottom: 50px;
+}
+
+@mixin right-big-image {
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+
+  img {
+    width: 60%;
+  }
+}
+
+@mixin right-h3 {
+  width: 40%;
+  font-size: 1.5rem;
+  font-family: serif;
+  padding: 80px 0 0 50px;
+  color: rgb(185, 95, 95);
+}
+
+@mixin right-p {
+  text-align: left;
+  font-size: 1.2rem;
+  padding-top: 20px;
+
+  :last-child {
+    padding-top: 0;
+  }
+}
+
+@mixin right-ul {
+  display: flex;
+  margin-top: 10px;
+  list-style: none;
+
+  li {
+    margin-right: 10px;
+
+    :last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// @mixin right ここまで↑ //
+
+// @mixin left ここから↓ //
+@mixin left-img_f {
+  background-image: url(../images/img17.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #efe9c6;
+  background-blend-mode: soft-light; // 画像の変化に関するプロパティ
+  padding: 50px 50px;
+  max-height: 70%;
+  margin-bottom: 50px;
+}
+
+@mixin left-big-image {
+  display: flex;
+  flex-wrap: wrap;
+  visibility: hidden;
+
+  img {
+    width: 60%;
+  }
+}
+
+@mixin left-h3 {
+  width: 40%;
+  font-size: 1.5rem;
+  font-family: serif;
+  padding: 80px 0 0 50px;
+  color: rgb(185, 95, 95);
+}
+
+@mixin left-p {
+  text-align: left;
+  font-size: 1.2rem;
+  padding-top: 20px;
+
+  :last-child {
+    padding-top: 0;
+  }
+}
+
+@mixin left-ul {
+  display: flex;
+  margin-top: 10px;
+  list-style: none;
+
+  li {
+    margin-right: 10px;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  li img {
+    width: 100%;
+  }
+}
+
+// @mixin left ここまで↑ //
+
+/* LaLa麺 */
+.cooking-img_f {
+  @include right-img_f;
+
+  .cooking-img {
+    @include right-big-image();
+
+    h3 {
+      @include right-h3();
+
+      p {
+        @include right-p();
+      }
+    }
+
+    ul {
+      @include right-ul();
+    }
+  }
+}
+
+/* 居酒屋 LaLaのれん */
+.cooking-img_f1 {
+  @include left-img_f;
+
+  #noren {
+    @include left-big-image();
+
+    h3 {
+      @include left-h3();
+
+      p {
+        @include left-p();
+      }
+    }
+
+    ul {
+      @include left-ul();
+    }
+  }
+}
+
+/* LaLaカフェ */
+#cafe {
+  @include right-big-image();
+
+  h3 {
+    @include right-h3();
+
+    p {
+      @include right-p();
+    }
+  }
+
+  ul {
+    @include right-ul();
+  }
+}
+
+/* 茶店 小町LaLa屋 */
+#comachi {
+  @include left-big-image();
+
+  h3 {
+    @include left-h3();
+
+    p {
+      @include left-p();
+    }
+  }
+
+  ul {
+    @include left-ul();
+  }
+}
+
+// JQuery用 アニメーション ここから↓ //
+/* LaLa麺 */
+.show_ss-left {
+  animation: slide-skew1 0.8s 0s backwards;
+}
+
+.show_ss1-right {
+  animation: slide-skew2 0.8s 0s backwards;
+}
+
+.show_b {
+  animation: slideIn-bottom 0.8s 1s backwards;
+}
+
+.show_z10 {
+  animation: zoomIn 1s 1.6s backwards;
+}
+
+.show_f-up {
+  animation: fadeup 1s 2.4s backwards;
+}
+
+/* 居酒屋 LaLaのれん */
+.show_s-right {
+  animation: slideIn-right 0.5s 0s backwards;
+}
+
+.show_s-right1 {
+  animation: slideIn-right 0.5s 0.5s backwards;
+}
+
+.show_s-right2 {
+  animation: slideIn-right 0.5s 1s backwards;
+}
+
+.show_p-right {
+  animation: poyoyon-right 1s ease-in 1.6s backwards;
+}
+
+.show_f-up {
+  animation: fadeup 1s 2.4s backwards;
+}
+
+/* cafe */
+.show_s-left {
+  animation: slideIn-left 0.5s 0s backwards;
+}
+
+.show_s-left1 {
+  animation: slideIn-left 0.5s 0.5s backwards;
+}
+
+.show_s-left2 {
+  animation: slideIn-left 0.5s 1s backwards;
+}
+
+.show_p-left {
+  animation: poyoyon-left 1s ease-in 1.6s backwards;
+}
+
+.cafe .cafe_a4 {
+  animation: fadeup 1s 2.4s backwards;
+}
+
+/* 茶店 小町LaLa屋 */
+.show_kuru {
+  animation: kurukuru 0.8s 0s backwards;
+}
+
+.show_kuru1 {
+  animation: kurukuru 0.8s 0.5s backwards;
+}
+
+.show_kuru2 {
+  animation: kurukuru 0.8s 1s backwards;
+}
+
+.show_p-bottom {
+  animation: poyoyon-top 0.8s ease-out 2s backwards;
+}
+
+.comachi .comachi_a4 {
+  animation: fadeup 1s 2.4s backwards; // 左下から左上 */
+}
+
+/* 画像回転+テキスト */
+.flipZ2 a {
+  /*テキストの基点となる位置を定義*/
+  position: relative;
+  display: block;
+}
+
+.flipZ2 img {
+  transition: all 0.35s ease; // 移り変わる速さを変更したい場合はこの数値を変更
+  backface-visibility: hidden; // 三次元になった際に裏面を可視化させない
+}
+
+.flipZ2 a:hover img {
+  /*hoverした時の変化*/
+  transform: rotate3d(-1, -1, 0, 100deg); // 奥行きをもたせて回転
+  opacity: 0;
+}
+
+.flipZ2 span.cap {
+  /*ここからエリアの絶対配置の指定*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*ここまでエリアの絶対配置の指定*/
+  transition: all 0.35s ease; // 移り変わる速さを変更したい場合はこの数値を変更
+  transform: rotate3d(1, 1, 0, 100deg); // 奥行きをもたせて回転
+  opacity: 0;
+  font-family: fonts(main);
+  font-size: 1.5rem;
+  background: #333; // 背景色
+  color: #fff; // テキストの色を変えたい場合はここを修正
+  /*ここからテキスト中央寄せの指定*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*ここまでテキスト中央寄せの指定*/
+}
+
+.flipZ2 a:hover span.cap {
+  /*hoverした時の変化*/
+  transform: rotate3d(0, 0, 0, 0deg); // 奥行きをもたせて回転
+  opacity: 1;
+  transition-delay: 0.15s; // 移り変わる速さを変更したい場合はこの数値を変更
+}
+
+.lead {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.flipZ2 {
+  width: 70%;
+  margin: 0 auto;
+}
