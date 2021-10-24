@@ -199,62 +199,56 @@
 @media (min-width: 1050px) {
   label[for="open-close"] {
     visibility: hidden;
-  }
 
-  nav {
-    position: static;
-    /* 初期設定に表示 */
-    width: 100%;
-    /* height: auto; */
-    margin: 0;
-  }
+    nav {
+      position: static; // 初期設定に表示
+      width: 100%;
+      margin: 0;
 
-  nav span,
-  nav span::before,
-  nav span::after {
-    display: none;
-  }
+      img {
+        max-width: 10%;
+      }
 
-  #menu {
-    position: static;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    display: none;
-  }
+      #menu {
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        display: none;
 
-  nav img {
-    max-width: 10%;
-  }
+        li {
+          width: 33.3%;
+          border-top: 1px solid #999;
+          border-left: 1px solid #999;
 
-  #menu li {
-    width: 33.3%;
-    border-top: 1px solid #999;
-    border-left: 1px solid #999;
-  }
-
-  #menu li:last-of-type {
-    border-right: 1px solid #999;
+          :last-of-type {
+            border-right: 1px solid #999;
+          }
+        }
+      }
+    }
   }
 }
 
 /* ===================================================== */
 
 /* レスポンシブル2 ここから↓  */
-/* max-widthは横幅1700pxからの表示 */
+/* min-widthは横幅1700pxまでの表示 */
 /* ヘッダー ここから↓ */
 @media (min-width: 1700px) {
+
+  /* 共通部分 ここから↓*/
   h2 {
     font-size: 4rem;
     /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
     text-align: center;
     margin: 300px 0;
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
   }
 
   /* 小さな見出し 開館時間 露店風呂 室内*/
   h3 {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     width: 100%;
     color: #09c2bf;
     padding-bottom: 20px;
@@ -267,68 +261,52 @@
     width: 100%;
     height: auto;
     background: rgba(251, 250, 250, 0.5);
-    position: fixed;
-    /* ウィンドウを基準に画面に固定 */
-    top: 0;
-    /* 上下の固定位置を上から0pxにする */
-    left: 0;
-    /* 左右の固定位置を左から0pxにする */
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
-    /* シャドウ */
-    z-index: 30;
-    /* 絶対値の値 */
-  }
+    position: fixed; // ウィンドウを基準に画面に固定
+    top: 0; // 上下の固定位置を上から0pxにする
+    left: 0; // 左右の固定位置を左から0pxにする
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1); // シャドウ
+    z-index: 30; // 絶対値の値
 
-  .header-logo {
-    display: flex;
-    font-size: 5rem;
-    /* ※変更 */
-    width: 100%;
-    font-family: "Reggae One", cursive;
-    /* Google フォント */
-    color: rgba(10, 9, 9, 0.877);
-    margin: 10px;
-  }
+    .header-logo {
+      display: flex;
+      font-size: 5rem; // ※変更
+      width: 100%;
+      font-family: fonts(sub1); // Google フォント
+      color: rgba(10, 9, 9, 0.877);
+      margin: 10px;
 
-  .header-logo i {
-    display: block;
-    padding: 0 30px;
-  }
+      i {
+        display: block;
+        padding: 0 30px;
+      }
 
-  .header-logo shadow:hover {
-    color: #fff;
-    background-color: rgba(163, 225, 218, 0.5);
-  }
+      ul {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: fonts(sub2);
+        margin: 0 auto;
+        list-style: none;
+        color: #432;
 
-  header ul {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: serif;
-    margin: 0 auto;
-    list-style: none;
-    color: #432;
-  }
+        li {
+          font-size: 3rem; // ※変更
 
-  header li {
-    font-size: 3rem;
-    /* ※変更 */
-  }
+          a {
+            color: color(sub1);
 
-  header a {
-    color: #432;
-  }
-
-  /* aダグだけをhoverレイアウトが崩さないため */
-  header li>a:hover {
-    color: #fff;
-    text-shadow: 1px 1px 1px #140505;
-    display: block;
-    /* aタグはインライン注意 */
-    padding: 20px 0;
-    /* blockに変更すればpaddingが効く */
-    background-color: rgba(163, 225, 218, 0.5);
+            &:hover {
+              color: color(sub);
+              text-shadow: 1px 1px 1px #140505;
+              display: block; // aタグはインライン注意
+              padding: 20px 0; // blockに変更すればpaddingが効く
+              background-color: rgba(163, 225, 218, 0.5);
+            }
+          }
+        }
+      }
+    }
   }
 
   /* ヘッダー ここまで↑ */
@@ -344,42 +322,36 @@
         #6ec1cf 50%,
         #adcfda 100%);
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
-    background-size: 200% 200%;
-    /*サイズを大きくひきのばす*/
+    background-size: 200% 200%; // サイズを大きくひきのばす
     position: absolute;
     top: -100px;
     z-index: 100;
     animation: bggradient 25s ease infinite;
-  }
 
-  .big-log h1 {
-    font-family: "Reggae One", cursive;
-    /* Google font */
-    color: #fff;
-    text-shadow: 1px 4px 4px #140505;
-    /* テキストシャドウ */
-  }
+    h1 {
+      font-family: fonts(sub1);
+      color: color(sub);
+      text-shadow: 1px 4px 4px #140505; // テキストシャドウ
 
-  .big-log i {
-    display: block;
-    /* iタグはインライン注意 */
-    padding-top: 50px;
-    /* ※変更 */
-    width: 100%;
-    font-size: 15rem;
-    /* ロゴのサイズ */
-  }
+      i {
+        display: block; // iタグはインライン注意
+        padding-top: 50px; // ※変更
+        width: 100%;
+        font-size: 15rem; // ロゴのサイズ
+      }
+    }
 
-  .big-log p {
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-    color: #fff;
-    font-family: "ヒラギノ明朝";
-    font-size: 4rem;
-    text-shadow: 1px 2px 3px #140505;
-    position: relative;
-    top: -100px;
+    p {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      color: color(sub);
+      font-family: fonts(sub3);
+      font-size: 4rem;
+      text-shadow: 1px 2px 3px #140505;
+      position: relative;
+      top: -100px;
+    }
   }
 
   /* Bigロゴ ここまで↑ */
@@ -387,156 +359,149 @@
   /* Big画像 フェードイン・フェードアウトここから↓ */
   .photos {
     position: relative;
-  }
 
-  .photos img {
-    position: absolute;
-    width: 100%;
-    top: 550px;
-    left: 0;
-    right: 0;
-    margin: 30px auto;
-    animation: photo 25s infinite;
-    /* 無限に繰り返す */
-    opacity: 0;
-    /* 不透明 */
-  }
+    img {
+      position: absolute;
+      width: 100%;
+      top: 550px;
+      left: 0;
+      right: 0;
+      margin: 30px auto;
+      animation: photo 25s infinite; // 無限に繰り返す
+      opacity: 0; // 不透明
 
-  /* nth-of-type(x)番目の要素を指定 */
-  .photos img:nth-of-type(1) {
-    animation-delay: 0s;
-    /* ディレイ 遅れ */
-  }
+      :nth-last-of-type(1) {
+        animation-delay: 0s; // ディレイ 遅れ
+      }
 
-  .photos img:nth-of-type(2) {
-    animation-delay: 5s;
-  }
+      :nth-last-of-type(2) {
+        animation-delay: 5s;
+      }
 
-  .photos img:nth-of-type(3) {
-    animation-delay: 10s;
+      :nth-last-of-type(3) {
+        animation-delay: 10s;
+      }
+    }
   }
 
   /* Big画像 フェードイン・フェードアウトここまで↑ */
 
   /* 温泉由来 ここから↓ */
   .origin_f {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     visibility: hidden;
-    font-size: 3rem;
-    /* ※変更 */
+    font-size: 3rem; // ※変更
     width: 100%;
     min-height: 100vh;
-  }
 
-  .origin-img {
-    background-image: url(../images/img18.jpg);
-    background-color: #badacf;
-    background-blend-mode: soft-light;
-    /* 画像の変化に関するプロパティ */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    padding: 50px;
-  }
+    .origin-img {
+      background-image: url(../images/img18.jpg);
+      background-color: #badacf;
+      background-blend-mode: soft-light; // 画像の変化に関するプロパティ
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      padding: 50px;
 
-  .origin-img p {
-    visibility: hidden;
-    font-family: "遊ゴシック";
-    max-width: 90%;
-    margin: 20px auto;
+      p {
+        visibility: hidden;
+        font-family: fonts(main);
+        max-width: 90%;
+        margin: 20px auto;
+      }
+    }
   }
 
   /* 温泉由来 ここまで↑ */
 
   /* お知らせ ここから↓ */
   .info_f {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     visibility: hidden;
     font-size: 1.5rem;
     width: 95%;
     min-height: 100vh;
-    background-color: #fff;
-  }
+    background-color: color(sub);
 
-  .info-img {
-    visibility: hidden;
-    padding: 100px;
-    background-color: #ffffff;
-    margin-bottom: 100px;
-    padding: 300px 0;
-    background-image: url(../images/img19.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-  }
+    /* IDを指定にすると反応する*/
+    #info {
+      visibility: hidden;
+      padding: 100px;
+      background-color: color(sub);
+      margin-bottom: 100px;
+      padding: 300px 0;
+      background-image: url(../images/img19.png);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
 
-  #info dl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    font-size: 3rem;
-    /* ※変更 */
-    max-width: 80%;
-    /* ここで全体の幅を調整できる */
-    margin: 0 auto;
-  }
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        font-size: 3rem; // ※変更
+        max-width: 80%; // ここで全体の幅を調整できる
+        margin: 0 auto;
 
-  #info dt {
-    width: 30%;
-    margin-right: 100px;
-    color: #2eb6b3;
-    text-align: center;
-    visibility: hidden;
-  }
+        dt,
+        dd {
+          border-bottom: 1px #ddd solid;
+          margin-bottom: 80px;
+        }
 
-  #info dd {
-    visibility: hidden;
-    text-align: center;
-    width: 50%;
-  }
+        dt {
+          width: 30%;
+          margin-right: 100px;
+          color: color(main);
+          text-align: center;
+          visibility: hidden;
+        }
 
-  #info dt,
-  #info dd {
-    border-bottom: 1px #ddd solid;
-    margin-bottom: 80px;
+        dd {
+          visibility: hidden;
+          text-align: center;
+          width: 50%;
+        }
+      }
+    }
   }
 
   /* おしらせ ここまで↑ */
 
   /* お知らせ一覧 ここから↓ */
   .post-info {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     width: 400px;
     height: 400px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 400px;
-    /* ※変更 */
-  }
+    margin-bottom: 400px; // ※変更
 
-  .post-date {
-    font-family: "遊ゴシック";
-    background: #0bd;
-    border-radius: 50%;
-    color: #fff;
-    width: 400px;
-    height: 400px;
-    font-size: 3rem;
-    padding-top: 120px;
-    /* margin-left: -30px; */
-  }
+    a {
+      .post-date {
+        font-family: fonts(main);
+        background: #0bd;
+        border-radius: 50%;
+        color: color(sub);
+        width: 400px;
+        height: 400px;
+        font-size: 3rem;
+        padding-top: 120px;
 
-  .post-date:hover {
-    background: #2eb6b3;
-  }
+        &:hover {
+          background: color(main);
+        }
 
-  .post-date span {
-    font-size: 3rem;
-    border-top: 1px rgba(255, 255, 255, 0.5) solid;
-    display: block;
-    width: 60%;
-    margin: 0 auto;
+        span {
+          font-size: 3rem;
+          border-top: 1px rgba(255, 255, 255, 0.5) solid;
+          display: block;
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 
   /* お知らせ一覧 ここまで↑ */
@@ -549,29 +514,33 @@
     grid-template-columns: repeat(auto-fit, minmax(750px, 2fr));
     padding: 80px;
     background-image: url(../images/img17.jpg);
-    background-color: #2eb6b3;
+    background-color: color(main);
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     margin-bottom: 200px;
-  }
 
-  #grid img {
-    visibility: hidden;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-  }
+    img {
+      visibility: hidden;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
 
-  #grid p {
-    font-family: "遊ゴシック";
-    text-align: center;
-    font-size: 3rem;
-    color: #fff;
-  }
+    .item_f {
+      a {
+        p {
+          font-family: fonts(main);
+          text-align: center;
+          font-size: 3rem;
+          color: color(sub);
 
-  #grid p:hover {
-    color: rgb(233, 233, 233);
+          &:hover {
+            color: rgb(233, 233, 233);
+          }
+        }
+      }
+    }
   }
 
   /* メルマガ登録 ここから↓ */
@@ -583,67 +552,84 @@
     background-size: cover;
     font-size: 1.25rem;
     width: 95%;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      height: 30px;
+    }
+
+    p {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 80px;
+      /* ※変更 */
+      color: color(sub);
+      border-radius: 5px;
+      background: linear-gradient(to right,
+          #362ae0 0%,
+          #3b79cc 50%,
+          #42d3ed 100%);
+      opacity: 0;
+      animation: kurukuru 1.4s ease-out;
+      /* くるくるアニメーション */
+      opacity: 1;
+
+      &:hover {
+        background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
+      }
+    }
+
+    span {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
   }
 
-  .sns-favicon div {
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-  }
-
-  .sns-favicon p {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 80px;
-    /* ※変更 */
-    color: #ffff;
-    border-radius: 5px;
-    background: linear-gradient(to right,
-        #362ae0 0%,
-        #3b79cc 50%,
-        #42d3ed 100%);
-    opacity: 0;
-    animation: kurukuru 1.4s ease-out;
-    /* くるくるアニメーション */
+  @mixin favicon($img-num:1) {
+    background-image: url("../images/favicon#{$img-num}.png");
+    background-position: center;
+    background-size: cover;
+    animation: poyopoyo 2s ease-out 3s infinite;
     opacity: 1;
-  }
-
-  .sns-favicon a {
-    color: #fff;
-  }
-
-  .sns-favicon p:hover {
-    background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
-  }
-
-  .sns-favicon span {
-    display: block;
-    width: 100px;
-    height: 100px;
   }
 
   .favicon1 {
-    background-image: url(../images/icon4-twitter.png);
-    background-position: center;
-    background-size: cover;
-    animation: poyopoyo 2s ease-out 3s infinite;
-    opacity: 1;
+    @include favicon(4)
   }
 
   .favicon2 {
-    background-image: url(../images/icons5-facebook.png);
-    background-position: center;
-    background-size: cover;
-    animation: poyopoyo 2s ease-out 3s infinite;
-    opacity: 1;
+    @include favicon(5)
   }
 
   .favicon3 {
-    background-image: url(../images/icons6-twitter.png);
-    background-position: center;
-    background-size: cover;
-    animation: poyopoyo 2s ease-out 3s infinite;
-    opacity: 1;
+    @include favicon(6)
+  }
+
+  #merumaga_a2 {
+    .post-date {
+      font-family: fonts(main);
+      background: #0bd;
+      border-radius: 50%;
+      color: color(sub);
+      width: 400px;
+      height: 400px;
+      font-size: 3rem;
+      padding-top: 120px;
+
+      &:hover {
+        background: color(main);
+      }
+    }
+
+    span {
+      font-size: 3rem;
+      border-top: 1px rgba(255, 255, 255, 0.5) solid;
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 
   /* メルマガ登録 ここまで↑ */
@@ -652,146 +638,147 @@
   #merumaga_a {
     width: 95%;
     background-color: #f9f7f0;
-  }
 
-  .sns {
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    background: #faf7f0;
-  }
+    .sns {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      background: #faf7f0;
 
-  .sub-title {
-    width: 50%;
-    font-size: 3rem;
-    padding: 0 8px 8px;
-    border-bottom: 2px #0bd solid;
-    font-weight: normal;
-  }
+      .sns-box {
+        width: 100%;
 
-  .sns .sub-title {
-    margin: 50px 50px;
-  }
+        .sub-title {
+          width: 50%;
+          font-size: 3rem;
+          padding: 0 8px 8px;
+          border-bottom: 2px #0bd solid;
+          font-weight: normal;
+          margin: 50px 50px;
+        }
 
-  .sns-box {
-    width: 100%;
-  }
-
-  iframe {
-    width: 100%;
-    height: 50vh;
-    /* height: auto; */
+        iframe {
+          width: 100%;
+          height: 50vh;
+          /* height: auto; */
+        }
+      }
+    }
   }
 
   /* sns一覧 ここまで↑ */
 
   /* 営業時間 ここから↓ */
   /* ボーダーアニメーション ここから↓ */
-  .stroke h2 {
-    font-size: 3rem;
-    /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
-    text-align: center;
-    padding: 130px 0;
-    margin-bottom: 50px;
-  }
-
   .stroke {
     margin: 0 30px;
     position: relative;
+
+    .is-animated {
+
+      .right,
+      .left {
+        animation: stroke-height 1.8s;
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+      /* pxは絶対値。remは相対値でレイアウトに応じて変化 */
+      text-align: center;
+      padding: 130px 0;
+      margin-bottom: 50px;
+    }
+
+    .border {
+      content: "";
+      position: absolute;
+      opacity: 0;
+
+      .top_p,
+      .bottom {
+        width: calc(100% - 20px);
+      }
+
+      .top_p {
+        border-top: 3px solid #362ae0;
+        right: 0;
+        top: 0;
+      }
+
+      .bottom {
+        border-bottom: 3px solid #362ae0;
+        left: 0;
+        bottom: 0;
+      }
+
+      .right,
+      .left {
+        height: calc(100% - 20px);
+      }
+
+      .right {
+        border-right: 3px solid #362ae0;
+        right: 0;
+        top: 0;
+      }
+
+      .left {
+        border-left: 3px solid #362ae0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .border {
+      opacity: 1;
+
+      .top_p,
+      .bottom {
+        animation: stroke-width 1.8s;
+      }
+    }
   }
 
-  .stroke .border {
-    content: "";
-    position: absolute;
-    opacity: 0;
+  .time {
+    p {
+      font-size: 2.5rem;
+      color: color(main);
+      text-align: center;
+    }
+
+    span {
+      font-family: fonts(main);
+      display: block;
+      text-align: center;
+      font-size: 1.25rem;
+      color: color(main);
+    }
   }
 
-  .stroke .border.top_p,
-  .stroke .border.bottom {
-    width: calc(100% - 20px);
-  }
-
-  .stroke .border.top_p {
-    border-top: 3px solid #362ae0;
-    right: 0;
-    top: 0;
-  }
-
-  .stroke .border.bottom {
-    border-bottom: 3px solid #362ae0;
-    left: 0;
-    bottom: 0;
-  }
-
-  .stroke .border.right,
-  .stroke .border.left {
-    height: calc(100% - 20px);
-  }
-
-  .stroke .border.right {
-    border-right: 3px solid #362ae0;
-    right: 0;
-    top: 0;
-  }
-
-  .stroke .border.left {
-    border-left: 3px solid #362ae0;
-    left: 0;
-    bottom: 0;
-  }
-
-  .stroke .border {
-    opacity: 1;
-  }
-
-  .stroke .border.top_p,
-  .stroke .border.bottom {
-    animation: stroke-width 1.8s;
-  }
-
-  .stroke.is-animated .border.right,
-  .stroke.is-animated .border.left {
-    animation: stroke-height 1.8s;
-  }
-
-  .time p {
-    font-size: 2.5rem;
-    color: #2eb6b3;
-    text-align: center;
-  }
-
-  .time span {
-    font-family: "遊ゴシック";
-    display: block;
-    text-align: center;
-    font-size: 1.25rem;
-    color: #2eb6b3;
-  }
-
-  /* ※spanはインライン要素。display:blockが必要; */
   /* ボーダーアニメーション ここまで↑ */
 
   /* ラインアニメーション ここから↓ */
   .line {
     display: block;
     position: relative;
-  }
 
-  .line::after {
-    background: linear-gradient(to right,
-        #362ae0 0%,
-        #3b79cc 50%,
-        #42d3ed 100%);
-    content: "";
-    display: block;
-    height: 1px;
-    width: 0;
-    transform: translateX(-50%);
-    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    &::after {
+      background: linear-gradient(to right,
+          #362ae0 0%,
+          #3b79cc 50%,
+          #42d3ed 100%);
+      content: "";
+      display: block;
+      height: 1px;
+      width: 0;
+      transform: translateX(-50%);
+      transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+    }
   }
 
   .line_a::after {
@@ -801,29 +788,33 @@
   /* ラインアニメーション ここまで↑ */
 
   /* 料金表 */
-  .money h3 {
-    font-size: 3rem;
-    padding: 30px 0;
-  }
-
   .money_f {
     font-size: 2.5rem;
     background: #eeecc2;
     padding: 100px 50px;
-  }
 
-  .time h3 {
-    font-size: 3rem;
-  }
+    .time {
+      h3 {
+        font-size: 3rem;
+      }
 
-  .money_f p {
-    font-size: 3rem;
-    font-family: "遊ゴシック";
-  }
+      p {
+        font-size: 3rem;
+        font-family: fonts(main);
+      }
 
-  .money_f span {
-    font-family: "遊ゴジック";
-    font-size: 2rem;
+      span {
+        font-family: fonts(main);
+        font-size: 2rem;
+      }
+    }
+
+    .money {
+      h3 {
+        font-size: 3rem;
+        padding: 30px 0;
+      }
+    }
   }
 
   .table-money {
@@ -832,18 +823,28 @@
     margin: 0 auto;
     border: 1px #09c2bf solid;
     border-collapse: collapse;
-    font-family: "明朝";
-  }
+    font-family: fonts(sub3);
 
-  .table-money .money-heder {
-    color: #fff;
-    background-color: rgb(214, 235, 33);
-    border: 1px rgb(214, 235, 33) solid;
-    font-size: 2.5rem;
-  }
+    td {
+      :nth-of-type(3n) {
+        background: #e4f195;
+      }
 
-  .table-money span {
-    color: #09c2bf;
+      :nth-of-type(5n) {
+        background: #e4f195;
+      }
+    }
+
+    .money-heder {
+      color: color(sub);
+      background-color: rgb(214, 235, 33);
+      border: 1px rgb(214, 235, 33) solid;
+      font-size: 2.5rem;
+    }
+
+    span {
+      color: color(main);
+    }
   }
 
   tr,
@@ -868,19 +869,11 @@
     animation: fadeup 2s ease 1 backwards;
   }
 
-  .table-money td:nth-of-type(3n) {
-    background: #e4f195;
-  }
-
-  .table-money td:nth-of-type(5n) {
-    background-color: #e4f195;
-  }
-
   .explanation span {
     display: block;
     text-align: center;
-    font-family: "遊ゴシック";
-    color: #2eb6b3;
+    font-family: fonts(main);
+    color: color(main);
     padding: 20px 0 0 20px;
   }
 
@@ -892,82 +885,90 @@
 
   /* アクセス ここから↓ */
   .access-image {
-    font-family: "遊ゴシック";
+    font-family: fonts(main);
     display: flex;
-    height: 2300px;
+    height: 2100px;
+
+    article {
+      background-color: rgb(246, 250, 248);
+      width: 50%;
+      padding: 100px;
+
+      p {
+        font-size: 3rem;
+        text-align: center;
+        border: 1px black solid;
+        margin-bottom: 100px;
+        padding: 10px;
+
+        :last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      /* アクセス 周辺画像 */
+      .img-change {
+        width: 100%;
+        height: 30%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 5px;
+        animation: bgchange 25s ease-out infinite;
+      }
+
+      div {
+        iframe {
+          height: 80vh;
+        }
+      }
+    }
   }
 
-  .access-image article {
-    background-color: rgb(246, 250, 248);
-    width: 50%;
-    padding: 100px;
-  }
+  .car-contents {
+    h4 {
+      font-size: 2.5rem;
+      text-align: left;
+      color: color(main);
+    }
 
-  /* article内のpタグに反応してしまう注意 */
-  .access-image p {
-    font-size: 3rem;
-    text-align: center;
-    border: 1px black solid;
-    margin-bottom: 100px;
-    padding: 10px;
-  }
+    div {
+      p {
+        font-size: 2rem;
+        text-align: left;
+        border: 0;
+        margin: 0;
+      }
 
-  .access-image p:last-child {
-    margin-bottom: 0;
-  }
+      span {
+        font-size: 2.5rem;
+        display: block;
+        width: 80%;
+        background-color: #09c2bf;
+        color: color(sub);
+        margin: 50px 0;
+      }
+    }
 
-  /* アクセス 周辺画像 */
-  .img-change {
-    width: 100%;
-    height: 30%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 5px;
-    animation: bgchange 25s ease-out infinite;
-  }
+    ul {
+      text-align: left;
+      padding: 30px 50px 30px;
+      font-size: 2rem;
+    }
 
-  .access-image iframe {
-    height: 60vh;
-  }
+    span {
+      font-size: 2.5rem;
 
-  .car-contents h4 {
-    font-size: 2.5rem;
-    text-align: left;
-    color: #2eb6b3;
-  }
+    }
 
-  .car-contents div>p {
-    font-size: 2rem;
-    text-align: left;
-    border: 0;
-    margin: 0;
-  }
-
-  .car-contents span {
-    font-size: 2rem;
-    display: block;
-    width: 80%;
-    background-color: #09c2bf;
-    color: #ffff;
-    padding: 50px 10px;
-    margin: 50px 0;
-  }
-
-  .car-contents ul {
-    text-align: left;
-    padding: 30px 50px 30px;
-    font-size: 2rem;
-  }
-
-  .car-contents .font {
-    text-align: left;
-    font-size: 2rem;
-    padding: 20px;
-    border: 0;
+    .font {
+      text-align: left;
+      font-size: 2rem;
+      padding: 20px;
+      border: 0;
+    }
   }
 
   /* アクセス ここまで↑ */
-
   /* フッター ここから↓ */
   footer {
     font-family: "遊ゴシック";
