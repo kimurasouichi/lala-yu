@@ -317,7 +317,6 @@ nav span::after {
   background-image: url(../images/img18.jpg);
   background-color: #badacf;
   background-blend-mode: soft-light;
-  /* 画像の変化に関するプロパティ */
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -646,7 +645,6 @@ nav span::after {
 iframe {
   width: 100%;
   height: 315px;
-  /* height: auto; */
 }
 
 /* sns一覧 ここまで↑ */

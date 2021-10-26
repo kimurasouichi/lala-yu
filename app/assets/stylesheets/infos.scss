@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // ＠mixin left-content ここから↓ //
 @mixin left-content {
   padding: 150px 0;
@@ -36,8 +38,8 @@
 }
 
 // @mixin left-content ここまで↑ //
+// @mixin right-content ここから↓ //
 
-// mixin right-content ここから↓ //
 @mixin right-content {
   padding: 150px 0;
   visibility: visible;
@@ -76,8 +78,8 @@
 }
 
 // @mixin right-content ここまで↑ //
+/* お知らせ一覧 ここから↓ */
 
-/* お知らせ一覧 */
 /* 左 */
 .info-content {
   @include left-content;
