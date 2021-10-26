@@ -1,14 +1,13 @@
+/* 共通部分 ここから↓ */
 @charset "utf-8";
-
-/* 共通部分 */
-/* Googleフォントの読み込み。共通のbodyにも記述 */
-@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"); // Googleフォントの読み込み。共通のbodyにも記述
 @import "_global";
 @import "_keyframes";
 @import "_animation";
 
 /* 共通部分 ここまで↑ */
 /* レスポンシブル1 ここから↓ */
+
 /* min-widthは横幅1050pxまでの表示(ハンバーガーメニュー専用。
    display:noneを使用し1050pxまでは非表示にする) */
 @media (min-width: 1050px) {

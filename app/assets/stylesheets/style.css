@@ -1,7 +1,6 @@
+/* 共通部分 ここから↓ */
 @charset "UTF-8";
-/* 共通部分 */
-/* Googleフォントの読み込み。共通のbodyにも記述 */
-@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"); /* Googleフォント */
 html {
   font-size: 100%;
 }
@@ -69,6 +68,8 @@ h3 {
 }
 
 /* 共通部分 ここまで↑ */
+/* keyframes一覧 ここから↓ */
+
 /* グラデーションアニメーション */
 @-webkit-keyframes bggradient {
   0% {
@@ -210,7 +211,6 @@ h3 {
             transform: translateY(0);
   }
 }
-
 @keyframes fadeup2 {
   0% {
     -webkit-transform: translateY(300px);
@@ -280,7 +280,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes slideIn-left {
   0% {
     -webkit-transform: translateX(-180px);
@@ -312,7 +311,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes slideIn-bottom {
   0% {
     opacity: 0;
@@ -376,7 +374,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes slide-skew1 {
   0% {
     -webkit-transform: translate(-200px, -200px);
@@ -408,7 +405,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes slide-skew2 {
   0% {
     -webkit-transform: translate(200px, -200px);
@@ -440,7 +436,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes slide-skew3 {
   0% {
     -webkit-transform: translate(-200px, 200px);
@@ -691,7 +686,6 @@ h3 {
     opacity: 1;
   }
 }
-
 @keyframes stroke-height {
   0% {
     height: 0;
@@ -789,13 +783,16 @@ h3 {
   }
 }
 
+/* keyframes一覧 ここまで↑  */
+/* アニメーション一覧 ここから↓ */
+
+/* 共通部分 ここから↓ */
 /* jQuery用 */
 .hidden {
   /* 要素を消す */
   display: none;
 }
 
-/* jQuery アニメーションここから↓ */
 /* セピア */
 .sepia img {
   -webkit-filter: sepia(100%);
@@ -848,8 +845,9 @@ h3 {
   width: 120px;
 }
 
-/* スライドアニメーション */
+/* 共通部分 ここまで↑ */
 /* お知らせ ここから↓ */
+
 .show_s {
   -webkit-animation: slideIn-left 1s 4s backwards;
           animation: slideIn-left 1s 4s backwards;
@@ -921,7 +919,8 @@ h3 {
 }
 
 /* お知らせ ここまで↑ */
-/* snsで使用 */
+/* 各アニメーション ここから↓ */
+
 .show_s14 {
   -webkit-animation: slideIn-left 1s;
           animation: slideIn-left 1s;
@@ -1013,23 +1012,26 @@ h3 {
           animation: fadeup2 1.5s ease-out 2s backwards;
 }
 
-/* jQuery アニメーションここまで↑ */
-/* 共通部分 ここまで↑ */
+/* 各アニメーションここまで↑ */
 /* レスポンシブル1 ここから↓ */
+
 /* min-widthは横幅1050pxまでの表示(ハンバーガーメニュー専用。
    display:noneを使用し1050pxまでは非表示にする) */
 @media (min-width: 1050px) {
   label[for="open-close"] {
     visibility: hidden;
   }
+
   label[for="open-close"] nav {
     position: static;
     width: 100%;
     margin: 0;
   }
+
   label[for="open-close"] nav img {
     max-width: 10%;
   }
+
   label[for="open-close"] nav #menu {
     position: static;
     display: -webkit-box;
@@ -1040,18 +1042,22 @@ h3 {
     padding: 0;
     display: none;
   }
+
   label[for="open-close"] nav #menu li {
     width: 33.3%;
     border-top: 1px solid #999;
     border-left: 1px solid #999;
   }
+
   label[for="open-close"] nav #menu li :last-of-type {
     border-right: 1px solid #999;
   }
+
 }
 
 /* レスポンシブ1 ここまで↑ */
 /* レスポンシブル2 ここから↓  */
+
 /* min-widthは横幅1700pxまでの表示 */
 /* ヘッダー ここから↓ */
 @media (min-width: 1700px) {
@@ -1062,6 +1068,7 @@ h3 {
     margin: 300px 0;
     font-family: 遊ゴシック;
   }
+
   /* 小さな見出し 開館時間 露店風呂 室内*/
   h3 {
     font-family: 遊ゴシック;
@@ -1070,8 +1077,10 @@ h3 {
     padding-bottom: 20px;
     font-size: 1.5rem;
   }
+
   /* 共通部分 ここまで↑ */
   /* ヘッダー ここから↓ */
+
   header {
     width: 100%;
     height: auto;
@@ -1083,6 +1092,7 @@ h3 {
             box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
     z-index: 30;
   }
+
   header .header-logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1093,10 +1103,12 @@ h3 {
     color: rgba(10, 9, 9, 0.877);
     margin: 10px;
   }
+
   header .header-logo i {
     display: block;
     padding: 0 30px;
   }
+
   header .header-logo ul {
     width: 70%;
     display: -webkit-box;
@@ -1112,9 +1124,11 @@ h3 {
     list-style: none;
     color: #432;
   }
+
   header .header-logo ul li {
     font-size: 3rem;
   }
+
   header .header-logo ul li a:hover {
     color: #fff;
     text-shadow: 1px 1px 1px #140505;
@@ -1122,8 +1136,10 @@ h3 {
     padding: 20px 0;
     background-color: rgba(163, 225, 218, 0.5);
   }
+
   /* ヘッダー ここまで↑ */
   /* Bigロゴ ここから↓ */
+
   .big-log {
     text-align: center;
     margin: 0 auto;
@@ -1140,17 +1156,20 @@ h3 {
     -webkit-animation: bggradient 25s ease infinite;
             animation: bggradient 25s ease infinite;
   }
+
   .big-log h1 {
     font-family: Reggae One,cursive;
     color: #fff;
     text-shadow: 1px 4px 4px #140505;
   }
+
   .big-log h1 i {
     display: block;
     padding-top: 50px;
     width: 100%;
     font-size: 15rem;
   }
+
   .big-log p {
     width: 80%;
     text-align: center;
@@ -1162,11 +1181,14 @@ h3 {
     position: relative;
     top: -100px;
   }
+
   /* Bigロゴ ここまで↑ */
   /* Big画像 フェードイン・フェードアウトここから↓ */
+
   .photos {
     position: relative;
   }
+
   .photos img {
     position: absolute;
     width: 100%;
@@ -1178,20 +1200,25 @@ h3 {
             animation: photo 25s infinite;
     opacity: 0;
   }
+
   .photos img :nth-last-of-type(1) {
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
   }
+
   .photos img :nth-last-of-type(2) {
     -webkit-animation-delay: 5s;
             animation-delay: 5s;
   }
+
   .photos img :nth-last-of-type(3) {
     -webkit-animation-delay: 10s;
             animation-delay: 10s;
   }
+
   /* Big画像 フェードイン・フェードアウトここまで↑ */
   /* 温泉由来 ここから↓ */
+
   .origin_f {
     font-family: 遊ゴシック;
     visibility: hidden;
@@ -1199,6 +1226,7 @@ h3 {
     width: 100%;
     min-height: 100vh;
   }
+
   .origin_f .origin-img {
     background-image: url(../images/img18.jpg);
     background-color: #badacf;
@@ -1208,14 +1236,17 @@ h3 {
     width: 100%;
     padding: 50px;
   }
+
   .origin_f .origin-img p {
     visibility: hidden;
     font-family: 遊ゴシック;
     max-width: 90%;
     margin: 20px auto;
   }
+
   /* 温泉由来 ここまで↑ */
   /* お知らせ ここから↓ */
+
   .info_f {
     font-family: 遊ゴシック;
     visibility: hidden;
@@ -1225,6 +1256,7 @@ h3 {
     background-color: #fff;
     /* IDを指定にすると反応する*/
   }
+
   .info_f #info {
     visibility: hidden;
     padding: 100px;
@@ -1236,6 +1268,7 @@ h3 {
     background-position: center;
     width: 100%;
   }
+
   .info_f #info dl {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1250,11 +1283,13 @@ h3 {
     max-width: 80%;
     margin: 0 auto;
   }
+
   .info_f #info dl dt,
   .info_f #info dl dd {
     border-bottom: 1px #ddd solid;
     margin-bottom: 80px;
   }
+
   .info_f #info dl dt {
     width: 30%;
     margin-right: 100px;
@@ -1262,13 +1297,16 @@ h3 {
     text-align: center;
     visibility: hidden;
   }
+
   .info_f #info dl dd {
     visibility: hidden;
     text-align: center;
     width: 50%;
   }
+
   /* おしらせ ここまで↑ */
   /* お知らせ一覧 ここから↓ */
+
   .post-info {
     font-family: 遊ゴシック;
     width: 400px;
@@ -1277,6 +1315,7 @@ h3 {
     margin: 0 auto;
     margin-bottom: 400px;
   }
+
   .post-info a .post-date {
     font-family: 遊ゴシック;
     background: #0bd;
@@ -1287,9 +1326,11 @@ h3 {
     font-size: 3rem;
     padding-top: 120px;
   }
+
   .post-info a .post-date:hover {
     background: #2eb6b3;
   }
+
   .post-info a .post-date span {
     font-size: 3rem;
     border-top: 1px rgba(255, 255, 255, 0.5) solid;
@@ -1297,8 +1338,10 @@ h3 {
     width: 60%;
     margin: 0 auto;
   }
+
   /* お知らせ一覧 ここまで↑ */
   /* 施設案内 ここから↓ */
+
   #grid {
     visibility: hidden;
     display: -ms-grid;
@@ -1314,23 +1357,28 @@ h3 {
     background-position: center;
     margin-bottom: 200px;
   }
+
   #grid img {
     visibility: hidden;
     width: 100%;
     background-size: cover;
     background-position: center;
   }
+
   #grid .item_f a p {
     font-family: 遊ゴシック;
     text-align: center;
     font-size: 3rem;
     color: #fff;
   }
+
   #grid .item_f a p:hover {
     color: #e9e9e9;
   }
+
   /* 施設案内 ここまで↑ */
   /* メルマガ登録 ここから↓ */
+
   .sns-favicon {
     margin: 0 auto;
     padding: 80px 400px;
@@ -1340,6 +1388,7 @@ h3 {
     font-size: 1.25rem;
     width: 95%;
   }
+
   .sns-favicon div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1349,6 +1398,7 @@ h3 {
             justify-content: space-between;
     height: 30px;
   }
+
   .sns-favicon p {
     font-size: 3rem;
     text-align: center;
@@ -1362,15 +1412,18 @@ h3 {
             animation: kurukuru 1.4s ease-out;
     opacity: 1;
   }
+
   .sns-favicon p:hover {
     background: -webkit-gradient(linear, left top, right top, from(#362ae0), color-stop(0%, #3b79cc), to(#42d3ed));
     background: linear-gradient(to right, #362ae0 0%, #3b79cc 0%, #42d3ed 100%);
   }
+
   .sns-favicon span {
     display: block;
     width: 100px;
     height: 100px;
   }
+
   .favicon1 {
     background-image: url("../images/favicon4.jpg");
     background-position: center;
@@ -1379,6 +1432,7 @@ h3 {
             animation: poyopoyo 2s ease-out 3s infinite;
     opacity: 1;
   }
+
   .favicon2 {
     background-image: url("../images/favicon5.jpg");
     background-position: center;
@@ -1387,6 +1441,7 @@ h3 {
             animation: poyopoyo 2s ease-out 3s infinite;
     opacity: 1;
   }
+
   .favicon3 {
     background-image: url("../images/favicon6.jpg");
     background-position: center;
@@ -1395,6 +1450,7 @@ h3 {
             animation: poyopoyo 2s ease-out 3s infinite;
     opacity: 1;
   }
+
   #merumaga_a2 .post-date {
     font-family: 遊ゴシック;
     background: #0bd;
@@ -1405,9 +1461,11 @@ h3 {
     font-size: 3rem;
     padding-top: 120px;
   }
+
   #merumaga_a2 .post-date:hover {
     background: #2eb6b3;
   }
+
   #merumaga_a2 span {
     font-size: 3rem;
     border-top: 1px rgba(255, 255, 255, 0.5) solid;
@@ -1415,12 +1473,15 @@ h3 {
     width: 60%;
     margin: 0 auto;
   }
+
   /* メルマガ登録 ここまで↑ */
   /* sns一覧 ここから↓ */
+
   #merumaga_a {
     width: 95%;
     background-color: #f9f7f0;
   }
+
   #merumaga_a .sns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1430,9 +1491,11 @@ h3 {
     margin: 0 auto;
     background: #faf7f0;
   }
+
   #merumaga_a .sns .sns-box {
     width: 100%;
   }
+
   #merumaga_a .sns .sns-box .sub-title {
     width: 50%;
     font-size: 3rem;
@@ -1441,75 +1504,90 @@ h3 {
     font-weight: normal;
     margin: 50px 50px;
   }
+
   #merumaga_a .sns .sns-box iframe {
     width: 100%;
     height: 50vh;
-    /* height: auto; */
   }
+
   /* sns一覧 ここまで↑ */
   /* 営業時間 ここから↓ */
+
   /* ボーダーアニメーション ここから↓ */
   .stroke {
     margin: 0 30px;
     position: relative;
   }
+
   .stroke .is-animated .right,
   .stroke .is-animated .left {
     -webkit-animation: stroke-height 1.8s;
             animation: stroke-height 1.8s;
   }
+
   .stroke h2 {
     font-size: 3rem;
     text-align: center;
     padding: 130px 0;
     margin-bottom: 50px;
   }
+
   .stroke .border {
     content: "";
     position: absolute;
     opacity: 0;
   }
+
   .stroke .border .top_p,
   .stroke .border .bottom {
     width: calc(100% - 20px);
   }
+
   .stroke .border .top_p {
     border-top: 3px solid #362ae0;
     right: 0;
     top: 0;
   }
+
   .stroke .border .bottom {
     border-bottom: 3px solid #362ae0;
     left: 0;
     bottom: 0;
   }
+
   .stroke .border .right,
   .stroke .border .left {
     height: calc(100% - 20px);
   }
+
   .stroke .border .right {
     border-right: 3px solid #362ae0;
     right: 0;
     top: 0;
   }
+
   .stroke .border .left {
     border-left: 3px solid #362ae0;
     left: 0;
     bottom: 0;
   }
+
   .stroke .border {
     opacity: 1;
   }
+
   .stroke .border .top_p,
   .stroke .border .bottom {
     -webkit-animation: stroke-width 1.8s;
             animation: stroke-width 1.8s;
   }
+
   .time p {
     font-size: 2.5rem;
     color: #2eb6b3;
     text-align: center;
   }
+
   .time span {
     font-family: 遊ゴシック;
     display: block;
@@ -1517,12 +1595,15 @@ h3 {
     font-size: 1.25rem;
     color: #2eb6b3;
   }
+
   /* ボーダーアニメーション ここまで↑ */
   /* ラインアニメーション ここから↓ */
+
   .line {
     display: block;
     position: relative;
   }
+
   .line::after {
     background: -webkit-gradient(linear, left top, right top, from(#362ae0), color-stop(50%, #3b79cc), to(#42d3ed));
     background: linear-gradient(to right, #362ae0 0%, #3b79cc 50%, #42d3ed 100%);
@@ -1538,31 +1619,39 @@ h3 {
     bottom: 0;
     left: 50%;
   }
+
   .line_a::after {
     width: 100%;
   }
+
   /* ラインアニメーション ここまで↑ */
+
   /* 料金表 */
   .money_f {
     font-size: 2.5rem;
     background: #eeecc2;
     padding: 100px 50px;
   }
+
   .money_f .time h3 {
     font-size: 3rem;
   }
+
   .money_f .time p {
     font-size: 3rem;
     font-family: 遊ゴシック;
   }
+
   .money_f .time span {
     font-family: 遊ゴシック;
     font-size: 2rem;
   }
+
   .money_f .money h3 {
     font-size: 3rem;
     padding: 30px 0;
   }
+
   .table-money {
     text-align: center;
     width: 100%;
@@ -1571,39 +1660,49 @@ h3 {
     border-collapse: collapse;
     font-family: ヒラギノ明朝;
   }
+
   .table-money td :nth-of-type(3n) {
     background: #e4f195;
   }
+
   .table-money td :nth-of-type(5n) {
     background: #e4f195;
   }
+
   .table-money .money-heder {
     color: #fff;
     background-color: #d6eb21;
     border: 1px #d6eb21 solid;
     font-size: 2.5rem;
   }
+
   .table-money span {
     color: #2eb6b3;
   }
+
   tr,
   th,
   td {
     height: 40px;
   }
+
   th {
     background: #e0ebe7;
   }
+
   td {
     background: #eeecc2;
   }
+
   .price {
     visibility: hidden;
   }
+
   .show_up1 {
     -webkit-animation: fadeup 2s ease 1 backwards;
             animation: fadeup 2s ease 1 backwards;
   }
+
   .explanation span {
     display: block;
     text-align: center;
@@ -1611,11 +1710,14 @@ h3 {
     color: #2eb6b3;
     padding: 20px 0 0 20px;
   }
+
   .table-money .black {
     color: black;
   }
+
   /* 営業時間 ここまで↑ */
   /* アクセス ここから↓ */
+
   .access-image {
     font-family: 遊ゴシック;
     display: -webkit-box;
@@ -1623,12 +1725,13 @@ h3 {
     display: flex;
     height: 2100px;
   }
+
   .access-image article {
     background-color: #f6faf8;
     width: 50%;
     padding: 100px;
-    /* アクセス 周辺画像 */
   }
+
   .access-image article p {
     font-size: 3rem;
     text-align: center;
@@ -1636,9 +1739,11 @@ h3 {
     margin-bottom: 100px;
     padding: 10px;
   }
+
   .access-image article p :last-child {
     margin-bottom: 0;
   }
+
   .access-image article .img-change {
     width: 100%;
     height: 30%;
@@ -1648,20 +1753,24 @@ h3 {
     -webkit-animation: bgchange 25s ease-out infinite;
             animation: bgchange 25s ease-out infinite;
   }
+
   .access-image article div iframe {
     height: 80vh;
   }
+
   .car-contents h4 {
     font-size: 2.5rem;
     text-align: left;
     color: #2eb6b3;
   }
+
   .car-contents div p {
     font-size: 2rem;
     text-align: left;
     border: 0;
     margin: 0;
   }
+
   .car-contents div span {
     font-size: 2.5rem;
     display: block;
@@ -1670,22 +1779,27 @@ h3 {
     color: #fff;
     margin: 50px 0;
   }
+
   .car-contents ul {
     text-align: left;
     padding: 30px 50px 30px;
     font-size: 2rem;
   }
+
   .car-contents span {
     font-size: 2.5rem;
   }
+
   .car-contents .font {
     text-align: left;
     font-size: 2rem;
     padding: 20px;
     border: 0;
   }
+
   /* アクセス ここまで↑ */
   /* フッター ここから↓ */
+
   footer {
     font-family: 遊ゴシック;
     background: #432;
@@ -1694,8 +1808,10 @@ h3 {
     color: #fff;
     font-size: 2rem;
   }
+
   /* フッター ここまで↑ */
   /* New.html ここから↓ */
+
   /* お知らせ一覧 */
   .h2_f {
     width: 100%;
@@ -1708,39 +1824,50 @@ h3 {
             justify-content: center;
     margin: 130px 0 0 0;
   }
+
   /* New.html ここまで↑ */
   /* Show.html ここから↓ */
+
   .show-content h3 {
     font-size: 3rem;
   }
+
   .show-content p {
     font-size: 2rem;
     font-family: 遊ゴシック;
   }
+
   .big_f1 ul .box img {
     width: 100%;
   }
+
   .big_f1 li {
     width: 100%;
   }
+
   .big_f1 li img {
     width: 100%;
   }
+
   #bigimg_2 {
     visibility: hidden;
     width: 75%;
   }
+
   .right_img {
     width: 24%;
   }
+
   /* Show.html ここまで↑ */
   /* Cooking.html ここから↓ */
+
   /* LaLa麺 */
   .cooking-img_f {
     padding: 50px 50px;
     max-height: 100%;
     margin-bottom: 50px;
   }
+
   .cooking-img_f .cooking-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1749,6 +1876,7 @@ h3 {
         flex-wrap: wrap;
     visibility: hidden;
   }
+
   .cooking-img_f .cooking-img h3 {
     width: 40%;
     font-size: 3rem;
@@ -1756,17 +1884,21 @@ h3 {
     padding: 80px 0 0 0;
     color: #b95f5f;
   }
+
   .cooking-img_f .cooking-img h3 p {
     text-align: left;
     font-size: 2rem;
     padding-top: 20px;
   }
+
   .cooking-img_f .cooking-img h3 p :last-child {
     padding-top: 0;
   }
+
   .cooking-img_f .cooking-img img {
     width: 60%;
   }
+
   .cooking-img_f .cooking-img ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1778,16 +1910,20 @@ h3 {
     margin-top: 10px;
     list-style: none;
   }
+
   .cooking-img_f .cooking-img ul li {
     width: 100%;
     margin-right: 10px;
   }
+
   .cooking-img_f .cooking-img ul li :last-child {
     margin-right: 0;
   }
+
   .cooking-img_f .cooking-img ul li img {
     width: 100%;
   }
+
   /* 居酒屋 LaLaのれん */
   .cooking-img_f1 {
     background-image: url(../images/img17.jpg);
@@ -1799,6 +1935,7 @@ h3 {
     max-height: 70%;
     margin-bottom: 50px;
   }
+
   #noren {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1807,6 +1944,7 @@ h3 {
         flex-wrap: wrap;
     visibility: hidden;
   }
+
   #noren h3 {
     width: 40%;
     font-size: 3rem;
@@ -1814,17 +1952,21 @@ h3 {
     padding: 80px 0 0 50px;
     color: #b95f5f;
   }
+
   #noren h3 p {
     text-align: left;
     font-size: 2rem;
     padding-top: 20px;
   }
+
   #noren h3 p :last-child {
     padding-top: 0;
   }
+
   #noren img {
     width: 60%;
   }
+
   #noren ul {
     width: 100%;
     display: -webkit-box;
@@ -1833,16 +1975,20 @@ h3 {
     margin-top: 10px;
     list-style: none;
   }
+
   #noren ul li {
     width: 100%;
     margin-right: 10px;
   }
+
   #noren ul li :last-child {
     margin-right: 0;
   }
+
   #noren ul li img {
     width: 100%;
   }
+
   /* LaLaカフェ */
   #cafe {
     display: -webkit-box;
@@ -1852,6 +1998,7 @@ h3 {
         flex-wrap: wrap;
     visibility: hidden;
   }
+
   #cafe h3 {
     width: 40%;
     font-size: 3rem;
@@ -1859,17 +2006,21 @@ h3 {
     padding: 80px 0 0 0;
     color: #b95f5f;
   }
+
   #cafe h3 p {
     text-align: left;
     font-size: 2rem;
     padding-top: 20px;
   }
+
   #cafe h3 p :last-child {
     padding-top: 0;
   }
+
   #cafe img {
     width: 60%;
   }
+
   #cafe ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1877,15 +2028,19 @@ h3 {
     margin-top: 10px;
     list-style: none;
   }
+
   #cafe ul li {
     margin-right: 10px;
   }
+
   #cafe ul li :last-child {
     margin-right: 0;
   }
+
   #cafe ul li img {
     width: 100%;
   }
+
   /* LaLaカフェ */
   #cafe {
     display: -webkit-box;
@@ -1895,6 +2050,7 @@ h3 {
         flex-wrap: wrap;
     visibility: hidden;
   }
+
   #cafe h3 {
     width: 40%;
     font-size: 3rem;
@@ -1902,17 +2058,21 @@ h3 {
     padding: 80px 0 0 50px;
     color: #b95f5f;
   }
+
   #cafe h3 p {
     text-align: left;
     font-size: 2rem;
     padding-top: 20px;
   }
+
   #cafe h3 p :last-child {
     padding-top: 0;
   }
+
   #cafe img {
     width: 60%;
   }
+
   #cafe ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1921,16 +2081,20 @@ h3 {
     margin-top: 10px;
     list-style: none;
   }
+
   #cafe ul li {
     width: 100%;
     margin-right: 10px;
   }
+
   #cafe ul li :last-child {
     margin-right: 0;
   }
+
   #cafe ul li img {
     width: 100%;
   }
+
   /* 茶店 小町LaLa屋 */
   #comachi {
     display: -webkit-box;
@@ -1940,6 +2104,7 @@ h3 {
         flex-wrap: wrap;
     visibility: hidden;
   }
+
   #comachi h3 {
     width: 40%;
     font-size: 3rem;
@@ -1947,17 +2112,21 @@ h3 {
     padding: 80px 0 0 50px;
     color: #b95f5f;
   }
+
   #comachi h3 p {
     text-align: left;
     font-size: 2rem;
     padding-top: 20px;
   }
+
   #comachi h3 p :last-child {
     padding-top: 0;
   }
+
   #comachi img {
     width: 60%;
   }
+
   #comachi ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1969,15 +2138,19 @@ h3 {
     margin-top: 10px;
     list-style: none;
   }
+
   #comachi ul li {
     width: 100%;
     margin-right: 10px;
   }
+
   #comachi ul li :last-child {
     margin-right: 0;
   }
+
   /* cooking.html ここまで↑  */
   /* Contact.html ここから↓ */
+
   .form-contact {
     font-family: 遊ゴシック;
     width: 95%;
@@ -1991,8 +2164,9 @@ h3 {
     margin-top: 150px;
     -webkit-animation: fadeup2 2s ease-in-out 1s backwards;
             animation: fadeup2 2s ease-in-out 1s backwards;
-    /* inputの行間隔 */
+
   }
+
   .form-contact .form-title {
     font-size: 5rem;
     text-transform: uppercase;
@@ -2000,20 +2174,23 @@ h3 {
     margin-bottom: 100px;
     margin: 0;
   }
+
   .form-contact form div.required {
     font-size: 3rem;
     margin: 200px 0;
-    /* 必須 */
   }
+
   .form-contact form div.required label {
     font-size: 2rem;
     margin-bottom: 10px;
     display: block;
   }
+
   .form-contact form div.required label span {
     color: red;
     font-size: 2rem;
   }
+
   .form-contact form div.required input[type="text"],
   .form-contact form div.required input[type="email"] {
     width: 100%;
@@ -2021,17 +2198,20 @@ h3 {
     margin: 0;
     background-color: #eee;
   }
+
   .form-contact form textarea {
     background-color: #eee;
     width: 100%;
     max-width: 100%;
     height: 20rem;
   }
+
   .form-contact input[type="submit"] {
     border: none;
     cursor: pointer;
     line-height: 1;
   }
+
   .form-contact .button {
     font-size: 3rem;
     background: #0bd;
@@ -2039,9 +2219,11 @@ h3 {
     border-radius: 5px;
     padding: 18px 32px;
   }
+
   .form-contact .button:hover {
     background: #0090aa;
   }
+
   /* スイッチ */
   .switch {
     display: -webkit-box;
@@ -2054,14 +2236,15 @@ h3 {
     width: 100%;
     position: fixed;
     bottom: 0;
-    /* アニメーションは貼り付ける場所に注意 */
   }
+
   .switch div {
     width: 50%;
     background-color: rgba(150, 167, 5, 0.7);
     -webkit-animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
             animation: fadeIn 3s ease-in-out 1 normal forwards, poyopoyo 2s 5s infinite;
   }
+
   .switch p {
     font-family: 遊ゴシック;
     font-size: 1.25rem;
@@ -2071,6 +2254,7 @@ h3 {
     margin: 0 10px;
     background-color: rgba(4, 23, 107, 0.5);
   }
+
   .switch span {
     display: block;
     text-align: center;
@@ -2083,12 +2267,15 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   /* スイッチ ここまで↑ */
 }
 
 /* Contact.html ここまで↑ */
+
 /* レスポンシブル2 ここまで↑ */
 /* レスポンシブル3 ここから↓ */
+
 /* max-widthは横幅1050pxからの表示 */
 @media (max-width: 1050px) {
   header .header-logo {
@@ -2098,14 +2285,17 @@ h3 {
     width: 80%;
     margin: 0 auto;
   }
+
   header .header-logo ul,
   header .header-logo li {
     display: none;
   }
+
   /* ハンバーガーメニュー ここから↓ */
   label[for="open-close"] {
     margin-bottom: 0px;
   }
+
   label[for="open-close"] nav {
     z-index: 30;
     width: 35px;
@@ -2117,9 +2307,11 @@ h3 {
     /* クリックしたときに表示するメニュー */
     /* アニメーションの実施 */
   }
+
   label[for="open-close"] nav #open-close {
     display: none;
   }
+
   label[for="open-close"] nav #menu {
     width: 100%;
     margin-top: 60px;
@@ -2128,10 +2320,12 @@ h3 {
     top: 15px;
     right: 100%;
   }
+
   label[for="open-close"] nav #menu li {
     height: auto;
     line-height: 1.2;
   }
+
   label[for="open-close"] nav #menu li a {
     height: auto;
     display: block;
@@ -2142,17 +2336,21 @@ h3 {
     text-decoration: none;
     font-size: 1.2rem;
   }
+
   label[for="open-close"] nav #menu li a:hover {
     color: #9cefec;
   }
+
   label[for="open-close"] nav #open-close:checked ~ #menu {
     -webkit-transition: all 300ms 0s ease;
     transition: all 300ms 0s ease;
     -webkit-transform: translate(100%);
             transform: translate(100%);
   }
+
   /* ハンバーガーメニュー ここまで↑ */
   /* 大きなロゴ ここから↓ */
+
   /* Big画像 */
   .photos img {
     position: absolute;
@@ -2165,6 +2363,7 @@ h3 {
             animation: photo 25s infinite;
     opacity: 0;
   }
+
   .big-log {
     top: 0;
     text-align: center;
@@ -2172,6 +2371,7 @@ h3 {
     width: 100%;
     margin: 0 0 700px 0;
   }
+
   .big-log i {
     display: block;
     text-align: center;
@@ -2179,8 +2379,10 @@ h3 {
     width: 100%;
     font-size: 5rem;
   }
+
   /* 大きなロゴ ここまで↑ */
   /* 温泉由来 ここから↓ */
+
   .origin-img {
     background-image: url(../images/img18.jpg);
     background-color: #badacf;
@@ -2190,14 +2392,17 @@ h3 {
     width: 100%;
     padding: 80px 0;
   }
+
   .origin-img p {
     font-family: 遊ゴシック;
     width: 100%;
     padding: 0;
     margin: 10px auto;
   }
+
   /* 温泉由来 ここまで↑ */
   /* お知らせ ここから↓ */
+
   .info_f .info-img {
     margin-bottom: 100px;
     padding: 200px 0;
@@ -2205,10 +2410,12 @@ h3 {
     background-size: cover;
     background-position: center;
   }
+
   .info_f #info {
     padding: 200px 0;
     background-color: #fff;
   }
+
   .info_f #info dl {
     display: block;
     width: 100%;
@@ -2216,6 +2423,7 @@ h3 {
     margin: 0 auto;
     font-size: 1.4rem;
   }
+
   .info_f #info dl dt {
     width: 100%;
     color: #2eb6b3;
@@ -2223,20 +2431,24 @@ h3 {
     visibility: hidden;
     margin: 0 auto;
   }
+
   .info_f #info dl dd {
     visibility: hidden;
     text-align: center;
     width: 50%;
     margin: 0 auto;
   }
+
   .info_f #info dl dt,
   .info_f #info dl dd {
     border-bottom: 1px #ddd solid;
     margin-bottom: 80px;
     width: 100%;
   }
+
   /* お知らせ ここまで↑ */
   /* 施設案内 ここから↓ */
+
   #grid {
     display: -ms-grid;
     display: grid;
@@ -2251,13 +2463,16 @@ h3 {
     background-position: center;
     margin-bottom: 150px;
   }
+
   #grid p {
     text-align: center;
     font-size: 1.8rem;
     color: #fff;
   }
+
   /* 施設案内 ここまで↑ */
   /* メルマガ登録 ここから↓ */
+
   .sns-favicon {
     margin: 0 auto;
     padding: 80px 150px;
@@ -2267,6 +2482,7 @@ h3 {
     font-size: 1rem;
     width: 95%;
   }
+
   .sns-favicon div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2276,6 +2492,7 @@ h3 {
             justify-content: space-between;
     height: 30px;
   }
+
   .sns-favicon p {
     text-align: center;
     margin-top: 20px;
@@ -2283,21 +2500,26 @@ h3 {
     color: #fff;
     border-radius: 5px;
   }
+
   .sns-favicon span {
     display: block;
     width: 30px;
   }
+
   /* メルマガ登録 ここまで↑ */
   /* sns一覧 ここから↓ */
+
   .sns {
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
     background: #faf7f0;
   }
+
   .sns .sns-box {
     width: 100%;
   }
+
   .sns .sns-box .sub-title {
     width: 50%;
     font-size: 2rem;
@@ -2306,21 +2528,26 @@ h3 {
     font-weight: normal;
     margin: 50px 50px;
   }
+
   .sns .sns-box iframe {
     width: 100%;
     height: auto;
   }
+
   /* sns一覧 ここまで↑ */
   /* アクセス ここから↓ */
+
   .access-image {
     display: block;
     max-height: 3000px;
   }
+
   .access-image article {
     width: 95%;
     padding: 30px;
     border: #09c2bf 1px solid;
   }
+
   .access-image article .img-change {
     width: 80%;
     height: 50vh;
@@ -2330,11 +2557,13 @@ h3 {
     -webkit-animation: bgchange 25s ease-in infinite;
             animation: bgchange 25s ease-in infinite;
   }
+
   .access-image article p {
     width: 80%;
     text-align: center;
     margin: 0 auto;
   }
+
   .access-image article div {
     text-align: center;
     margin: 50px auto;
@@ -2342,18 +2571,22 @@ h3 {
     background-size: cover;
     background-position: center;
   }
+
   .access-image article div iframe {
     width: 80%;
     height: 50vh;
   }
+
   .car-contents div h4 {
     padding-left: 100px;
     color: #2eb6b3;
   }
+
   .car-contents div p {
     text-align: left;
     padding-left: 80px;
   }
+
   .car-contents div span {
     display: block;
     text-align: left;
@@ -2362,14 +2595,18 @@ h3 {
     background-color: #09c2bf;
     color: #fff;
   }
+
   .car-contents ul {
     padding: 10px 30px 10px 80px;
   }
+
   .car-contents span {
     margin: 0 auto;
   }
+
   /* アクセス ここまで↑ */
   /* フッター ここから↓ */
+
   footer {
     background: #432;
     text-align: center;
@@ -2377,17 +2614,21 @@ h3 {
     color: #fff;
     font-size: 1.2rem;
   }
+
   /* フッター ここまで↑*/
   /* Now.html ここから↓ */
+
   /* 左 */
   .info-content {
     padding: 100px 0;
     visibility: hidden;
   }
+
   .info-content img {
     width: 80%;
     position: absolute;
   }
+
   .info-content div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2398,20 +2639,24 @@ h3 {
     height: auto;
     background: rgba(251, 250, 250, 0.8);
   }
+
   .info-content h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
   }
+
   .info-content p {
     font-size: 0.8rem;
     padding: 5px 0;
   }
+
   /* 右 */
   .info-content_1 {
     padding: 150px 0;
     visibility: visible;
     margin-bottom: 350px;
   }
+
   .info-content_1 img {
     margin-left: 150px;
     width: 100%;
@@ -2419,6 +2664,7 @@ h3 {
     -webkit-animation: slide-skew2 1s 1s backwards;
             animation: slide-skew2 1s 1s backwards;
   }
+
   .info-content_1 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2431,27 +2677,32 @@ h3 {
     -webkit-animation: slide-skew3 1s 1s backwards;
             animation: slide-skew3 1s 1s backwards;
   }
+
   .info-content_1 h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
     -webkit-animation: slideIn-right 1s 3s backwards;
             animation: slideIn-right 1s 3s backwards;
   }
+
   .info-content_1 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 4s backwards;
             animation: fadeup 1s 4s backwards;
   }
+
   /* 左 */
   .info-content_2 {
     padding: 100px 0;
     visibility: hidden;
   }
+
   .info-content_2 img {
     width: 80%;
     position: absolute;
   }
+
   .info-content_2 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2462,36 +2713,44 @@ h3 {
     height: auto;
     background: rgba(251, 250, 250, 0.8);
   }
+
   .info-content_2 h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
   }
+
   .info-content_2 p {
     font-size: 0.8rem;
     padding: 5px 0;
   }
+
   .info-content_2 img {
     -webkit-animation: slide-skew1 1s 3s backwards;
             animation: slide-skew1 1s 3s backwards;
   }
+
   .info-content_2 div {
     -webkit-animation: slide-skew 1s 3s backwards;
             animation: slide-skew 1s 3s backwards;
   }
+
   .info-content_2 h4 {
     -webkit-animation: slideIn-left 1s 4s backwards;
             animation: slideIn-left 1s 4s backwards;
   }
+
   .info-content_2 p {
     -webkit-animation: fadeup 1s 1 5s backwards;
             animation: fadeup 1s 1 5s backwards;
   }
+
   /* 右 */
   .info-content_3 {
     padding: 150px 0;
     visibility: visible;
     margin-bottom: 350px;
   }
+
   .info-content_3 img {
     margin-left: 150px;
     width: 100%;
@@ -2499,6 +2758,7 @@ h3 {
     -webkit-animation: slide-skew2 1s 1s backwards;
             animation: slide-skew2 1s 1s backwards;
   }
+
   .info-content_3 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2511,43 +2771,52 @@ h3 {
     -webkit-animation: slide-skew3 1s 1s backwards;
             animation: slide-skew3 1s 1s backwards;
   }
+
   .info-content_3 h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
     -webkit-animation: slideIn-right 1s 3s backwards;
             animation: slideIn-right 1s 3s backwards;
   }
+
   .info-content_3 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 4s backwards;
             animation: fadeup 1s 4s backwards;
   }
+
   .info-content_3 img {
     -webkit-animation: slide-skew2 1s 5s backwards;
             animation: slide-skew2 1s 5s backwards;
   }
+
   .info-content_3 div {
     -webkit-animation: slide-skew3 1s 5s backwards;
             animation: slide-skew3 1s 5s backwards;
   }
+
   .info-content_3 h4 {
     -webkit-animation: slideIn-right 1s 6s backwards;
             animation: slideIn-right 1s 6s backwards;
   }
+
   .info-content_3 p {
     -webkit-animation: fadeup 1s 1 7s backwards;
             animation: fadeup 1s 1 7s backwards;
   }
+
   /* 左 */
   .info-content_4 {
     padding: 100px 0;
     visibility: hidden;
   }
+
   .info-content_4 img {
     width: 80%;
     position: absolute;
   }
+
   .info-content_4 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2558,36 +2827,44 @@ h3 {
     height: auto;
     background: rgba(251, 250, 250, 0.8);
   }
+
   .info-content_4 h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
   }
+
   .info-content_4 p {
     font-size: 0.8rem;
     padding: 5px 0;
   }
+
   .info-content_4 img {
     -webkit-animation: slide-skew1 1s 7s backwards;
             animation: slide-skew1 1s 7s backwards;
   }
+
   .info-content_4 div {
     -webkit-animation: slide-skew 1s 7s backwards;
             animation: slide-skew 1s 7s backwards;
   }
+
   .info-content_4 h4 {
     -webkit-animation: slideIn-left 1s 7s backwards;
             animation: slideIn-left 1s 7s backwards;
   }
+
   .info-content_4 p {
     -webkit-animation: fadeup 1s 8s backwards;
             animation: fadeup 1s 8s backwards;
   }
+
   /* 右 */
   .info-content_5 {
     padding: 150px 0;
     visibility: visible;
     margin-bottom: 350px;
   }
+
   .info-content_5 img {
     margin-left: 150px;
     width: 100%;
@@ -2595,6 +2872,7 @@ h3 {
     -webkit-animation: slide-skew2 1s 1s backwards;
             animation: slide-skew2 1s 1s backwards;
   }
+
   .info-content_5 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -2607,36 +2885,44 @@ h3 {
     -webkit-animation: slide-skew3 1s 1s backwards;
             animation: slide-skew3 1s 1s backwards;
   }
+
   .info-content_5 h4 {
     margin-bottom: 50px;
     font-size: 1.2rem;
     -webkit-animation: slideIn-right 1s 3s backwards;
             animation: slideIn-right 1s 3s backwards;
   }
+
   .info-content_5 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 4s backwards;
             animation: fadeup 1s 4s backwards;
   }
+
   .info-content_5 img {
     -webkit-animation: slide-skew2 1s 8s backwards;
             animation: slide-skew2 1s 8s backwards;
   }
+
   .info-content_5 div {
     -webkit-animation: slide-skew3 1s 8s backwards;
             animation: slide-skew3 1s 8s backwards;
   }
+
   .info-content_5 h4 {
     -webkit-animation: slideIn-right 1s 10s backwards;
             animation: slideIn-right 1s 10s backwards;
   }
+
   .info-content_5 p {
     -webkit-animation: fadeup 1s 11s backwards;
             animation: fadeup 1s 11s backwards;
   }
+
   /* Now.html ここまで↑ */
   /* Contact.html ここから↓ */
+
   .form-contact {
     width: 95%;
     background-image: url(../images/img15.jpg);
@@ -2647,6 +2933,7 @@ h3 {
     background-position: center;
     padding: 100px 100px;
   }
+
   .form-contact .form-title {
     font-size: 3rem;
     text-transform: uppercase;
@@ -2654,19 +2941,23 @@ h3 {
     margin-bottom: 100px;
     margin: 0;
   }
+
   .form-contact form .required {
     font-size: 1.5rem;
     margin: 100px 0;
   }
+
   .form-contact form .required label {
     font-size: 1.125rem;
     margin-bottom: 10px;
     display: block;
   }
+
   .form-contact form .required label span {
     color: red;
     font-size: 0.7rem;
   }
+
   .form-contact form .required input[type="text"],
   .form-contact form .required input[type="email"] {
     width: 100%;
@@ -2674,17 +2965,20 @@ h3 {
     margin: 0;
     background-color: #eee;
   }
+
   .form-contact form .required textarea {
     background-color: #eee;
     width: 100%;
     max-width: 100%;
     height: 6rem;
   }
+
   .form-contact form input[type="submit"] {
     border: none;
     cursor: pointer;
     line-height: 1;
   }
+
   .form-contact form .button {
     font-size: 1.375rem;
     background: #0bd;
@@ -2692,11 +2986,14 @@ h3 {
     border-radius: 5px;
     padding: 18px 32px;
   }
+
   .form-contact form .button:hover {
     background: #0090aa;
   }
+
   /* Contact.html ここまで↑ */
   /* スイッチ ここから↓ */
+
   .switch {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2709,10 +3006,12 @@ h3 {
     position: fixed;
     bottom: 0;
   }
+
   .switch div {
     width: 100%;
     background-color: rgba(150, 167, 5, 0.7);
   }
+
   .switch p {
     font-size: 1rem;
     color: #fff;
@@ -2721,6 +3020,7 @@ h3 {
     margin: 0 10px;
     background-color: rgba(80, 87, 119, 0.7);
   }
+
   .switch span {
     display: block;
     text-align: center;
@@ -2733,8 +3033,10 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   /* スイッチ ここまで↑ */
   /* Cooking.htmlここから↓ */
+
   .cooking-img h3 {
     width: 40%;
     font-size: 1.2rem;
@@ -2742,10 +3044,12 @@ h3 {
     padding: 10px 0 0 50px;
     color: #b95f5f;
   }
+
   .cooking-img h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #noren h3 {
     width: 40%;
     font-size: 1.2rem;
@@ -2753,10 +3057,12 @@ h3 {
     padding: 10px 0 0 10px;
     color: #b95f5f;
   }
+
   #noren h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #cafe h3 {
     width: 40%;
     font-size: 1.2rem;
@@ -2764,10 +3070,12 @@ h3 {
     padding: 10px 0 0 50px;
     color: #b95f5f;
   }
+
   #cafe h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #comachi h3 {
     width: 40%;
     font-size: 1.2rem;
@@ -2775,15 +3083,19 @@ h3 {
     padding: 10px 0 0 10px;
     color: #b95f5f;
   }
+
   #comachi h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
 }
 
 /* Cooking.htmlここまで↑ */
+
 /* レスポンス3 ここまで↑ */
 /* レスポンシブ4 スマホ用ここから↓ */
+
 /* max-widthは横幅600pxからの表示 */
 @media (max-width: 600px) {
   /* 共通部分 ここから↓ */
@@ -2793,20 +3105,25 @@ h3 {
     text-align: center;
     margin: 50px 0;
   }
+
   /* 営業時間、露店風呂、室内 */
   h3 {
     color: #09c2bf;
     padding-bottom: 20px;
     font-size: 1.2rem;
   }
+
   /* 共通部分 ここまで↑ */
   /* ヘッダー ここから↓ */
+
   .header-logo {
     font-size: 2rem;
     width: 70%;
   }
+
   /* ヘッダーここまで↑ */
   /* ハンバーメニュー ここから↓ */
+
   nav {
     z-index: 30;
     width: 35px;
@@ -2816,6 +3133,7 @@ h3 {
     top: 10px;
     right: 10px;
   }
+
   nav #menu {
     width: 100%;
     margin-top: 50px;
@@ -2823,10 +3141,12 @@ h3 {
     position: fixed;
     right: 100%;
   }
+
   nav #menu li {
     height: auto;
     line-height: 3.2;
   }
+
   nav #menu li a {
     height: auto;
     padding: 10px 0;
@@ -2839,8 +3159,10 @@ h3 {
     border-bottom: 1px solid #eee9e9;
     font-size: 1rem;
   }
+
   /* ハンバーガーメニュー ここまで↑ */
   /* Bigロゴ ここから↓ */
+
   /* Big画像 */
   .photos img {
     position: absolute;
@@ -2853,17 +3175,20 @@ h3 {
             animation: photo 25s infinite;
     opacity: 0;
   }
+
   .big-log {
     text-align: center;
     margin: 0 auto;
     width: 100%;
     margin: 0 0 420px 0;
   }
+
   .big-log h1 {
     font-family: Reggae One,cursive;
     color: #fff;
     text-shadow: 1px 4px 4px #140505;
   }
+
   .big-log p {
     width: 80%;
     text-align: center;
@@ -2874,6 +3199,7 @@ h3 {
     text-shadow: 1px 2px 3px #140505;
     top: -30px;
   }
+
   .big-log h1 i {
     display: block;
     text-align: center;
@@ -2881,14 +3207,17 @@ h3 {
     width: 100%;
     font-size: 3.5rem;
   }
+
   /* Bigロゴ ここまで↑ */
   /* 温泉由来 ここから↓ */
+
   .origin_f {
     visibility: hidden;
     font-size: 1.5rem;
     width: 100%;
     min-height: 100vh;
   }
+
   .origin_f .origin-img {
     background-image: url(../images/img18.jpg);
     background-color: #badacf;
@@ -2898,25 +3227,31 @@ h3 {
     width: 100%;
     padding: 30px 10px;
   }
+
   .origin_f .origin-img p {
     font-family: 遊ゴシック;
     width: 90%;
     margin: 0px auto;
     font-size: 1rem;
   }
+
   /* 温泉由来 ここまで↑ */
   /* お知らせ ここから↓ */
+
   #info h2 {
     margin-bottom: 20px;
   }
+
   .info_f {
     margin-bottom: 50px;
   }
+
   .info_f #info {
     padding: 150px 30px;
     background-size: cover;
     background-position: center;
   }
+
   .info_f #info dl {
     display: block;
     width: 100%;
@@ -2924,6 +3259,7 @@ h3 {
     margin: 0 auto;
     font-size: 1.5rem;
   }
+
   .info_f #info dl dt {
     width: 100%;
     color: #2eb6b3;
@@ -2931,12 +3267,14 @@ h3 {
     visibility: hidden;
     margin: 0 auto;
   }
+
   .info_f #info dl dd {
     visibility: hidden;
     text-align: center;
     width: 50%;
     margin: 0 auto;
   }
+
   .info_f #info dl dt,
   .info_f #info dl dd {
     text-align: center;
@@ -2947,14 +3285,17 @@ h3 {
     font-size: initial;
     width: 100%;
   }
+
   /* お知らせ ここまで↑ */
   /* お知らせ一覧 ここから↓ */
+
   .post-info {
     width: 100px;
     height: 100px;
     text-align: center;
     margin-bottom: 100px;
   }
+
   .post-info a .post-date {
     background: #0bd;
     border-radius: 50%;
@@ -2965,6 +3306,7 @@ h3 {
     padding-top: 35px;
     margin-left: -13px;
   }
+
   .post-info a .post-date span {
     font-size: 1rem;
     border-top: 1px rgba(255, 255, 255, 0.5) solid;
@@ -2972,11 +3314,14 @@ h3 {
     width: 50%;
     margin: 0 auto;
   }
+
   .post-info a .post-date:hover {
     background: #2eb6b3;
   }
+
   /* お知らせ一覧 ここまで↑ */
   /* 施設案内 ここから↓ */
+
   #grid {
     display: -ms-grid;
     display: grid;
@@ -2992,13 +3337,16 @@ h3 {
     background-position: center;
     margin-bottom: 50px;
   }
+
   #grid p {
     text-align: center;
     font-size: 1.2rem;
     color: #fff;
   }
+
   /* 施設案内 ここまで↑ */
   /* メルマガ登録 ここから↓ */
+
   .sns-favicon {
     padding: 80px 50px;
     background-image: url(../images/img20.jpg);
@@ -3006,12 +3354,15 @@ h3 {
     background-size: cover;
     font-size: 0.5rem;
   }
+
   .sns-favicon #merumaga_a3 {
     font-size: 1rem;
   }
+
   #merumaga_a2 {
     font-size: 1rem;
   }
+
   #merumaga_a2 .post-date {
     background: #0bd;
     border-radius: 50%;
@@ -3022,6 +3373,7 @@ h3 {
     padding-top: 35px;
     margin-left: -13px;
   }
+
   #merumaga_a2 .post-date span {
     font-size: 1rem;
     border-top: 1px rgba(255, 255, 255, 0.5) solid;
@@ -3029,44 +3381,54 @@ h3 {
     width: 50%;
     margin: 0 auto;
   }
+
   #merumaga_a2 .post-date:hover {
     background: #2eb6b3;
   }
+
   #merumaga_a .sns .sns-box {
     width: 100%;
     margin: 0 auto;
   }
+
   #merumaga_a .sns .sns-box .sub-title {
     font-size: 1.5rem;
     padding-top: 50px;
     margin: 20px 20px;
   }
+
   /* メルマガ ここまで↑ */
   /* 営業時間 ここから↓ */
+
   .stroke h2 {
     font-size: 1.5rem;
     padding: 80px 0px;
   }
+
   .time p {
     font-size: 1.5rem;
     color: #2eb6b3;
     text-align: center;
   }
+
   .time span {
     display: block;
     text-align: center;
     font-size: 1rem;
     color: #2eb6b3;
   }
+
   /* 料金表 */
   .money h3 {
     padding: 30px 0;
   }
+
   .money_f {
     background: #eeecc2;
     padding: 10px;
     margin-bottom: 0;
   }
+
   .table-money {
     text-align: center;
     width: 100%;
@@ -3076,45 +3438,57 @@ h3 {
     font-family: ヒラギノ明朝;
     font-size: 0.8rem;
   }
+
   .table-money tr td :nth-of-type(3n) {
     background: #e4f195;
   }
+
   .table-money tr td :nth-of-type(5n) {
     background-color: #e4f195;
   }
+
   .table-money .money-heder {
     color: #fff;
     background-color: #d6eb21;
     border: 1px #d6eb21 solid;
   }
+
   .table-money span {
     color: #09c2bf;
   }
+
   tr,
   th,
   td {
     height: 40px;
   }
+
   th {
     background: #e0ebe7;
   }
+
   td {
     background: #eeecc2;
   }
+
   .explanation p {
     font-size: 1rem;
     color: #2eb6b3;
     padding: 10px 0;
   }
+
   /* 営業時間 ここまで↑ */
   /* アクセスここから↓ */
+
   /* 詳細に記述しないと反応しない */
   .access-image article {
     padding: 5px;
   }
+
   .access-image article div {
     margin: 20px auto;
   }
+
   .access-image article p {
     font-size: 1rem;
     text-align: center;
@@ -3123,6 +3497,7 @@ h3 {
     padding: 10px;
     margin-top: 10px;
   }
+
   .access-image article .img-change {
     width: 100%;
     height: 30vh;
@@ -3132,25 +3507,30 @@ h3 {
     -webkit-animation: bgchange 25s ease-in infinite;
             animation: bgchange 25s ease-in infinite;
   }
+
   .access-image article p {
     font-size: 1rem;
     width: 100%;
   }
+
   .access-image article div iframe {
     width: 100%;
     height: 40vh;
   }
+
   .car-contents div h4 {
     padding-left: 20px;
     font-size: 1rem;
     text-align: left;
     color: #2eb6b3;
   }
+
   .car-contents div p {
     font-size: 1rem;
     text-align: left;
     margin: 0;
   }
+
   .car-contents div span {
     font-size: 1rem;
     display: block;
@@ -3163,55 +3543,67 @@ h3 {
     margin-left: 10px;
     margin-top: 10px;
   }
+
   .car-contents ul {
     text-align: left;
     padding: 10px 10px 10px;
     font-size: 1rem;
   }
+
   .car-contents span {
     font-size: 1rem;
     text-align: left;
     margin-left: 10px;
   }
+
   .car-contents .font {
     text-align: left;
     font-size: 1rem;
     padding: 10px 10px;
     margin-left: 10px;
   }
+
   /* アクセス ここまで↑ */
   /* フッター ここから↓ */
+
   footer {
     background: #432;
     text-align: center;
     padding: 10px 0;
   }
+
   footer p {
     color: #fff;
     font-size: 1rem;
     margin: 0;
   }
+
   /* フッター ここまで↑ */
   /* トップ移動 ここから↓ */
+
   .top {
     position: fixed;
     right: 10px;
     bottom: 50px;
   }
+
   /* トップ移動ここまで↑ */
   /* Naw.html ここから↓ */
+
   .info-content {
     font-family: 遊ゴシック;
     padding: 0;
     visibility: hidden;
     margin-bottom: 150px;
   }
+
   .info-content img {
     width: 100%;
     position: absolute;
     -webkit-animation: slide-skew1 1s;
             animation: slide-skew1 1s;
   }
+
   .info-content div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3224,24 +3616,28 @@ h3 {
     -webkit-animation: slide-skew 1s;
             animation: slide-skew 1s;
   }
+
   .info-content h4 {
     margin-bottom: 10px;
     font-size: 1rem;
     -webkit-animation: slideIn-left 1s 1 2s backwards;
             animation: slideIn-left 1s 1 2s backwards;
   }
+
   .info-content p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 1 3s backwards;
             animation: fadeup 1s 1 3s backwards;
   }
+
   .info-content_1 {
     font-family: 遊ゴシック;
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
   }
+
   .info-content_1 img {
     margin: auto;
     width: 100%;
@@ -3249,6 +3645,7 @@ h3 {
     -webkit-animation: slide-skew2 1s 1s backwards;
             animation: slide-skew2 1s 1s backwards;
   }
+
   .info-content_1 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3261,30 +3658,35 @@ h3 {
     -webkit-animation: slide-skew3 1s 1s backwards;
             animation: slide-skew3 1s 1s backwards;
   }
+
   .info-content_1 h4 {
     margin-bottom: 10px;
     font-size: 1rem;
     -webkit-animation: slideIn-right 1s 3s backwards;
             animation: slideIn-right 1s 3s backwards;
   }
+
   .info-content_1 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 4s backwards;
             animation: fadeup 1s 4s backwards;
   }
+
   .info-content_2 {
     font-family: 遊ゴシック;
     padding: 0;
     visibility: hidden;
     margin-bottom: 150px;
   }
+
   .info-content_2 img {
     width: 100%;
     position: absolute;
     -webkit-animation: slide-skew1 1s 3s backwards;
             animation: slide-skew1 1s 3s backwards;
   }
+
   .info-content_2 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3297,29 +3699,34 @@ h3 {
     -webkit-animation: slide-skew 1s 3s backwards;
             animation: slide-skew 1s 3s backwards;
   }
+
   .info-content_2 h4 {
     font-size: 1rem;
     -webkit-animation: slideIn-left 1s 4s backwards;
             animation: slideIn-left 1s 4s backwards;
   }
+
   .info-content_2 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 1 5s backwards;
             animation: fadeup 1s 1 5s backwards;
   }
+
   .info-content_3 {
     font-family: 遊ゴシック;
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
   }
+
   .info-content_3 img {
     margin: auto;
     width: 100%;
     -webkit-animation: slide-skew2 1s 5s backwards;
             animation: slide-skew2 1s 5s backwards;
   }
+
   .info-content_3 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3331,29 +3738,34 @@ h3 {
     -webkit-animation: slide-skew3 1s 5s backwards;
             animation: slide-skew3 1s 5s backwards;
   }
+
   .info-content_3 h4 {
     font-size: 1rem;
     -webkit-animation: slideIn-right 1s 6s backwards;
             animation: slideIn-right 1s 6s backwards;
   }
+
   .info-content_3 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 1 7s backwards;
             animation: fadeup 1s 1 7s backwards;
   }
+
   .info-content_4 {
     font-family: 遊ゴシック;
     padding: 0;
     visibility: hidden;
     margin-bottom: 150px;
   }
+
   .info-content_4 img {
     width: 100%;
     position: absolute;
     -webkit-animation: slide-skew1 1s 7s backwards;
             animation: slide-skew1 1s 7s backwards;
   }
+
   .info-content_4 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3365,29 +3777,34 @@ h3 {
     -webkit-animation: slide-skew 1s 7s backwards;
             animation: slide-skew 1s 7s backwards;
   }
+
   .info-content_4 h4 {
     font-size: 1rem;
     -webkit-animation: slideIn-left 1s 7s backwards;
             animation: slideIn-left 1s 7s backwards;
   }
+
   .info-content_4 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 8s backwards;
             animation: fadeup 1s 8s backwards;
   }
+
   .info-content_5 {
     font-family: 遊ゴシック;
     padding: 50px 0;
     visibility: visible;
     margin-bottom: 150px;
   }
+
   .info-content_5 img {
     margin: auto;
     width: 100%;
     -webkit-animation: slide-skew2 1s 8s backwards;
             animation: slide-skew2 1s 8s backwards;
   }
+
   .info-content_5 div {
     margin: 0 auto;
     padding: 50px 50px;
@@ -3399,33 +3816,42 @@ h3 {
     -webkit-animation: slide-skew3 1s 8s backwards;
             animation: slide-skew3 1s 8s backwards;
   }
+
   .info-content_5 h4 {
     font-size: 1.2rem;
     -webkit-animation: slideIn-right 1s 10s backwards;
             animation: slideIn-right 1s 10s backwards;
   }
+
   .info-content_5 p {
     font-size: 0.8rem;
     padding: 5px 0;
     -webkit-animation: fadeup 1s 11s backwards;
             animation: fadeup 1s 11s backwards;
   }
+
   /* New.html ここまで↑ */
   /* Show.html ここから↓ */
+
   .show-content {
     margin: 50px 0;
   }
+
   .show-content p {
     font-size: 1rem;
   }
+
   .car-contents ul {
     margin-left: 20px;
   }
+
   /* Show.html ここまで↑ */
   /* Contact.html ここから↓ */
+
   .h2_f {
     margin-top: 60px;
   }
+
   .form-contact {
     width: 95%;
     background-image: url(../images/img15.jpg);
@@ -3437,6 +3863,7 @@ h3 {
     padding: 50px 30px;
     margin-top: 50px;
   }
+
   .form-contact .form-title {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -3444,20 +3871,24 @@ h3 {
     margin-bottom: 100px;
     margin: 0;
   }
+
   .form-contact form .required {
     font-size: 1rem;
     margin: 50px 0;
   }
+
   .form-contact form .required label {
     font-size: 1.125rem;
     margin-bottom: 10px;
     display: block;
     /* 必須 */
   }
+
   .form-contact form .required label span {
     color: red;
     font-size: 0.7rem;
   }
+
   .form-contact form .required input[type="text"],
   .form-contact form .required input[type="email"] {
     width: 100%;
@@ -3465,31 +3896,34 @@ h3 {
     margin: 0;
     background-color: #eee;
   }
+
   .form-contact form .required textarea {
     background-color: #eee;
     width: 100%;
     max-width: 100%;
     height: 6rem;
   }
+
   .form-contact form input[type="submit"] {
     border: none;
-    cursor: pointer;
-    /* カーソルの表示変更  */
-    line-height: 1;
-    /* 行の高さ  */
+    cursor: pointer; /* カーソルの表示変更  */
+    line-height: 1; /* 行の高さ  */
   }
+
   .form-contact form .button {
     font-size: 1rem;
     background: #0bd;
     color: #fff;
-    border-radius: 5px;
-    /* 要素の角を丸める */
+    border-radius: 5px; /* 要素の角を丸める */
     padding: 18px 32px;
   }
+
   .form-contact form .button:hover {
     background: #0090aa;
   }
+
   /* スイッチ ここから↓ */
+
   .switch {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3502,9 +3936,11 @@ h3 {
     position: fixed;
     bottom: 0;
   }
+
   .switch div {
     width: 80%;
   }
+
   .switch p {
     font-size: 0.8rem;
     color: #fff;
@@ -3513,6 +3949,7 @@ h3 {
     margin: 0 10px;
     background-color: rgba(80, 87, 119, 0.7);
   }
+
   .switch span {
     display: block;
     text-align: center;
@@ -3525,15 +3962,19 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   /* スイッチ ここまで↑ */
   /* Cooking.htmlここから↓ */
+
   .cooking-img_f {
     padding: 10px;
     margin-bottom: 20px;
   }
+
   .cooking-img_f img {
     width: 100%;
   }
+
   .cooking-img_f h3 {
     width: 100%;
     font-size: 1.2rem;
@@ -3541,22 +3982,26 @@ h3 {
     padding: 10px 0 10px 0;
     color: #b95f5f;
   }
+
   .cooking-img_f h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #noren {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     visibility: hidden;
   }
+
   #noren img {
     width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
+
   #noren h3 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -3567,15 +4012,18 @@ h3 {
     padding: 10px 0 10px 0;
     color: #b95f5f;
   }
+
   #noren h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #noren ul {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
+
   #cafe {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3585,6 +4033,7 @@ h3 {
             justify-content: flex-end;
     visibility: hidden;
   }
+
   #cafe h3 {
     text-align: right;
     width: 100%;
@@ -3593,11 +4042,13 @@ h3 {
     padding: 10px 0 10px 0;
     color: #b95f5f;
   }
+
   #cafe h3 p {
     text-align: right;
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #cafe img {
     width: 100%;
     -webkit-box-pack: end;
@@ -3607,21 +4058,25 @@ h3 {
         -ms-flex-order: 1;
             order: 1;
   }
+
   #cafe ul {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
+
   #comachi {
     display: flexbox;
     visibility: hidden;
   }
+
   #comachi img {
     width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
+
   #comachi h3 {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
@@ -3632,17 +4087,21 @@ h3 {
     padding: 10px 0 10px 0;
     color: #b95f5f;
   }
+
   #comachi h3 p {
     font-size: 1rem;
     padding-top: 20px;
   }
+
   #comachi ul {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
+
 }
 
 /* Cooking.htmlここまで↑ */
+
 /* レスポンシブ4 スマホ用ここまで↑ */
 /*# sourceMappingURL=style.css.map */
