@@ -1,0 +1,185 @@
+/* jQuery用 */
+.hidden {
+  /* 要素を消す */
+  display: none;
+}
+
+/* jQuery アニメーションここから↓ */
+/* セピア */
+.sepia img {
+  filter: sepia(100%);
+  /*セピア具合を変更したい場合はこの数値を変更*/
+  transition: 0.3s ease-in-out;
+  /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.sepia a:hover img {
+  /*hoverした時の変化*/
+  filter: sepia(0);
+}
+
+/* シャドウ */
+.shadow {
+  transition: box-shadow 0.2s ease 0s initial;
+}
+
+.shadow:hover {
+  box-shadow: 10px 7px 0px 3px rgb(236, 231, 231);
+}
+
+/* 浮く */
+.float {
+  transition: transform 0.2s ease 0s;
+}
+
+.float:hover {
+  transform: translate(0, -10%);
+}
+
+/* 伸びる */
+.width {
+  transition: width 0.2s ease 0s;
+}
+
+.width:hover {
+  width: 120px;
+}
+
+/* スライドアニメーション */
+/* お知らせ ここから↓ */
+.show_s {
+  animation: slideIn-left 1s 4s backwards;
+}
+
+.show_s1 {
+  animation: slideIn-right 1s 4s backwards;
+}
+
+.show_s2 {
+  animation: slideIn-left 1s 4.5s backwards;
+}
+
+.show_s3 {
+  animation: slideIn-right 1s 4.5s backwards;
+}
+
+.show_s4 {
+  animation: slideIn-left 1s 5s backwards;
+}
+
+.show_s5 {
+  animation: slideIn-right 1s 5s backwards;
+}
+
+.show_s6 {
+  animation: slideIn-left 1s 5.5s backwards;
+}
+
+.show_s7 {
+  animation: slideIn-right 1s 5.5s backwards;
+}
+
+.show_s8 {
+  animation: slideIn-left 1s 6s backwards;
+}
+
+.show_s9 {
+  animation: slideIn-right 1s 6s backwards;
+}
+
+.show_s10 {
+  animation: slideIn-left 1s 6.5s backwards;
+}
+
+.show_s11 {
+  animation: slideIn-right 1s 6.5s backwards;
+}
+
+.show_s12 {
+  animation: slideIn-left 1s 7s backwards;
+}
+
+.show_s13 {
+  animation: slideIn-right 1s 7s backwards;
+}
+
+/* お知らせ ここまで↑ */
+
+/* snsで使用 */
+.show_s14 {
+  animation: slideIn-left 1s;
+}
+
+/* ななめから出てくるアニメーション */
+.show_n {
+  animation: slide-skew 1s 0s alternate;
+  /* 左下から左上 */
+}
+
+.show_n1 {
+  animation: slide-skew1 1s 0s alternate;
+  /* 右上から右下 */
+}
+
+.show_n2 {
+  animation: slide-skew 1s 3s backwards;
+  /* 左下から左上 */
+}
+
+/* ぷよぷよアニメーション */
+.show_p {
+  animation: poyoyon-right 1s 1 forwards;
+}
+
+.show_p1 {
+  animation: poyoyon-left 1s;
+}
+
+/* ズームアニメーション */
+.show_z {
+  animation: zoomIn 1s 0s backwards;
+}
+
+/* フェードインアニメーション */
+.show_f {
+  animation: fadeIn 2s ease-in-out 1 normal forwards;
+}
+
+.show_f1 {
+  animation: fadeIn 2s ease-in-out 3s backwards;
+}
+
+/* フェードイン・ふわふわアニメーション */
+.show_ff {
+  animation: fadeIn 2s ease-in-out 1 normal forwards,
+    fuwafuwa 5s infinite ease-in-out 0.5s alternate;
+}
+
+/* ちかちかアニメーション */
+.show_t {
+  animation: fadeIn 0.5s ease infinite alternate;
+  /* keyframeの内容はフェードインと同じ */
+}
+
+/* フェードアップアニメーション */
+.show_up {
+  animation: fadeup 1s 1 forwards;
+}
+
+.show_f-up1 {
+  animation: fadeup 1.5s 3s backwards;
+}
+
+.show_f-up2 {
+  animation: fadeup 0.5s ease-in-out 2s backwards;
+}
+
+.show_f-up3 {
+  animation: fadeup2 1.5s ease-out 1s backwards;
+}
+
+.show_f-up4 {
+  animation: fadeup2 1.5s ease-out 2s backwards;
+}
+
+/* jQuery アニメーションここまで↑ */
