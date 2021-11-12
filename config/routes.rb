@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "lalas#index"
-  resources :lalas, only: [:index, :new] do
+  resources :lalas, only: [:index, :new, :create] do
   end
   resources :infos, only: [:index ] do
   end

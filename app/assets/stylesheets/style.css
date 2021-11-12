@@ -3644,4 +3644,19 @@ h3 {
 
 /* Cooking.htmlここまで↑ */
 /* レスポンシブ4 スマホ用ここまで↑ */
+div.contents.row .success {
+  margin: 20px 0;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+          box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  height: 100vh;
+}
+
+div.contents.row .success h3 {
+  margin: 50px auto;
+}
 /*# sourceMappingURL=style.css.map */
