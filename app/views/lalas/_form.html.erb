@@ -1,4 +1,5 @@
 <%= form_with model: lala, local: true do |f| %>
+<%= render 'error_messages', model: f.object %>
   <div class="form-contact wrapper">
     <h2 class="form-title">Contect</h2>
     <div class="required">
