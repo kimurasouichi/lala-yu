@@ -1,9 +1,13 @@
 /* 共通部分 ここから↓ */
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"); // Googleフォントの読み込み。共通のbodyにも記述
-@import "_global";
-@import "_keyframes";
-@import "_animation";
+@import "global";
+@import "keyframes";
+@import "animation";
+@import "buildings";
+@import "lalas";
+@import "infos";
+@import "cookings";
 
 /* 共通部分 ここまで↑ */
 /* レスポンシブル1 ここから↓ */
@@ -13,7 +17,7 @@
 @media (min-width: 1050px) {
   label[for="open-close"] {
     visibility: hidden;
- 
+
     nav {
       position: static; // 初期設定に表示
       width: 100%;
